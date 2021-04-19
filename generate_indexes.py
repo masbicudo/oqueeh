@@ -41,7 +41,7 @@ def make(header, path=".", url_path=""):
             title = get_title(name)
             items.append({
                 "title": title,
-                "url": join_url(url_path, name),
+                "url": name,
             })
             continue
         if name == "index.html":
@@ -62,7 +62,7 @@ def make(header, path=".", url_path=""):
         title = re.sub(r"\s+", " ", title)
         items.append({
             "title": title,
-            "url": join_url(url_path, m[1]),
+            "url": m[1],
         })
     with open(os.path.join(path, "index.html"), "w") as fs:
         text = html(header, items)
@@ -75,7 +75,7 @@ def make_children(path=".", url_path=""):
             continue
         if not valid_dir(name):
             continue
-        child_url_path = join_url(url_path, name)
+        child_url_path = name
         title = get_title(name)
         make(title, child_path, child_url_path)
         make_children(child_path, child_url_path)
