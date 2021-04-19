@@ -1,4 +1,4 @@
-# Set code block language
+# Set Markdown code block language
 
 ## To Python
 
