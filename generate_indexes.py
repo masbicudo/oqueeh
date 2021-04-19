@@ -3,18 +3,31 @@ import re
 
 def html(header, items):
     nl = "\n  "
-    return f"""<!DOCTYPE html>
+    ext = ".html"
+    text = f"""<!DOCTYPE html>
 <html>
 <body>
 <h2>{header}</h2>
 <p>
-  {nl.join(list(map(lambda i: f'<li><a href="{i["url"]}">{i["title"]}</a></li>', items)))}
+  {nl.join(map(lambda i: f'<li><a href="{i["url"]}">{i["title"]}</a></li>', items))}
 </p>
 </body>
 </html>
 """
+    return text, ext
 
-EXCLUDED = ['index.html']
+def md(header, items):
+    nl = "\n\n"
+    ext = ".md"
+    text = f"""# {header}
+
+{
+    nl.join(  map(lambda i: f'[{i["title"]}]({i["url"]})', items)  )
+}
+"""
+    return text, ext
+
+generate_file = md
 
 def join_url(a, b):
     if a == "":
@@ -22,7 +35,7 @@ def join_url(a, b):
     return f"{a}/{b}"
 
 def valid_dir(name):
-    if name[0] == ".":
+    if name[0] in "._":
         return False
     return True
 
@@ -44,7 +57,8 @@ def make(header, path=".", url_path=""):
                 "url": name,
             })
             continue
-        if name == "index.html":
+        if name in ["index.html", "index.md"]:
+            os.remove(os.path.join(path, name))
             continue
         m = re.match(r"^(.*)\.md$", name)
         if m is None:
@@ -64,8 +78,8 @@ def make(header, path=".", url_path=""):
             "title": title,
             "url": m[1],
         })
-    with open(os.path.join(path, "index.html"), "w") as fs:
-        text = html(header, items)
+    text, ext = generate_file(header, items)
+    with open(os.path.join(path, f"index{ext}"), "w") as fs:
         fs.write(text)
 
 def make_children(path=".", url_path=""):
