@@ -1,4 +1,6 @@
-# Refresh DNS cache on Windows
+---
+title: Refresh DNS cache on Windows
+---
 
 ```
 ipconfig /flushdns

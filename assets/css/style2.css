@@ -1,0 +1,65 @@
+body {
+    margin: 10px;
+}
+
+ans {
+    display: inline-block;
+}
+
+ans, .ans, .ans code {
+    font-size: 24pt;
+}
+
+code {
+    font-size: 14pt;
+}
+
+.sitename {
+    /* ref: https://nathanfriend.io/2018/04/27/fantastic-fast-fonts-with-system-ui.html */
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, 
+             'Segoe UI', Roboto, 'Helvetica Neue', 
+             Ubuntu, Arial, sans-serif;
+    color: crimson;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 2em;
+    box-sizing: border-box;
+}
+
+.sitename:hover {
+    border-bottom: 4px solid crimson;
+}
+
+.sitename span {
+    display: inline-block;
+}
+
+.smaller{
+    font-size: 0.8em;
+}
+
+section {
+    margin: 1em 0 1em 0;
+    padding: 0 100px 0 100px;
+}
+
+/* pre > code {
+    font-size: 2em;
+} */
+
+h2 {
+    margin-top: 1em;
+}
+h3 {
+    margin-top: 1em;
+}
+h4 {
+    margin-top: 1em;
+}
+h5 {
+    margin-top: 1em;
+}
+
+ul {
+    margin-bottom: 10px;
+}

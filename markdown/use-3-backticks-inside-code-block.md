@@ -1,4 +1,6 @@
-# Use 3 backticks inside Markdown code block
+---
+title: Use 3 backticks inside Markdown code block
+---
 
 `````
 ````
@@ -6,4 +8,4 @@
 ````
 `````
 
-Add more backticks to the fence.
+To use even more backticks inside, just add more backticks to the fence.

@@ -1,4 +1,8 @@
-# Markdown
+---
+title: Markdown
+---
+
+[Markdown inside tags](markdown-inside-tags)
 
 [Set Markdown code block language](set-code-block-language)
 

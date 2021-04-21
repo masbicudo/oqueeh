@@ -19,7 +19,9 @@ def html(header, items):
 def md(header, items):
     nl = "\n\n"
     ext = ".md"
-    text = f"""# {header}
+    text = f"""---
+title: {header}
+---
 
 {
     nl.join(  map(lambda i: f'[{i["title"]}]({i["url"]})', items)  )
@@ -35,7 +37,7 @@ def join_url(a, b):
     return f"{a}/{b}"
 
 def valid_dir(name):
-    if name[0] in "._":
+    if name[0] in "._" or name == "assets":
         return False
     return True
 
@@ -73,6 +75,10 @@ def make(header, path=".", url_path=""):
                 if title is not None:
                     title = title[1]
                     break
+                title = re.match(r"^title:\s*(.*)[\s\n]*$", line)
+                if title is not None:
+                    title = title[1]
+                    break
         title = re.sub(r"\s+", " ", title)
         items.append({
             "title": title,
@@ -95,7 +101,7 @@ def make_children(path=".", url_path=""):
         make_children(child_path, child_url_path)
 
 def main():
-    make("oqueeh")
+    make("")
     make_children()
 
 if __name__ == '__main__':
