@@ -37,7 +37,7 @@ def join_url(a, b):
     return f"{a}/{b}"
 
 def valid_dir(name):
-    if name[0] in "._" or name == "assets":
+    if name[0] in "._" or name == "assets" or "=" in name:
         return False
     return True
 
@@ -71,17 +71,23 @@ def make(header, path=".", url_path=""):
                 line = fs.readline()
                 if not line:
                     break
-                title = re.match(r"^#\s*(.*)[\s\n]*$", line)
-                if title is not None:
-                    title = title[1]
+                page_title = re.match(r"^(#+)\s*(.*)[\s\n]*$", line)
+                if page_title is not None and len(page_title[1]) == 1:
+                    page_title = page_title[2]
                     break
-                title = re.match(r"^title:\s*(.*)[\s\n]*$", line)
-                if title is not None:
-                    title = title[1]
+                page_title = re.match(r"^title:\s*(.*)[\s\n]*$", line)
+                if page_title is not None:
+                    page_title = page_title[1]
                     break
-        title = re.sub(r"\s+", " ", title)
+        page_title = page_title if page_title is not None else ""
+        while True:
+            tag_match = re.match(r"<(\w+)[^>]*>((?:(?!</\1>).)*)</\1>", page_title)
+            if tag_match is None:
+                break
+            page_title = page_title = re.sub(r"<(\w+)[^>]*>((?:(?!</\1>).)*)</\1>", r"\2", page_title)
+        page_title = re.sub(r"\s+", " ", page_title)
         items.append({
-            "title": title,
+            "title": page_title,
             "url": m[1],
         })
     text, ext = generate_file(header, items)
