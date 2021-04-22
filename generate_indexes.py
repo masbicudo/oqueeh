@@ -46,9 +46,20 @@ def get_title(title):
     title = re.sub(r"\b\w", lambda x: x[0].upper(), title)
     return title
 
-def make(header, path=".", url_path=""):
+def path_key(d):
+    key = ""
+    if os.path.isdir(d):
+        key += "D"
+    elif os.path.isfile(d):
+        key += "F"
+    key += d.lower()
+    return key
+
+def make(header="", path=".", url_path="", ignore_files=False):
+    listing = sorted(os.listdir(path), key=path_key)
+
     items = []
-    for name in os.listdir(path):
+    for name in listing:
         file_path = os.path.join(path, name)
         if os.path.isdir(file_path):
             if not valid_dir(name):
@@ -58,6 +69,8 @@ def make(header, path=".", url_path=""):
                 "title": title,
                 "url": name,
             })
+            continue
+        if ignore_files:
             continue
         if name in ["index.html", "index.md"]:
             os.remove(os.path.join(path, name))
@@ -78,6 +91,7 @@ def make(header, path=".", url_path=""):
                 page_title = re.match(r"^title:\s*(.*)[\s\n]*$", line)
                 if page_title is not None:
                     page_title = page_title[1]
+                    page_title = re.sub(r"^\"([^\"]*)\"$", r"\1", page_title)
                     break
         page_title = page_title if page_title is not None else ""
         while True:
@@ -107,7 +121,7 @@ def make_children(path=".", url_path=""):
         make_children(child_path, child_url_path)
 
 def main():
-    make("")
+    make(ignore_files=True)
     make_children()
 
 if __name__ == '__main__':
