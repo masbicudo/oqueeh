@@ -1,0 +1,6 @@
+sl = sorted(["The", "lazy", "fox"])
+print(sl)
+sl = sorted(["The", "lazy", "fox"], key=str.upper)
+print(sl)
+sl = sorted(["The", "lazy", "fox"], key=lambda x: x[1])
+print(sl)

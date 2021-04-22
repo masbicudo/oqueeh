@@ -4,6 +4,8 @@ title: Free trustworthy DDNS
 
 ## If you own a domain
 
-[Hurricane Electric DNS](dns.he.com)
+<div markdown="1" class="ans">
+[Hurricane Electric DNS](https://dns.he.net)
+</div>
 
 This is the best one, just my opinion. =)
