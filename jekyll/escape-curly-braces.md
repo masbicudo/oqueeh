@@ -1,6 +1,6 @@
 ---
 title: Escape curly braces in Jekyll
-categories: ["Jekyll"]
+categories: [Jekyll]
 ---
 
 ## One or more curly braces in sequence
@@ -27,4 +27,4 @@ Text {{ "{{" }} example }} here.
 Text {{ example }} here.
 {% endraw %}
 
-Use this Python program to help escaping these strings [escape-curly-braces.py]({% link /Jekyll/escape-curly-braces.py %})
+Use this Python program to help escaping these strings [escape-curly-braces.py]({% link /jekyll/escape-curly-braces.py %})

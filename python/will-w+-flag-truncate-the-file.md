@@ -1,5 +1,6 @@
 ---
 title: Will "w+" flag truncate the file in Python
+categories: [Python]
 ---
 
 <ans>Yes.</ans>

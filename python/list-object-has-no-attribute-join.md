@@ -1,5 +1,6 @@
 ---
 title: "'list' object has no attribute 'join'"
+categories: [Python]
 ---
 
 Correct way:

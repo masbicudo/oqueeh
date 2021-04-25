@@ -1,5 +1,6 @@
 ---
 title: Create a Python virtual environment
+categories: [Python]
 ---
 
 <div markdown="1" class="ans">

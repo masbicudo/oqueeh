@@ -1,5 +1,6 @@
 ---
 title: Ensure path exists
+categories: [Python]
 ---
 
 <div markdown="1" class="ans">

@@ -4,7 +4,7 @@ title:
 
 [Computing](computing)
 
-[Css](css)
+[CSS](css)
 
 [Hosting](hosting)
 
@@ -12,7 +12,7 @@ title:
 
 [Markdown](markdown)
 
-[Postgresql](postgresql)
+[PostgreSQL](postgresql)
 
 [Python](python)
 

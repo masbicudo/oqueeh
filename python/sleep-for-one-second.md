@@ -1,5 +1,6 @@
 ---
 title: Sleep for 1 second
+categories: [Python]
 ---
 
 <div markdown="1" class="ans">

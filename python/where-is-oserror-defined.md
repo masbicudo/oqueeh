@@ -1,5 +1,6 @@
 ---
 title: Where is OSError defined in Python
+categories: [Python]
 ---
 
 <div markdown="1" class="ans">

@@ -1,5 +1,6 @@
 ---
 title: Join list into string in Python
+categories: [Python]
 ---
 
 <div markdown="1" class="ans">

@@ -14,6 +14,8 @@ title: Python
 
 [Difference between "w" and "w+" flags in Python](difference-between-w-w+-flags)
 
+[Ensure path exists](ensure-path-exists)
+
 [First letters to upper in Python](first-letters-to-upper)
 
 [Get type of object in Python](get-type-of-object)
@@ -23,6 +25,8 @@ title: Python
 [Lambda functions in Python](lambda-function)
 
 ['list' object has no attribute 'join'](list-object-has-no-attribute-join)
+
+[Read a file line by line in Python](read-file-line-by-line)
 
 [Read keyboard input in Python](read-keyboard-input)
 
@@ -41,5 +45,9 @@ title: Python
 [str reserved keyword in Python](str-reserved-keyword)
 
 [String to lowercase in Python](string-to-lowercase)
+
+[Trim string in Python](trim-string)
+
+[Where is OSError defined in Python](where-is-oserror-defined)
 
 [Will "w+" flag truncate the file in Python](will-w+-flag-truncate-the-file)

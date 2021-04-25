@@ -1,5 +1,6 @@
 ---
 title: "str reserved keyword in Python"
+categories: [Python]
 ---
 
 <div markdown="1" class="ans">

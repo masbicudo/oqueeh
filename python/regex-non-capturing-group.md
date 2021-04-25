@@ -1,5 +1,6 @@
 ---
 title: Regex non-capturing group in Python
+categories: [Python]
 ---
 
 <div markdown="1" class="ans">

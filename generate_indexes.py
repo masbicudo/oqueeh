@@ -1,5 +1,6 @@
 import os
 import re
+from utils import get_category_name
 
 def html(header, items):
     nl = "\n  "
@@ -41,11 +42,6 @@ def valid_dir(name):
         return False
     return True
 
-def get_title(title):
-    title = re.sub(r"-_\.", " ", title)
-    title = re.sub(r"\b\w", lambda x: x[0].upper(), title)
-    return title
-
 def path_key(d):
     key = ""
     if os.path.isdir(d):
@@ -64,7 +60,7 @@ def make(header="", path=".", url_path="", ignore_files=False):
         if os.path.isdir(file_path):
             if not valid_dir(name):
                 continue
-            title = get_title(name)
+            title = get_category_name(name)
             items.append({
                 "title": title,
                 "url": name,
@@ -116,7 +112,7 @@ def make_children(path=".", url_path=""):
         if not valid_dir(name):
             continue
         child_url_path = name
-        title = get_title(name)
+        title = get_category_name(name)
         make(title, child_path, child_url_path)
         make_children(child_path, child_url_path)
 

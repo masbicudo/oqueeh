@@ -1,5 +1,6 @@
 ---
 title: Regex replace with reference to capture group in Python
+categories: [Python]
 ---
 
 <div markdown="1" class="ans">

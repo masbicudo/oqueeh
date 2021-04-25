@@ -1,5 +1,6 @@
 ---
 title: Read a file line by line in Python
+categories: [Python]
 ---
 
 <div markdown="1" class="ans">

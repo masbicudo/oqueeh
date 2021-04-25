@@ -1,5 +1,6 @@
 ---
 title: Create a text file in Python
+categories: [Python]
 ---
 
 <div markdown="1" class="ans">

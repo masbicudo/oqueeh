@@ -1,5 +1,6 @@
 ---
 title: Difference between "w" and "w+" flags in Python
+categories: [Python]
 ---
 
 <div markdown="1" class="ans">

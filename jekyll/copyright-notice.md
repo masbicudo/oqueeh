@@ -1,5 +1,6 @@
 ---
 title: Copyright notice in Jekyll
+categories: [Jekyll]
 ---
 
 ```

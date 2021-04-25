@@ -1,5 +1,6 @@
 ---
 title: Free trustworthy DDNS
+categories: [Hosting]
 ---
 
 ## If you own a domain
