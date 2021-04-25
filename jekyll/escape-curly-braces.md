@@ -1,6 +1,5 @@
 ---
 title: Escape curly braces in Jekyll
-categories: [Jekyll]
 ---
 
 ## One or more curly braces in sequence

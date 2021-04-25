@@ -1,7 +1,6 @@
 ---
 title: Read keyboard input in Python
 tags: [python,keyboard,input]
-categories: [Python]
 ---
 
 <div markdown="1" class="ans">

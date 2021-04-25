@@ -1,6 +1,5 @@
 ---
 title: What is CLI?
-categories: [Computing]
 ---
 
 <ans>Command line interface</ans>

@@ -1,6 +1,5 @@
 ---
 title: Markdown inside tags
-categories: [Markdown]
 ---
 
 <div markdown="1" class="ans">

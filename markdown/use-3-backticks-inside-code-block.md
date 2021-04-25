@@ -1,6 +1,5 @@
 ---
 title: Use 3 backticks inside Markdown code block
-categories: [Markdown]
 ---
 
 `````

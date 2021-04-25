@@ -1,6 +1,5 @@
 ---
 title: Command line arguments in Python
-categories: [Python]
 ---
 
 <div markdown="1" class="ans">

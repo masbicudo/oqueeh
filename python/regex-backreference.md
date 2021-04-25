@@ -1,6 +1,5 @@
 ---
 title: Regex back-reference in Python
-categories: [Python]
 ---
 
 <div markdown="1" class="ans">

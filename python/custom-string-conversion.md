@@ -1,6 +1,5 @@
 ---
 title: Custom string conversion in Python
-categories: [Python]
 ---
 
 <div markdown="1" class="ans">
