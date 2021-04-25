@@ -1,17 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
 body {
-    margin: 10px;
+    margin: 0.5cm;
+    font-size: calc(0.6*(1vw + 1vh + 0.5cm));
+    --header-size-max: 1.5em;
+    --header-size-min: 1em;
+    font-family: 'Roboto', sans-serif;
 }
 
 ans {
     display: inline-block;
 }
 
-ans, .ans, .ans code {
-    font-size: 24pt;
+ans, .ans {
+    font-size: 1.5em;
 }
 
-code {
-    font-size: 14pt;
+code, kbd, pre, samp {
+    font-size: inherit;
+}
+
+pre {
+    display: block;
+    overflow-x: auto;
 }
 
 .sitename {
@@ -22,12 +33,16 @@ code {
     color: crimson;
     font-weight: bold;
     font-style: italic;
-    font-size: 2em;
     box-sizing: border-box;
+    position: absolute;
+    bottom: 0.5cm;
+    left: 0.5cm;
+    border-bottom: 0.1em solid transparent;
+    font-size: 1.2em;
 }
 
 .sitename:hover {
-    border-bottom: 4px solid crimson;
+    border-bottom: 0.1em solid crimson;
 }
 
 .sitename span {
@@ -40,24 +55,39 @@ code {
 
 section {
     margin: 1em 0 1em 0;
-    padding: 0 100px 0 100px;
+    padding: 0 2em 0 2em;
+}
+
+footer {
+    position: absolute;
+    bottom: 0.5cm;
+    right: 0.5cm;
+    font-size: 0.8em;
 }
 
 /* pre > code {
     font-size: 2em;
 } */
 
+h1, h2, h3, h4, h5, h6 {
+    margin: 1em 0 0.2em -0.5em;
+}
+
+h1 {
+    font-size: calc(1.0*(var(--header-size-max) - var(--header-size-min)) + var(--header-size-min));
+    margin: 0 0 1em 0;
+}
 h2 {
-    margin-top: 1em;
+    font-size: calc(1/2*(var(--header-size-max) - var(--header-size-min)) + var(--header-size-min));
 }
 h3 {
-    margin-top: 1em;
+    font-size: calc(1/3*(var(--header-size-max) - var(--header-size-min)) + var(--header-size-min));
 }
 h4 {
-    margin-top: 1em;
+    font-size: calc(1/4*(var(--header-size-max) - var(--header-size-min)) + var(--header-size-min));
 }
 h5 {
-    margin-top: 1em;
+    font-size: calc(1.5*(var(--header-size-max) - var(--header-size-min)) + var(--header-size-min));
 }
 
 ul {
