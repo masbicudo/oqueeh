@@ -4,7 +4,7 @@ body {
     margin: 0.5cm;
     font-size: calc(0.6*(1vw + 1vh + 0.5cm));
     --header-size-max: 1.5em;
-    --header-size-min: 1em;
+    --header-size-min: 0.8em;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -87,7 +87,10 @@ h4 {
     font-size: calc(1/4*(var(--header-size-max) - var(--header-size-min)) + var(--header-size-min));
 }
 h5 {
-    font-size: calc(1.5*(var(--header-size-max) - var(--header-size-min)) + var(--header-size-min));
+    font-size: calc(1/5*(var(--header-size-max) - var(--header-size-min)) + var(--header-size-min));
+}
+h5 {
+    font-size: calc(1/6*(var(--header-size-max) - var(--header-size-min)) + var(--header-size-min));
 }
 
 ul {

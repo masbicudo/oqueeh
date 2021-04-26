@@ -1,11 +1,11 @@
 ---
-title: Copyright notice in Jekyll
+title: Split string in Jekyll
 ---
 
 <div markdown="1" class="ans">
 {% raw %}
 ```
-&copy; {{ 'now' | date: "%Y" }} Name
+{% assign list = str_value | split: '/' %}
 ```
 {% endraw %}
 </div>

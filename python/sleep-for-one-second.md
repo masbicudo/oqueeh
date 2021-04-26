@@ -8,7 +8,7 @@ time.sleep(1)
 ```
 </div>
 
-# Prerequisite
+## Prerequisite
 
 ```python
 import time

@@ -38,6 +38,8 @@ title: Python
 
 [Reversing lists in Python](reversing-lists)
 
+[Save object to JSON in Python](save-object-to-json)
+
 [Sleep for 1 second](sleep-for-one-second)
 
 [Sorting lists in Python](sorting-lists)
