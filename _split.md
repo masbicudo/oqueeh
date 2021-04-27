@@ -368,7 +368,7 @@
     ```
     </ans>
 
-#file=postgresql/create-table-if-not-exists.md
+#file=postgresql/drop-table-if-exists.md
     ---
     title: Drop table if it exists in PostgreSQL
     ---
