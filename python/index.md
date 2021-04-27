@@ -2,6 +2,10 @@
 title: Python
 ---
 
+[Cannot read from file opened with mode "x" in Python](cannot-read-open-mode-x)
+
+[Chack if a number is even or odd in Python](check-number-is-even-or-odd)
+
 [Command line arguments in Python](command-line-arguments)
 
 [Create a text file in Python](create-text-file)
@@ -20,11 +24,17 @@ title: Python
 
 [Get type of object in Python](get-type-of-object)
 
+[Iterate dictionary key/value pairs in Python](iterate-dict-key-value-pairs)
+
 [Join list into string in Python](join-list-into-string)
 
 [Lambda functions in Python](lambda-function)
 
-['list' object has no attribute 'join'](list-object-has-no-attribute-join)
+[AttributeError: 'list' object has no attribute 'join'](list-object-has-no-attribute-join)
+
+[Pop or dequee item from tuple in Python](pop-or-dequee-item-from-tuple)
+
+[psycopg2 copy_from cannot insert field with delimiter, even if quoted](psycopg2-copy_from-cannot-insert-field-with-delimiter-even-if-quoted)
 
 [Read a file line by line in Python](read-file-line-by-line)
 
@@ -36,11 +46,27 @@ title: Python
 
 [Regex replace with reference to capture group in Python](regex-replace-capture-group)
 
+[Remove characters at end of string in Python](remove-characters-at-end-of-string)
+
+[Remove characters at start of string in Python](remove-characters-at-start-of-string)
+
+[Remove characters surrounding string in Python](remove-characters-surrounding-string)
+
+[Remove item from tuple in Python](remove-item-from-tuple)
+
+[Remove spaces at end of string in Python](remove-spaces-at-end-of-string)
+
+[Remove spaces at start of string in Python](remove-spaces-at-start-of-string)
+
+[Remove spaces surrounding string in Python](remove-spaces-surrounding-string)
+
 [Reversing lists in Python](reversing-lists)
 
 [Save object to JSON in Python](save-object-to-json)
 
 [Sleep for 1 second](sleep-for-one-second)
+
+[Slice array in Python](slice-array)
 
 [Sorting lists in Python](sorting-lists)
 
@@ -49,6 +75,8 @@ title: Python
 [String to lowercase in Python](string-to-lowercase)
 
 [Trim string in Python](trim-string)
+
+[Tuples: Immutable lists in Python](tuples-immutable-lists)
 
 [Where is OSError defined in Python](where-is-oserror-defined)
 

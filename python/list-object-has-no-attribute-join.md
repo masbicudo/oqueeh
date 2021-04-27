@@ -1,5 +1,5 @@
 ---
-title: "'list' object has no attribute 'join'"
+title: "AttributeError: 'list' object has no attribute 'join'"
 ---
 
 Correct way:
