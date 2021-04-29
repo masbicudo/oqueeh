@@ -1,10 +1,13 @@
 {
+    "batch": "Batch",
     "computing": "Computing",
     "css": "CSS",
     "hosting": "Hosting",
     "jekyll": "Jekyll",
     "markdown": "Markdown",
     "postgresql": "PostgreSQL",
+    "powershell": "PowerShell",
     "python": "Python",
-    "windows": "Windows"
+    "windows": "Windows",
+    "windows-terminal": "Windows Terminal"
 }

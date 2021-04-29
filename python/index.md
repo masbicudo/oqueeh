@@ -20,6 +20,8 @@ title: Python
 
 [Ensure path exists](ensure-path-exists)
 
+[Execute function at exit in Python](execute-function-at-exit)
+
 [First letters to upper in Python](first-letters-to-upper)
 
 [Get type of object in Python](get-type-of-object)

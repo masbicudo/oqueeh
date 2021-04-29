@@ -2,6 +2,8 @@
 title: 
 ---
 
+[Batch](batch)
+
 [Computing](computing)
 
 [CSS](css)
@@ -14,6 +16,10 @@ title:
 
 [PostgreSQL](postgresql)
 
+[PowerShell](powershell)
+
 [Python](python)
 
 [Windows](windows)
+
+[Windows Terminal](windows-terminal)
