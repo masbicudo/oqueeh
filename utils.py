@@ -1,6 +1,7 @@
 category_names = {
     "css": "CSS",
     "postgresql": "PostgreSQL",
+    "powershell": "PowerShell",
 }
 
 def get_category_name(cat):

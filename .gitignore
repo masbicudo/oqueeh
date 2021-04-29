@@ -3,3 +3,4 @@ Gemfile
 Gemfile.lock
 /__pycache__/
 *.error.md
+/_func_cache.json

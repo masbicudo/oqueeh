@@ -412,6 +412,124 @@
     ```
     </ans>
 
+#file=windows-terminal/open-new-tab.md
+    # Open new tab in Windows Terminal
+
+    <ans>
+    ```
+    wt -w 0 nt
+    ```
+    </ans>
+
+    #### Using a profile
+
+    ```
+    wt -w 0 nt -p "Prompt de comando"
+    ```
+
+    The profile name is not culture invariant, so using it in scripts could be a problem.
+
+    #### Reference
+
+    #ref=https://docs.microsoft.com/en-us/windows/terminal/command-line-arguments?tabs=windows
+
+#file=windows-terminal/execute-command-in-new-tab.md
+    # Execute command in new tab in Windows Terminal
+
+    <ans>
+    ```
+    wt -w 0 nt cmd /K echo MASBicudo
+    ```
+    </ans>
+
+    #### Using a profile
+
+    ```
+    wt -w 0 nt -p "Prompt de comando" cmd /K echo MASBicudo
+    ```
+
+    The profile name is not culture invariant, so using it in scripts could be a problem.
+
+    #### Reference
+
+    #ref=https://docs.microsoft.com/en-us/windows/terminal/command-line-arguments?tabs=windows
+
+#file=windows-terminal/execute-command-in-new-split-pane.md
+    # Execute command in new split pane in Windows Terminal
+
+    <ans>
+    ```
+    wt -w 0 sp -V cmd /K echo MASBicudo
+    ```
+    </ans>
+
+    - `-V`: vertical split pane
+    - `-H`: horizontal split pane
+
+    #### Reference
+
+    #ref=https://docs.microsoft.com/en-us/windows/terminal/command-line-arguments?tabs=windows
+
+#file=windows-terminal/open-new-split-pane.md
+    # Open new split pane in Windows Terminal
+
+    <ans>
+    ```
+    wt -w 0 sp -V
+    ```
+    </ans>
+
+    - `-V`: vertical split pane
+    - `-H`: horizontal split pane
+
+    #### Reference
+
+    #ref=https://docs.microsoft.com/en-us/windows/terminal/command-line-arguments?tabs=windows
+
+#file=powershell/clear-screen.md
+    # Clear screen in PowerShell
+
+    <ans>
+    ```
+    clear
+    ```
+    </ans>
+
+#file=powershell/execute-multiple-commands-in-single-line.md
+    # Execute multiple command in a single line in PowerShell
+
+    <ans>
+    ```
+    cmd1 ; cmd2 ; ...
+    ```
+    </ans>
+
+#file=batch/execute-multiple-commands-in-single-line.md
+    # Execute multiple command in a single line in Batch
+
+    <ans>
+    ```
+    cmd1 & cmd2 & ...
+    ```
+    </ans>
+
+#file=python/execute-function-at-exit.md
+    # Execute function at exit in Python
+
+    ```
+    atexit.register(fn)
+    ```
+
+    This can be used inside a module.
+
+    The function will be called in the end of the Python program, even if the program is terminated by pressing <key>ctrl+c</key>.
+
+    #### Prerequisite:
+
+    ```python
+    import atexit
+    ```
+
 #file=
     #ref=https://realpython.com/python-modulo-operator/#how-to-check-if-a-number-is-even-or-odd
     #ref=https://jekyllrb.com/docs/variables/

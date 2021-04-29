@@ -1,6 +1,8 @@
 import re
 import os
 
+import func_cache as fc
+
 def get_charset_from_content_type(content_type):
     match_charset = re.search(r"charset=\s*([^,]*)\s*", content_type)
     if match_charset is not None:
@@ -45,10 +47,16 @@ def get_page_html(uri):
 
     return document
 
+def get_page_html_cached(uri):
+    return fc.func_session_get("get_page_html", 1, uri, dt.timedelta(30), lambda: get_page_html(uri))
+
 def get_page_title(uri):
-    tree = get_page_html(uri)
+    tree = get_page_html_cached(uri)
     text = tree.find(".//title").text
     return text
+
+def get_page_title_cached(uri):
+    return fc.func_cache_get("get_page_title", 1, uri, dt.timedelta(30), lambda: get_page_title(uri))
 
 def get_domain_from_uri(uri):
     from urllib.parse import urlparse
@@ -59,7 +67,7 @@ def get_link(uri):
     if uri[0] == "/":
         return f"{{% link {uri[1:]} %}}"
     try:
-        title = get_page_title(uri)
+        title = get_page_title_cached(uri)
         if " | " in title or " - " in title:
             return f"[{title}]({uri})"
         domain = get_domain_from_uri(uri)
@@ -67,9 +75,14 @@ def get_link(uri):
     except Exception as ex:
         return uri
 
+def get_link_cached(uri):
+    return get_link(uri)
+    # return fc.func_cache_get("get_link", 1, uri, dt.timedelta(30), lambda: get_link(uri))
+
 import sys
 
 input_filename = "_split.md"
+
 argn = 0
 overwrite = False
 for arg in sys.argv[1:]:
@@ -87,6 +100,46 @@ for arg in sys.argv[1:]:
         argn += 1
 error_file_name = re.sub(r'(.*)\.md', r'\1.error.md', input_filename)
 
+import datetime as dt
+import distutils.util as du
+def get_value_from_string(str_value):
+    try: return int(str_value)
+    except: pass
+    try: return float(str_value)
+    except: pass
+    try: return bool(du.strtobool(str_value))
+    except: pass
+    try: return dt.datetime.strptime(str_value, '%Y-%m-%d %H:%M:%S.%f')
+    except: pass
+    try: return dt.datetime.strptime(str_value, '%Y-%m-%d %H:%M:%S')
+    except: pass
+    try: return dt.datetime.strptime(str_value, '%Y-%m-%d %H:%M')
+    except: pass
+    try: return dt.datetime.strptime(str_value, '%Y-%m-%d')
+    except: pass
+    return str_value
+
+def set_front_matter(lines, key, value):
+    if lines[0] != "---":
+        lines.insert(0, "---")
+        lines.insert(0, "---")
+    fm = {}
+    state = 0
+    ok = False
+    for lnum, line in enumerate(lines):
+        if line.strip() == "---":
+            state += 1
+        if state == 2: break
+        if state == 1:
+            m = re.match(r"^([^:]+):\s*(.*)\s*$", line)
+            if m is not None:
+                if m[1] == key:
+                    lines[lnum] = f"{key}: {value}"
+                    ok = True
+    if not ok:
+        lines.insert(1, f"{key}: {value}")
+    return lines
+
 with open(input_filename, "r") as fs:
     orig_files = {}
     files = {}
@@ -94,53 +147,60 @@ with open(input_filename, "r") as fs:
     cur_file = None
     orig_file = None
     for line in fs:
-        m = re.match(r"^(\s*)#\s*([^=]*)\s*(?:=\s*(.*)\s*)?", line)
+        m = re.match(r"^(\s*)#([^=]*)\s*(?:=\s*(.*)\s*)?", line)
         if m is not None:
             prefix = m[1]
             name = m[2]
-            value = m[3]
+            str_value = m[3]
+            value = get_value_from_string(str_value)
             data[name] = value
-            if name == "publish" and value == "false":
-                files[data["file"]] = False
             if data["file"] not in files:
-                cur_file = files[data["file"]] = []
-            if name == "ref" and data["file"] != "":
-                line = f"{prefix}- {get_link(value)}"
+                cur_file = files[data["file"]] = {"lines": [], "title": None, "publish": True}
             if name == "file":
+                continue
+            if name == "publish":
+                cur_file["publish"] = (value == 0)
+            if name == "ref" and data["file"] != "":
+                line = f"{prefix}- {get_link_cached(value)}"
+        m = re.match(r"^(\s*)(#+)\s+(.*)\s*$", line)
+        if m is not None:
+            if m[2] == "#":
+                cur_file["title"] = m[3]
                 continue
         if data["file"] != "":
             line = re.sub(r'^(\s*)<ans>\s*$', r'\1<div markdown="1" class="ans">', line)
             line = re.sub(r'^(\s*)</ans>\s*$', r'\1</div>', line)
-        cur_file.append(line.rstrip("\n"))
+        cur_file["lines"].append(line.rstrip("\n"))
 
     with open(error_file_name, "w", encoding="utf-8") as fs_out_split:
         for key, value in files.items():
-            if value == False:
-                if os.path.isfile(key):
-                    os.remove(key)
+            file_path = key
+            file_data = value
+            if file_data["publish"] == False:
+                if os.path.isfile(file_path):
+                    os.remove(file_path)
                 continue
-            if key != "":
-                os.makedirs(os.path.dirname(key), exist_ok=True)
-            lmin = min(v for v in value if v.strip() != "")
-            lmax = max(v for v in value if v.strip() != "")
+            if file_path != "":
+                os.makedirs(os.path.dirname(file_path), exist_ok=True)
+            lmin = min(v for v in file_data["lines"] if v.strip() != "")
+            lmax = max(v for v in file_data["lines"] if v.strip() != "")
             it = 0
             for a, b in zip(lmin, lmax):
                 if a != b or a not in " \t":
                     break
                 it += 1
-            content_lines = [v[it:] if v.strip() != "" else "" for v in value]
-            if content_lines[0] == "---":
-                content_lines.insert(1, "generated: true")
-            else:
-                content_lines.insert(0, "---\ngenerated: true\n---")
+            content_lines = [v[it:] if v.strip() != "" else "" for v in file_data["lines"]]
+            set_front_matter(content_lines, "generated", "true")
+            if file_data["title"] is not None:
+                set_front_matter(content_lines, "title", file_data["title"])
             content = "\n".join(content_lines)
-            if content.strip() != "" and key != "":
+            if content.strip() != "" and file_path != "":
                 try:
-                    with open(key, "w" if overwrite else "x", encoding="utf-8") as fs_out:
+                    with open(file_path, "w" if overwrite else "x", encoding="utf-8") as fs_out:
                         fs_out.write(content)
                 except:
-                    fs_out_split.write(f"#error=file exists: {key}\n")
+                    fs_out_split.write(f"#error=file exists: {file_path}\n")
             else:
-                content = "\n".join(value)
-                fs_out_split.write(f"#file={key}\n")
+                content = "\n".join(file_data["lines"])
+                fs_out_split.write(f"#file={file_path}\n")
                 fs_out_split.write(f"{content}\n")
