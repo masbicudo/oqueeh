@@ -68,6 +68,7 @@ def get_link(uri):
         return f"{{% link {uri[1:]} %}}"
     try:
         title = get_page_title_cached(uri)
+        title = re.sub(r"[|\\]", r"\\\0", title)
         if " | " in title or " - " in title:
             return f"[{title}]({uri})"
         domain = get_domain_from_uri(uri)
