@@ -141,36 +141,67 @@ def set_front_matter(lines, key, value):
         lines.insert(1, f"{key}: {value}")
     return lines
 
+def format_error(source, lnum, message, value):
+    text = f"{source}:{lnum + 1} - Error: {message}"
+    if value:
+        text += f"\n  {value}"
+    return text
+
+_pattern_ans_start_tag = re.compile(r'^(\s*)<ans(?:((?:(?!class).)*?)\s*(\s)class=(["\'])((?:(?!\4).)+)\4)?([^>]*?)>\s*$')
+replace_ans_start_tag = lambda line: _pattern_ans_start_tag.sub(r'\1<div markdown="1"\2 class="ans\3\5"\6>', line)
+_pattern_ans_close_tag = re.compile(r'^(\s*)</ans>\s*$')
+replace_and_close_tag = lambda line: _pattern_ans_close_tag.sub(r'\1</div>', line)
+allowed_exts = [".md"]
+
 with open(input_filename, "r") as fs:
     orig_files = {}
     files = {}
     data = {}
     cur_file = None
     orig_file = None
-    for line in fs:
-        m = re.match(r"^(\s*)#([^=]*)\s*(?:=\s*(.*)\s*)?", line)
+    for lnum, line in enumerate(fs):
+        m = re.match(r"^(\s*)#(\b[^=]*)\s*(?:=\s*(.*)\s*)?", line)
         if m is not None:
             prefix = m[1]
             name = m[2]
             str_value = m[3]
             value = get_value_from_string(str_value)
             data[name] = value
-            if data["file"] not in files:
-                cur_file = files[data["file"]] = {"lines": [], "title": None, "publish": True}
             if name == "file":
+                cur_file = {"lines": [], "title": None, "publish": True, "options": {}}
+                if value == "":
+                    print(format_error(input_filename, lnum, "empty file name", value))
+                    continue
+                m_fname = re.match(r"^(.*?)(\.[^\.]*)$", value)
+                if m_fname is None:
+                    print(format_error(input_filename, lnum, "file without extension", value))
+                    continue
+                if m_fname[2] not in allowed_exts:
+                    print(format_error(input_filename, lnum, f"allowed extensions are {' '.join(allowed_exts)}", value))
+                    continue
+                if value in files:
+                    print(format_error(input_filename, lnum, "duplicate file path found", value))
+                    continue
+                files[value] = cur_file
                 continue
             if name == "publish":
-                cur_file["publish"] = (value == 0)
-            if name == "ref" and data["file"] != "":
+                cur_file["publish"] = (value == True)
+                continue
+            if name == "ref":
                 line = f"{prefix}- {get_link_cached(value)}"
+            else:
+                cur_file["options"][name] = value
+                continue
         m = re.match(r"^(\s*)(#+)\s+(.*)\s*$", line)
         if m is not None:
             if m[2] == "#":
-                cur_file["title"] = m[3]
+                if cur_file["title"] is None:
+                    cur_file["title"] = m[3]
+                else:
+                    print(format_error(input_filename, lnum, "multiple titles found in file", None))
                 continue
-        if data["file"] != "":
-            line = re.sub(r'^(\s*)<ans>\s*$', r'\1<div markdown="1" class="ans">', line)
-            line = re.sub(r'^(\s*)</ans>\s*$', r'\1</div>', line)
+        line = replace_ans_start_tag(line)
+        line = replace_and_close_tag(line)
         cur_file["lines"].append(line.rstrip("\n"))
 
     with open(error_file_name, "w", encoding="utf-8") as fs_out_split:
@@ -197,7 +228,10 @@ with open(input_filename, "r") as fs:
             content = "\n".join(content_lines)
             if content.strip() != "" and file_path != "":
                 try:
-                    with open(file_path, "w" if overwrite else "x", encoding="utf-8") as fs_out:
+                    ow = overwrite
+                    if "overwrite" in file_data["options"]:
+                        ow = True
+                    with open(file_path, "w" if ow else "x", encoding="utf-8") as fs_out:
                         fs_out.write(content)
                 except:
                     fs_out_split.write(f"#error=file exists: {file_path}\n")
