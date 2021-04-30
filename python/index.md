@@ -2,6 +2,8 @@
 title: Python
 ---
 
+[Better performance with compiled regex in Python](better-performance-with-compiled-regex)
+
 [Cannot read from file opened with mode "x" in Python](cannot-read-open-mode-x)
 
 [Chack if a number is even or odd in Python](check-number-is-even-or-odd)
@@ -23,6 +25,8 @@ title: Python
 [Execute function at exit in Python](execute-function-at-exit)
 
 [First letters to upper in Python](first-letters-to-upper)
+
+[Get all capture groups from regex match in Python](get-all-capture-groups-from-regex-match)
 
 [Get type of object in Python](get-type-of-object)
 

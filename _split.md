@@ -530,6 +530,99 @@
     import atexit
     ```
 
+#file=css/condition-styles-to-screen-orientation.md
+    # Condition CSS styles to screen orientation
+
+    <ans>
+    ```css
+    @media (orientation: portrait) {
+    }
+    ```
+    </ans>
+
+    #### `orientation` can be:
+
+    - `portrait`: height greater than width
+    - `landscape`: width greater then height
+
+#file=python/better-performance-with-compiled-regex.md
+    # Better performance with compiled regex in Python
+    #overwrite=0
+    <ans>
+    ```python
+    pattern = re.compile(r"brown (\w+)")
+    ```
+    </ans>
+
+    Available `pattern` functions: `match`, `search`, `fullmatch`, `split`, `sub`, `findall`, `finditer` and `subn`.
+
+    Each function has one less parameter for the pattern string.
+
+    ```python
+    pattern.sub(r"\1", "The brown fox jumps!")
+    ```
+
+
+    #### Reference
+
+    #ref=https://docs.python.org/3/library/re.html#regular-expression-objects
+
+#file=python/get-all-capture-groups-from-regex-match.md
+    # Get all capture groups from regex match in Python
+    #overwrite=0
+    <ans>
+    ```python
+    match.groups()
+    ```
+    </ans>
+
+    #### Example
+    
+    ```python
+    match = re.match(r"(\d+)(\w+)", "123abc")
+    print(match.groups())
+    ```
+
+    Output: `('123', 'abc')`
+
+    #### Prerequisite
+
+    ```python
+    import re
+    ```
+
+    #### Reference
+
+    #ref=https://docs.python.org/3/library/re.html#re.Match.groups
+
+#file=html/anchor-with-reference-to-page-element.md
+    # Anchor with reference to page element in HTML
+    #overwrite=1
+
+    <ans>
+    ```html
+    <a href="#element_id">Link to element</a>
+    <div id="element_id">
+    ```
+    </ans>
+
+    Also works with more URI params filled, e.g. query string, path, domain, and so on.
+
+#file=html/set-name-of-file-to-be-downloaded-via-link.md
+    # Set the name of a file to be downloaded via a link in HTML
+    #overwrite=1
+
+    <ans>
+    ```html
+    <a download="File Name.pdf"
+       href="file-name?format=pdf">
+            Download File Name PDF
+    </a>
+    ```
+    </ans>
+
+    `download` attribute can be used to suggest a file name.
+
 #file=
     #ref=https://realpython.com/python-modulo-operator/#how-to-check-if-a-number-is-even-or-odd
     #ref=https://jekyllrb.com/docs/variables/

@@ -10,6 +10,8 @@ title:
 
 [Hosting](hosting)
 
+[HTML](html)
+
 [Jekyll](jekyll)
 
 [Markdown](markdown)

@@ -2,8 +2,8 @@
 title: CSS
 ---
 
-[Custom properties in CSS](custom-properties)
+[Condition CSS styles to screen orientation](condition-styles-to-screen-orientation)
 
-[publish=false](font-size-relative-to-resolution)
+[Custom properties in CSS](custom-properties)
 
 [Hide scrollbar when not needed](hide-scrollbar-when-not-needed)
