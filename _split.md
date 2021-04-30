@@ -431,7 +431,7 @@
 
     #### Reference
 
-    #ref=https://docs.microsoft.com/en-us/windows/terminal/command-line-arguments?tabs=windows
+    #ref=https://docs.microsoft.com/en-us/windows/terminal/command-line-arguments?tabs=windows#options-and-commands
 
 #file=windows-terminal/execute-command-in-new-tab.md
     # Execute command in new tab in Windows Terminal
@@ -452,7 +452,7 @@
 
     #### Reference
 
-    #ref=https://docs.microsoft.com/en-us/windows/terminal/command-line-arguments?tabs=windows
+    #ref=https://docs.microsoft.com/en-us/windows/terminal/command-line-arguments?tabs=windows#options-and-commands
 
 #file=windows-terminal/execute-command-in-new-split-pane.md
     # Execute command in new split pane in Windows Terminal
@@ -468,7 +468,7 @@
 
     #### Reference
 
-    #ref=https://docs.microsoft.com/en-us/windows/terminal/command-line-arguments?tabs=windows
+    #ref=https://docs.microsoft.com/en-us/windows/terminal/command-line-arguments?tabs=windows#options-and-commands
 
 #file=windows-terminal/open-new-split-pane.md
     # Open new split pane in Windows Terminal
@@ -484,7 +484,7 @@
 
     #### Reference
 
-    #ref=https://docs.microsoft.com/en-us/windows/terminal/command-line-arguments?tabs=windows
+    #ref=https://docs.microsoft.com/en-us/windows/terminal/command-line-arguments?tabs=windows#options-and-commands
 
 #file=powershell/clear-screen.md
     # Clear screen in PowerShell
