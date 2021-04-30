@@ -1,8 +1,4 @@
-category_names = {
-    "css": "CSS",
-    "postgresql": "PostgreSQL",
-    "powershell": "PowerShell",
-}
+from data import category_names
 
 def get_category_name(cat):
     import re

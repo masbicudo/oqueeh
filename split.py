@@ -27,21 +27,25 @@ def get_page_html(uri):
             html = bstr
     document = document_fromstring(html)
 
+    html_ok = False
+
     meta_content_type = document.find('./head/meta[@http-equiv="Content-type"]')
     if meta_content_type is not None:
         meta_content_type_charset = get_charset_from_content_type(meta_content_type.text)
         try:
             html = bstr.decode(meta_content_type_charset)
+            html_ok = True
         except:
             pass
 
-    meta_charset = document.find('./head/meta[@charset]')
-    if meta_charset is not None:
-        meta_charset_attrib = meta_charset.attrib["charset"]
-        try:
-            html = bstr.decode(meta_charset_attrib)
-        except:
-            pass
+    if not html_ok:
+        meta_charset = document.find('./head/meta[@charset]')
+        if meta_charset is not None:
+            meta_charset_attrib = meta_charset.attrib["charset"]
+            try:
+                html = bstr.decode(meta_charset_attrib)
+            except:
+                pass
 
     document = document_fromstring(html)
 
@@ -63,15 +67,20 @@ def get_domain_from_uri(uri):
     result = urlparse(uri).netloc
     return result
 
+_pattern_domain = re.compile(r"(?:((?:[^\.]+\.)*[^\.]+)\.)?([^\.]+)((\.(?:com|net|org|gov|edu|info|biz))(\.[^\.]+)?)")
+
 def get_link(uri):
     if uri[0] == "/":
         return f"{{% link {uri[1:]} %}}"
     try:
         title = get_page_title_cached(uri)
         title = re.sub(r"([|\\])", r"\\\1", title)
-        if " | " in title or " - " in title:
-            return f"[{title}]({uri})"
+        title_lower = title.lower()
         domain = get_domain_from_uri(uri)
+        m_domain = _pattern_domain.match(domain)
+        if m_domain is not None:
+            if m_domain[2] in title_lower:
+                return f"[{title}]({uri})"
         return f"[{title} - {domain}]({uri})"
     except Exception as ex:
         return uri
@@ -149,8 +158,10 @@ def format_error(source, lnum, message, value):
 
 _pattern_ans_start_tag = re.compile(r'^(\s*)<ans(?:((?:(?!class).)*?)\s*(\s)class=(["\'])((?:(?!\4).)+)\4)?([^>]*?)>\s*$')
 replace_ans_start_tag = lambda line: _pattern_ans_start_tag.sub(r'\1<div markdown="1"\2 class="ans\3\5"\6>', line)
+
 _pattern_ans_close_tag = re.compile(r'^(\s*)</ans>\s*$')
 replace_and_close_tag = lambda line: _pattern_ans_close_tag.sub(r'\1</div>', line)
+
 allowed_exts = [".md"]
 
 with open(input_filename, "r") as fs:
@@ -160,6 +171,7 @@ with open(input_filename, "r") as fs:
     cur_file = None
     orig_file = None
     for lnum, line in enumerate(fs):
+        line = line.rstrip()
         m = re.match(r"^(\s*)#(\b[^=]*)\s*(?:=\s*(.*)\s*)?", line)
         if m is not None:
             prefix = m[1]
@@ -200,9 +212,10 @@ with open(input_filename, "r") as fs:
                 else:
                     print(format_error(input_filename, lnum, "multiple titles found in file", None))
                 continue
-        line = replace_ans_start_tag(line)
-        line = replace_and_close_tag(line)
-        cur_file["lines"].append(line.rstrip("\n"))
+        if "ans" in line:
+            line = replace_ans_start_tag(line)
+            line = replace_and_close_tag(line)
+        cur_file["lines"].append(line)
 
     with open(error_file_name, "w", encoding="utf-8") as fs_out_split:
         for key, value in files.items():
@@ -214,14 +227,14 @@ with open(input_filename, "r") as fs:
                 continue
             if file_path != "":
                 os.makedirs(os.path.dirname(file_path), exist_ok=True)
-            lmin = min(v for v in file_data["lines"] if v.strip() != "")
-            lmax = max(v for v in file_data["lines"] if v.strip() != "")
+            lmin = min(v for v in file_data["lines"] if v != "")
+            lmax = max(v for v in file_data["lines"] if v != "")
             it = 0
             for a, b in zip(lmin, lmax):
                 if a != b or a not in " \t":
                     break
                 it += 1
-            content_lines = [v[it:] if v.strip() != "" else "" for v in file_data["lines"]]
+            content_lines = [v[it:] if v != "" else "" for v in file_data["lines"]]
             set_front_matter(content_lines, "generated", "true")
             if file_data["title"] is not None:
                 set_front_matter(content_lines, "title", file_data["title"])
@@ -231,6 +244,8 @@ with open(input_filename, "r") as fs:
                     ow = overwrite
                     if "overwrite" in file_data["options"]:
                         ow = True
+                        if file_data["options"]["overwrite"] == False:
+                            ow = False
                     with open(file_path, "w" if ow else "x", encoding="utf-8") as fs_out:
                         fs_out.write(content)
                 except:
