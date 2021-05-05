@@ -5,10 +5,28 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Node.js: Arquivo Atual",
+            "type": "node",
+            "request": "launch",
+            "program": "${file}",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
             "name": "Python: Arquivo Atual",
             "type": "python",
             "request": "launch",
             "program": "${file}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: split.py (test)",
+            "type": "python",
+            "request": "launch",
+            "program": "split.py",
+            "args": ["_split_test.md", "--test"],
             "console": "integratedTerminal"
         }
     ]
