@@ -623,6 +623,784 @@
 
     `download` attribute can be used to suggest a file name.
 
+#file=javascript/create-data-uri-from-web-content.md
+    # Create data URI from web content in JavaScript
+
+    <ans>
+    ```js
+    get_data_uri_from_web_content = (uri) => new Promise(
+        async (resolve, reject) => {
+            const blob = await (await fetch(uri)).blob()
+            const reader = new FileReader()
+            reader.onload  = ()      => resolve(reader.result)
+            reader.onerror = (error) => reject(error)
+            reader.readAsDataURL(blob)
+        })
+    ```
+    </ans>
+
+    #### Usage
+
+    ```js
+    get_data_uri_from_web_content("https://api.github.com/repos/masbicudo/oqueeh")
+	    .then(data_uri => document.write(data_uri))
+    ```
+
+    #ref=html/data-uri-generator.md
+
+#file=html/encode-file-data-inside-link-href-attribute.md
+    # Encode file data inside link href attribute
+
+    <ans>
+    ```html
+    <a href="data:text/plain;charset=utf-8;base64,TUFTQmljdWRv"
+        download="masbicudo.txt">Download</a>
+    ```
+    </ans>
+
+    #### Example
+
+    <a href="data:text/plain;charset=utf-8;base64,TUFTQmljdWRv"
+        download="masbicudo.txt">Download</a>
+
+    #ref=html/data-uri-generator.md
+
+#file=html/set-selected-item-in-html-select-element.md
+    # Set selected item in HTML select element
+
+    ```html
+    <option selected>Item text</option>
+    ```
+
+#file=css/ordering-of-values-on-margin-and-padding.md
+    # Ordering of values on CSS margin and padding
+
+    #### 4 values
+
+    Clockwise starting from top.
+
+    ```css
+    margin: top right bottom left
+    ```
+
+    #### 3 values
+
+    From top to bottom.
+
+    ```css
+    margin: top right+left bottom
+    ```
+
+    #### 2 values
+
+    Vertical then horizontal.
+
+    ```css
+    margin: top+bottom right+left
+    ```
+
+    #### 1 value
+
+    All.
+
+    ```css
+    margin: top+bottom+right+left
+    ```
+
+#file=javascript/load-file-as-data-uri.md
+    # Load file as data-URI
+
+    <ans>
+    #### JavaScript
+
+    ```javascript
+    function openFile(event, target_element) {
+        const reader = new FileReader()
+        reader.onload = () => target_element.innerText = reader.result
+        reader.readAsDataURL(event.target.files[0])
+    }
+    window.addEventListener('load', e => 
+    ```
+
+    #### HTML
+
+    ```html
+    <div id='output'></div>
+    ```
+    </ans>
+
+#file=javascript/generator-functions.md
+    # Generator functions in JavaScript
+
+    <ans>
+    ```js
+    function* gen() {
+        yield 1
+        yield 2
+    }
+    ```
+    </ans>
+
+#file=javascript/async-and-await-with-map.md
+    # Using asynchronous functions with Array map in JavaScript
+
+    <ans>
+    ```js
+    fna = async (data) => Promise.resolve(data)
+    promise_list = [1,2,3,4].map(async (x) => (await fna(x)) + 10)
+    Promise.all(promise_list).then(all_data => console.log(all_data))
+    ```
+    </ans>
+
+    `Promise.all` returns a promise that resolves with the values of all listed promises.
+
+#file=javascript/infinite-generator-functions.md
+    # Generator functions in JavaScript
+
+    <ans>
+    ```js
+    function* gen() {
+        var x = 0
+        while (true) yield x++
+    }
+    ```
+    </ans>
+
+#file=javascript/window-load-dom-content-loaded-ready-state-change-events.md
+    #include=javascript/page-load-events-in-web-browser.md
+
+#file=javascript/page-load-events-in-web-browser.md
+    # Page load events in web browser JavaScript
+
+    <ans>
+    1. document.readystate = interactive
+    2. document.DOMContentLoaded
+    3. document.readystate = complete
+    4. window.load
+    </ans>
+
+    #### Adding the event listeners
+
+    ```js
+    window.addEventListener('load',
+        e => console.log('window.load'))
+    document.addEventListener('readystatechange',
+        e => console.log(`document.readystate = ${document.readyState}`))
+    document.addEventListener('DOMContentLoaded',
+        e => console.log('document.DOMContentLoaded'))
+    ```
+
+    #### Reference
+
+    #ref=https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event
+
+#file=javascript/declaring-variables-with-var-let-and-const.md
+    # Declaring variables with var, let and const in JavaScript
+
+    <ans>
+    - `var`: function scope variable
+    - `let`: block scope variable
+    - `const`: block scope constants
+    </ans>
+
+#file=javascript/difference-between-var-let-and-const.md
+    # Difference between var, let and const in JavaScript
+    #include=javascript/declaring-variables-with-var-let-and-const.md
+
+#file=css/split-long-words-to-next-line.md
+    # Split long words to next line using CSS
+
+    <ans>
+    ```css
+    div {
+        word-wrap: break-word;
+    }
+    ```
+    </ans>
+
+#file=javascript/wait-for-many-promises.md
+    # Wait for many promises in JavaScript
+
+    <ans>
+    ```js
+    await Promise.all(promise_list)
+    ```
+    </ans>
+
+#file=html/data-uri-generator.md
+    # Data URI generator
+    #overwrite=1
+
+    <style>
+    input, textarea, select {
+        width: 100%;
+        display: none;
+    }
+    .visible {
+        display: block;
+    }
+    .output {
+        overflow-wrap: break-word;
+    }
+    </style>
+    #### Input
+
+    <select id="sel" class="visible">
+        <option value="file" selected>File</option>
+        <option value="text">Text</option>
+        <option value="uri">URI</option>
+    </select>
+
+    <input    id="file" type="file" class="visible" selected>
+    <textarea id="text"></textarea>
+    <input    id="uri" type="text">
+    <div class="highlight">
+    <code id='output' class="output"></code>
+    </div>
+    <script>
+        const fileToDataUri = (file_or_blob) => new Promise((resolve, reject) => {
+            const reader = new FileReader()
+            reader.onload  = ()      => resolve(reader.result)
+            reader.onerror = (error) => reject(error)
+            reader.readAsDataURL(file_or_blob)
+        })
+        function itemsToTargetElement(items, target_element) {
+            target_element.innerHTML = ""
+            for (item of items) {
+                div = document.createElement("div")
+                div.innerHTML = '<span class="nt">&lt;a</span>'+
+                                ' <span class="na">download=</span>'+
+                                '<span class="s">"'+item.name+'"</span>'+
+                                ' <span class="na">href=</span>'+
+                                '<span class="s">"'+item.text+'"</span>'+
+                                '<span class="nt">&gt;</span>'+
+                                item.name+
+                                '<span class="nt">&lt;/a&gt;</span>'
+                target_element.appendChild(div)
+            }
+        }
+        async function openFileAndConvertToDataUri(files, target_element) {
+            items_promise = [...files].map(async file => ({"name": file.name, "text": await fileToDataUri(f)}))
+            await Promise.all(items_promise).then(items => itemsToTargetElement(items, target_element))
+        }
+        function getTextAndConvertToDataUri(event, target_element) {
+            items = [{"name": "foo.txt", "text": "data:text/plain;base64," + btoa(event.target.text)}]
+            itemsToTargetElement(items, target_element)
+        }
+        async function downloadUriAndConvertToDataUri(uri, target_element) {
+            const response = await fetch(uri)
+            const content_disposition = response.headers.get("Content-Disposition")
+            const name = /filename=(.*)$/g.exec(content_disposition)[1]
+            const blob = await response.blob()
+            items = [{"name": name, "text": await fileToDataUri(blob)}]
+            itemsToTargetElement(items, target_element)
+        }
+        sel.addEventListener("change", e => {
+            for (opt of sel.options)
+                window[opt.value].classList.remove("visible")
+            window[e.target.value].classList.add("visible")
+        })
+        file.addEventListener("change", async (e) => await openFileAndConvertToDataUri(e.target.files, output))
+        text.addEventListener("keydown", (e) => getTextAndConvertToDataUri(e.target.innerText, output))
+        var timer = null
+        uri.addEventListener("keydown", (e) => {
+            clearTimeout(timer)
+            timer = setTimeout(async () => await downloadUriAndConvertToDataUri(e.target.value, output), 1)
+        })
+    </script>
+
+#file=github/api-to-get-info-about-a-repository.md
+    #overwrite=1
+    # API to get information about a repository from GitHub
+
+    <ans>
+    https://api.github.com/repos/<owner>/<repo>
+
+    Example: https://api.github.com/repos/masbicudo/oqueeh
+    </ans>
+
+#file=javascript/creating-iterable-class.md
+    #overwrite=1
+    # Creating an iterable class in JavaScript
+
+    <ans>
+    ```js
+    class Class {
+        *[Symbol.iterator]() {
+            yield 1
+            yield 2
+        }
+    }
+    ```
+    </ans>
+
+    Iterables can be used in `for`..`of` statements, and with spread operator:
+
+    ```js
+    for (let x of iterable) console.log(x)
+    console.log([...iterable])
+    ```
+
+    #ref=javascript/iterables-usage.md
+
+#file=javascript/creating-iterable-object.md
+    #overwrite=1
+    # Creating an iterable object in JavaScript
+
+    <ans>
+    ```js
+    obj = {
+        [Symbol.iterator]: function* () {
+            yield 1
+            yield 2
+        }
+    }
+    ```
+    </ans>
+
+    Iterables can be used in `for`..`of` statements, and with spread operator:
+
+    ```js
+    for (let x of iterable) console.log(x)
+    console.log([...iterable])
+    ```
+
+    #ref=javascript/iterables-usage.md
+
+#file=javascript/making-object-iterable.md
+    #overwrite=1
+    # Making an object iterable in JavaScript
+
+    ```js
+    obj = {}
+    obj[Symbol.iterator] = function* () {
+        yield 1
+        yield 2
+    }
+    ```
+
+    Iterables can be used in `for`..`of` statements, and with spread operator:
+
+    ```js
+    for (let x of iterable) console.log(x)
+    console.log([...iterable])
+    ```
+
+    #ref=javascript/iterables-usage.md
+
+#file=javascript/iterables-usage.md
+    #overwrite=1
+    # Iterables usage in JavaScript
+
+    <ans>
+    #### `for`..`of` statement
+
+    ```js
+    for (let x of iterable) console.log(x)
+    ```
+
+    #### Spread operator `...`
+
+    ```js
+    console.log([...iterable])
+    ```
+    </ans>
+
+#file=javascript/convert-iterable-object-to-array.md
+    #overwrite=1
+    # Convert iterable object to Array in JavaScript
+
+    <ans>
+    ```js
+    [...iterable_object]
+    ```
+    </ans>
+
+    #### Alternative
+
+    <ans>
+    ```js
+    Array.from(iterable_object)
+    ```
+    </ans>
+
+#file=javascript/rest-parameters.md
+    #overwrite=1
+    # Rest parameters in JavaScript
+
+    ```js
+    function fn(a, b, ...others) {
+        console.log(a, b, others)
+    }
+    ```
+
+    Rest parameter is denoted by three dots before last parameter.
+    It receives all extra parameters passed.
+
+    #### Example:
+
+    ```js
+    fn(1,2,5,8)
+    ```
+
+    Output: `1 2 [ 5, 8 ]`
+
+#file=javascript/create-function-with-variable-number-of-parameters.md
+    #overwrite=1
+    #publish=false
+    # Create function with variable number of parameters in JavaScript
+
+    #include=javascript/rest-parameters.md
+
+#file=javascript/convert-arguments-object-to-array.md
+    #overwrite=1
+    # Convert arguments object to Array in JavaScript
+
+    <ans>
+    ```js
+    function fn(...args) {
+    }
+    ```
+    </ans>
+
+    Rest parameters are represented by the three dots before the last parameter.
+    It receives all extra arguments as an Array.
+
+    #### Alternative: spread into Array
+
+    ```js
+    [...arguments]
+    ```
+
+    #### Alternative: Array.from
+    
+    ```js
+    Array.from(arguments)
+    ```
+
+    #### ES5
+
+    ```js
+    Array.prototype.slice.call(arguments)
+    ```
+
+    #ref=javascript/convert-iterable-object-to-array.md
+
+#file=javascript/what-is-vanilla-javascript.md
+    #overwrite=1
+    # What is vanilla JavaScript
+
+    <ans>
+    To rely on standard JavaScript instead of using external libraries.
+    </ans>
+
+#file=javascript/what-is-ecmascript.md
+    #overwrite=1
+    # What is ECMAScript?
+
+    <ans>
+    ECMAScript is a standard defining a common language specification.
+
+    The purpose is to provide wide compatibility between browsers and web applications.
+    </ans>
+
+    There is one new edition of the ECMAScript per year.
+
+    #ref=javascript/specification-dialects-and-engine-implementations.md
+
+#file=javascript/specification-dialects-and-engine-implementations.md
+    #overwrite=1
+    # Dialects and engine implementations of JavaScript?
+
+    <ans>
+    #### Specification
+
+    - ECMAScript (ECMA-262)
+
+    #### Dialects
+
+    - JavaScript
+    - JScript
+    - ActionScript
+
+    #### Engines
+
+    - V8
+    - SpiderMonkey
+    - Chakra
+    </ans>
+
+#file=javascript/what-is-javascript.md
+    #overwrite=1
+    # What is JavaScript?
+
+    <ans>
+    JavaScript is the main dialect of ECMAScript.
+    It is used in many modern browsers, backend servers and also in no-sql document databases.
+    </ans>
+
+    #ref=javascript/specification-dialects-and-engine-implementations.md
+
+#file=javascript/what-is-jscript.md
+    #overwrite=1
+    # What is JScript?
+
+    <ans>
+    JScript is the Microsoft's dialect of ECMAScript.
+    It is used in Internet Explorer, Edge and Windows Script (WScript).
+    </ans>
+
+    #ref=javascript/specification-dialects-and-engine-implementations.md
+
+#file=javascript/what-is-chakra.md
+    #overwrite=1
+    # What is Chakra?
+
+    <ans>
+    Chakra is the Microsoft's engine implementation of ECMAScript.
+    It is used in Internet Explorer, Edge and Windows Script (WScript).
+    </ans>
+
+    #ref=javascript/specification-dialects-and-engine-implementations.md
+
+#file=javascript/what-is-spidermonkey.md
+    #overwrite=1
+    # What is SpiderMonkey?
+
+    <ans>
+    SpiderMonkey is the engine implementation of ECMAScript by Mozilla.
+    It is used in Firefox browser and other Mozilla projects.
+    Also used in no-sql, i.e. document databases, like MongoDB.
+    </ans>
+
+    #ref=javascript/specification-dialects-and-engine-implementations.md
+
+#file=javascript/what-is-actionscript.md
+    #overwrite=1
+    # What is ActionScript?
+
+    <ans>
+    ActionScript is the Adobe's dialect of ECMAScript, used in Adobe Flash.
+    </ans>
+
+    #ref=javascript/specification-dialects-and-engine-implementations.md
+
+#file=javascript/what-is-v8.md
+    #overwrite=1
+    # What is V8?
+
+    <ans>
+    V8 is an ECMAScript engine implementation by Google (Alphabet).
+
+    It is used in Google Chrome browser and also in Node.js.
+    </ans>
+
+    #ref=javascript/specification-dialects-and-engine-implementations.md
+
+#file=javascript/firefox-browser-name.md
+    #overwrite=1
+    # Firefox or FireFox?
+
+    <ans>
+    Firefox, with lower f in fox.
+    </ans>
+
+#file=javascript/javascript-language-name.md
+    #overwrite=1
+    # JavaScript or Javascript?
+
+    <ans>
+    JavaScript, with upper S is the correct name.
+    </ans>
+
+    #### References
+
+    #ref=https://en.wikipedia.org/wiki/JavaScript
+    #ref=https://developer.mozilla.org/en-US/docs/Web/JavaScript
+    #ref=javascript/specification-dialects-and-engine-implementations.md
+
+#file=javascript/delay-code-execution.md
+    #overwrite=1
+
+    <ans>
+    ```js
+    setTimeout(() => el.innerText = "Update text after 5 seconds", 5000)
+    ```
+    </ans>
+
+#file=javascript/use-async-function-in-synchronous-context.md
+    #overwrite=1
+
+    <ans>
+    ```js
+    promise.then(data => proc(data))
+    ```
+    </ans>
+
+    #### Alternative
+
+    ```js
+    (async () => proc(await promise))()
+    ```
+
+#file=javascript/get-name-of-fetched-file.md
+    #overwrite=1
+
+    <ans>
+    ```js
+    response.headers.get("content-disposition")
+    ```
+    </ans>
+
+    `response` is returned by calling `fetch` asynchronously. Example:
+
+    ```js
+    const response = await fetch(uri)
+    ```
+
+#file=javascript/cancel-delayed-code-execution.md
+    #overwrite=1
+
+    <ans>
+    ```js
+    clearTimeout(timer)
+    ```
+    </ans>
+
+    `timer` object is returned by `setTimeout`. Example:
+
+    ```js
+    timer = setTimeout(() => el.innerText = "Update text after 5 seconds", 5000)
+    ```
+
+#file=javascript/fire-change-event-after-user-stops-typing.md
+    #overwrite=1
+
+    <ans>
+    ```js
+    text_input.addEventListener("keydown", e => {
+        clearTimeout(timer)
+        timer = setTimeout(() => output.innerText = e.target.value, 1000)
+    })
+    ```
+    </ans>
+
+    HTML:
+
+    ```html
+    <input type="text" id="text_input" />
+    <div id="output"></div>
+    ```
+
+#file=windows-terminal/close-pane-key-binding.md
+    # Close pane key binding in Windows Terminal
+    #overwrite=1
+
+    <ans>
+    <key>Ctrl</key>+<key>Shift</key>+<key>W</key>
+    </ans>
+
+    Closing the last pane will close the tab.
+    Closing the last tab will close the window.
+
+#file=windows-terminal/new-pane-key-binding.md
+    # New pane key binding in Windows Terminal
+    #overwrite=1
+
+    <ans>
+    - New horizontal pane: <key>Alt</key>+<key>Shift</key>-<key>-</key>
+    - New vertical pane:   <key>Alt</key>+<key>Shift</key>-<key>=</key>
+    </ans>
+
+#file=javascript/get-select-element-option-values.md
+    # Get select element option values in JavaScript
+    #overwrite=1
+
+    <ans>
+    ```js
+    [...sel.options].map(opt => opt.value)
+    ```
+    </ans>
+
+#file=javascript/toggle-html-element-class.md
+    # Toggle HTML element class in JavaScript
+    #overwrite=1
+
+    <ans>
+    ```js
+    el.classList.toggle("class_name")
+    ```
+    </ans>
+
+#file=javascript/prevent-default-dom-event-action.md
+    # Prevent default DOM event action in JavaScript
+    #overwrite=1
+
+    <ans>
+    ```js
+    event.preventDefault()
+    ```
+    </ans>
+
+#file=javascript/get-select-element-options.md
+    # Get select element options in JavaScript
+    #overwrite=1
+
+    <ans>
+    ```js
+    s.options
+    ```
+    </ans>
+
+    #### References
+
+    #ref=https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement
+    #ref=https://developer.mozilla.org/en-US/docs/Web/API/HTMLOptionElement
+
+#file=windows-terminal/default-key-bindings.md
+    # Default key bindings in Windows Terminal
+    #overwrite=1
+
+    <ans>
+    - Close pane/tab/window: <key>Ctrl</key>+<key>Shift</key>+<key>W</key>
+    - New horizontal pane:   <key>Alt</key>+<key>Shift</key>-<key>-</key>
+    - New vertical pane:     <key>Alt</key>+<key>Shift</key>-<key>=</key>
+    - Switch pane:           <key>Alt</key>+*Arrow keys*
+    - Resize pane:           <key>Alt</key>+<key>Shift</key>+*Arrow keys*
+    </ans>
+
+    *Arrow keys*: <key>Down</key> \| <key>Up</key> \| <key>Left</key> \| <key>Right</key>
+
+#file=python/encode-uri-query-string-from-dictionary.md
+    # Encode URI query string from dictionary in Python
+    #overwrite=0
+
+    <ans>
+    ```python
+    urllib.parse.urlencode({"q": "encode uri", "lang": "python"})
+    ```
+    </ans>
+
+    Output: `"q=encode+uri&lang=python"`
+
+    #### Prerequisite
+
+    ```python
+    import urllib.parse
+    ```
+
+#file=git/set-user-name-and-email.md
+    # Set user name and email in Git
+    #overwrite=1
+
+    <ans>
+    ```bash
+    git config --global user.name "Miguel Angelo"
+    git config --global user.email "masbicudo@gmail.com"
+    ```
+
+#file=
+
 #file=
     #ref=https://realpython.com/python-modulo-operator/#how-to-check-if-a-number-is-even-or-odd
     #ref=https://jekyllrb.com/docs/variables/
