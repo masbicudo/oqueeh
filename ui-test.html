@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<style>
+body {
+    background-color: black;
+    margin: 0;
+    text-align: center;
+}
+iframe {
+    border: none;
+    display: inline-block;
+    vertical-align: middle;
+}
+#test-bar {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 2em;
+}
+.invisible {
+    display: none;
+}
+</style>
+</head>
+<body>
+    <iframe id="TEST_FRAME"></iframe>
+    <div id="test-bar" class="ui large form">
+        <div class="field">
+            <div class="ui horizontal labeled icon buttons">
+                <button id="accept" class="ui inverted green button"><i class="thumbs up icon"></i>Accept</button>
+                <button id="reject" class="ui inverted red button"><i class="cancel icon"></i>Reject</button>
+                <button id="refresh" class="ui inverted blue button"><i class="refresh icon"></i>Refresh</button>
+            </div>
+        </div>
+        <div class="field">
+            <div class="ui input">
+                <input type="text" />
+            </div>
+        </div>
+        <div style="height: 10px;">
+            <div id="COMMAND" style="display: none; width: 10px; height: 10px;" data-value=""></div>
+        </div>
+    </div>
+</body>
+<script>
+function setCommand(value) {
+    COMMAND.setAttribute("data-value", value)
+    COMMAND.style.display = "block"
+}
+accept.addEventListener("click", (e) => setCommand("ACCEPT"))
+reject.addEventListener("click", (e) => setCommand("REJECT"))
+refresh.addEventListener("click", (e) => setCommand("REFRESH"))
+</script>
+</html>

@@ -5,3 +5,4 @@ Gemfile.lock
 *.error.md
 /_func_cache.json
 /_test.py
+*uncommited*
