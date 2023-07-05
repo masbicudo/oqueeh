@@ -13,4 +13,4 @@ generated: true
 #### `orientation` can be:
 
 - `portrait`: height greater than width
-- `landscape`: width greater then height
+- `landscape`: width greater than height

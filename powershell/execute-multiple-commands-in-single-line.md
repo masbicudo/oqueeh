@@ -1,5 +1,5 @@
 ---
-title: Execute multiple command in a single line in PowerShell
+title: Execute multiple commands in a single line in PowerShell
 generated: true
 ---
 

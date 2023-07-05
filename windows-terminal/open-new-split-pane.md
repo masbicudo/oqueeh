@@ -14,4 +14,4 @@ wt -w 0 sp -V
 
 #### Reference
 
-- [Windows Terminal command line arguments \| Microsoft Docs](https://docs.microsoft.com/en-us/windows/terminal/command-line-arguments?tabs=windows)
+- https://docs.microsoft.com/en-us/windows/terminal/command-line-arguments?tabs=windows#options-and-commands

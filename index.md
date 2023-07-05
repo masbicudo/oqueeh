@@ -8,9 +8,15 @@ title:
 
 [CSS](css)
 
+[Git](git)
+
+[GitHub](github)
+
 [Hosting](hosting)
 
 [HTML](html)
+
+[JavaScript](javascript)
 
 [Jekyll](jekyll)
 

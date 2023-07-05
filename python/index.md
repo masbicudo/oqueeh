@@ -20,6 +20,10 @@ title: Python
 
 [Difference between "w" and "w+" flags in Python](difference-between-w-w+-flags)
 
+[Encode string to UTF-8 in Python](encode-string-to-utf-8)
+
+[Encode URI query string from dictionary in Python](encode-uri-query-string-from-dictionary)
+
 [Ensure path exists](ensure-path-exists)
 
 [Execute function at exit in Python](execute-function-at-exit)
@@ -70,6 +74,8 @@ title: Python
 
 [Save object to JSON in Python](save-object-to-json)
 
+[Save text file using UTF-8 in Python](save-text-file-using-utf-8)
+
 [Sleep for 1 second](sleep-for-one-second)
 
 [Slice array in Python](slice-array)
@@ -87,3 +93,5 @@ title: Python
 [Where is OSError defined in Python](where-is-oserror-defined)
 
 [Will "w+" flag truncate the file in Python](will-w+-flag-truncate-the-file)
+
+[Write UTF-8 encoded text inside binary file in Python](write-utf-8-encoded-text-inside-binary-file)

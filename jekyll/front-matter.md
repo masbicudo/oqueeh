@@ -3,7 +3,7 @@ generated: true
 title: Front matter in Jekyll
 ---
 
-- [YAML front matter in Jekyll - simpleprimate.com](http://simpleprimate.com/blog/front-matter)
+- http://simpleprimate.com/blog/front-matter
 
 <div markdown="1" class="ans">
 {% raw %}
