@@ -5,6 +5,8 @@
 [ ] post **Set user name and email in Git** has UI bugs
 [x] fix typo *width greater then height* replace "then" with "than"
 
+[ ] https://itectec.com/webapp/google-drive-how-to-one-link-directly-to-a-specific-page-of-a-pdf-in-google-drive/#
+
 ## UI Tests
 
 Test list:
