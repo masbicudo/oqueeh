@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Node.js: Arquivo Atual",
+            "name": "Node.js: Current file",
             "type": "node",
             "request": "launch",
             "program": "${file}",
@@ -15,19 +15,37 @@
             "console": "integratedTerminal"
         },
         {
-            "name": "Python: Arquivo Atual",
+            "name": "Python: Current file",
             "type": "python",
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal"
         },
         {
-            "name": "Python: split.py (test)",
+            "name": "Python: oqh.py build -u --test",
             "type": "python",
             "request": "launch",
-            "program": "split.py",
-            "args": ["_split_test.md", "--test"],
+            "program": "oqh.py",
+            "args": ["build", "-u", "--test"],
             "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: oqh.py build -u",
+            "type": "python",
+            "request": "launch",
+            "program": "oqh.py",
+            "args": ["build", "-u"],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: Current Module File (local)",
+            "type": "python",
+            "request": "launch",
+            "module": "oqhlib.${fileBasenameNoExtension}",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "envFile": "${workspaceFolder}/.local.env"
         }
     ]
 }
