@@ -2,13 +2,21 @@
     "batch": "Batch",
     "computing": "Computing",
     "css": "CSS",
+    "git": "Git",
+    "github": "GitHub",
     "hosting": "Hosting",
     "html": "HTML",
+    "javascript": "JavaScript",
     "jekyll": "Jekyll",
+    "pt-BR": "Pt BR",
+    "data-hora": "Data Hora",
     "markdown": "Markdown",
     "postgresql": "PostgreSQL",
     "powershell": "PowerShell",
     "python": "Python",
     "windows": "Windows",
-    "windows-terminal": "Windows Terminal"
+    "windows-terminal": "Windows Terminal",
+    "c-sharp": "C#",
+    "pdm": "PDM",
+    "pyenv": "Pyenv"
 }

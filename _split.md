@@ -496,7 +496,7 @@
     </ans>
 
 #file=powershell/execute-multiple-commands-in-single-line.md
-    # Execute multiple command in a single line in PowerShell
+    # Execute multiple commands in a single line in PowerShell
 
     <ans>
     ```
@@ -505,7 +505,7 @@
     </ans>
 
 #file=batch/execute-multiple-commands-in-single-line.md
-    # Execute multiple command in a single line in Batch
+    # Execute multiple commands in a single line in Batch
 
     <ans>
     ```
@@ -543,11 +543,10 @@
     #### `orientation` can be:
 
     - `portrait`: height greater than width
-    - `landscape`: width greater then height
+    - `landscape`: width greater than height
 
 #file=python/better-performance-with-compiled-regex.md
     # Better performance with compiled regex in Python
-    #overwrite=0
     <ans>
     ```python
     pattern = re.compile(r"brown (\w+)")
@@ -569,7 +568,6 @@
 
 #file=python/get-all-capture-groups-from-regex-match.md
     # Get all capture groups from regex match in Python
-    #overwrite=0
     <ans>
     ```python
     match.groups()
@@ -597,7 +595,6 @@
 
 #file=html/anchor-with-reference-to-page-element.md
     # Anchor with reference to page element in HTML
-    #overwrite=1
 
     <ans>
     ```html
@@ -610,7 +607,6 @@
 
 #file=html/set-name-of-file-to-be-downloaded-via-link.md
     # Set the name of a file to be downloaded via a link in HTML
-    #overwrite=1
 
     <ans>
     ```html
@@ -829,7 +825,6 @@
 
 #file=html/data-uri-generator.md
     # Data URI generator
-    #overwrite=1
 
     <style>
     input, textarea, select {
@@ -910,7 +905,6 @@
     </script>
 
 #file=github/api-to-get-info-about-a-repository.md
-    #overwrite=1
     # API to get information about a repository from GitHub
 
     <ans>
@@ -920,7 +914,6 @@
     </ans>
 
 #file=javascript/creating-iterable-class.md
-    #overwrite=1
     # Creating an iterable class in JavaScript
 
     <ans>
@@ -944,7 +937,6 @@
     #ref=javascript/iterables-usage.md
 
 #file=javascript/creating-iterable-object.md
-    #overwrite=1
     # Creating an iterable object in JavaScript
 
     <ans>
@@ -968,7 +960,6 @@
     #ref=javascript/iterables-usage.md
 
 #file=javascript/making-object-iterable.md
-    #overwrite=1
     # Making an object iterable in JavaScript
 
     ```js
@@ -989,7 +980,6 @@
     #ref=javascript/iterables-usage.md
 
 #file=javascript/iterables-usage.md
-    #overwrite=1
     # Iterables usage in JavaScript
 
     <ans>
@@ -1007,7 +997,6 @@
     </ans>
 
 #file=javascript/convert-iterable-object-to-array.md
-    #overwrite=1
     # Convert iterable object to Array in JavaScript
 
     <ans>
@@ -1025,7 +1014,6 @@
     </ans>
 
 #file=javascript/rest-parameters.md
-    #overwrite=1
     # Rest parameters in JavaScript
 
     ```js
@@ -1046,14 +1034,12 @@
     Output: `1 2 [ 5, 8 ]`
 
 #file=javascript/create-function-with-variable-number-of-parameters.md
-    #overwrite=1
     #publish=false
     # Create function with variable number of parameters in JavaScript
 
     #include=javascript/rest-parameters.md
 
 #file=javascript/convert-arguments-object-to-array.md
-    #overwrite=1
     # Convert arguments object to Array in JavaScript
 
     <ans>
@@ -1087,7 +1073,6 @@
     #ref=javascript/convert-iterable-object-to-array.md
 
 #file=javascript/what-is-vanilla-javascript.md
-    #overwrite=1
     # What is vanilla JavaScript
 
     <ans>
@@ -1095,7 +1080,6 @@
     </ans>
 
 #file=javascript/what-is-ecmascript.md
-    #overwrite=1
     # What is ECMAScript?
 
     <ans>
@@ -1109,7 +1093,6 @@
     #ref=javascript/specification-dialects-and-engine-implementations.md
 
 #file=javascript/specification-dialects-and-engine-implementations.md
-    #overwrite=1
     # Dialects and engine implementations of JavaScript?
 
     <ans>
@@ -1131,7 +1114,6 @@
     </ans>
 
 #file=javascript/what-is-javascript.md
-    #overwrite=1
     # What is JavaScript?
 
     <ans>
@@ -1142,7 +1124,6 @@
     #ref=javascript/specification-dialects-and-engine-implementations.md
 
 #file=javascript/what-is-jscript.md
-    #overwrite=1
     # What is JScript?
 
     <ans>
@@ -1153,7 +1134,6 @@
     #ref=javascript/specification-dialects-and-engine-implementations.md
 
 #file=javascript/what-is-chakra.md
-    #overwrite=1
     # What is Chakra?
 
     <ans>
@@ -1164,7 +1144,6 @@
     #ref=javascript/specification-dialects-and-engine-implementations.md
 
 #file=javascript/what-is-spidermonkey.md
-    #overwrite=1
     # What is SpiderMonkey?
 
     <ans>
@@ -1176,7 +1155,6 @@
     #ref=javascript/specification-dialects-and-engine-implementations.md
 
 #file=javascript/what-is-actionscript.md
-    #overwrite=1
     # What is ActionScript?
 
     <ans>
@@ -1186,7 +1164,6 @@
     #ref=javascript/specification-dialects-and-engine-implementations.md
 
 #file=javascript/what-is-v8.md
-    #overwrite=1
     # What is V8?
 
     <ans>
@@ -1198,7 +1175,6 @@
     #ref=javascript/specification-dialects-and-engine-implementations.md
 
 #file=javascript/firefox-browser-name.md
-    #overwrite=1
     # Firefox or FireFox?
 
     <ans>
@@ -1206,7 +1182,6 @@
     </ans>
 
 #file=javascript/javascript-language-name.md
-    #overwrite=1
     # JavaScript or Javascript?
 
     <ans>
@@ -1220,7 +1195,6 @@
     #ref=javascript/specification-dialects-and-engine-implementations.md
 
 #file=javascript/delay-code-execution.md
-    #overwrite=1
 
     <ans>
     ```js
@@ -1229,7 +1203,6 @@
     </ans>
 
 #file=javascript/use-async-function-in-synchronous-context.md
-    #overwrite=1
 
     <ans>
     ```js
@@ -1244,7 +1217,6 @@
     ```
 
 #file=javascript/get-name-of-fetched-file.md
-    #overwrite=1
 
     <ans>
     ```js
@@ -1259,7 +1231,6 @@
     ```
 
 #file=javascript/cancel-delayed-code-execution.md
-    #overwrite=1
 
     <ans>
     ```js
@@ -1274,7 +1245,6 @@
     ```
 
 #file=javascript/fire-change-event-after-user-stops-typing.md
-    #overwrite=1
 
     <ans>
     ```js
@@ -1294,7 +1264,6 @@
 
 #file=windows-terminal/close-pane-key-binding.md
     # Close pane key binding in Windows Terminal
-    #overwrite=1
 
     <ans>
     <key>Ctrl</key>+<key>Shift</key>+<key>W</key>
@@ -1305,16 +1274,14 @@
 
 #file=windows-terminal/new-pane-key-binding.md
     # New pane key binding in Windows Terminal
-    #overwrite=1
 
     <ans>
-    - New horizontal pane: <key>Alt</key>+<key>Shift</key>-<key>-</key>
-    - New vertical pane:   <key>Alt</key>+<key>Shift</key>-<key>=</key>
+    - New horizontal pane: <key>Alt</key>+<key>Shift</key>+<key>-</key>
+    - New vertical pane:   <key>Alt</key>+<key>Shift</key>+<key>=</key>
     </ans>
 
 #file=javascript/get-select-element-option-values.md
     # Get select element option values in JavaScript
-    #overwrite=1
 
     <ans>
     ```js
@@ -1324,7 +1291,6 @@
 
 #file=javascript/toggle-html-element-class.md
     # Toggle HTML element class in JavaScript
-    #overwrite=1
 
     <ans>
     ```js
@@ -1334,7 +1300,6 @@
 
 #file=javascript/prevent-default-dom-event-action.md
     # Prevent default DOM event action in JavaScript
-    #overwrite=1
 
     <ans>
     ```js
@@ -1344,7 +1309,6 @@
 
 #file=javascript/get-select-element-options.md
     # Get select element options in JavaScript
-    #overwrite=1
 
     <ans>
     ```js
@@ -1359,12 +1323,11 @@
 
 #file=windows-terminal/default-key-bindings.md
     # Default key bindings in Windows Terminal
-    #overwrite=1
 
     <ans>
     - Close pane/tab/window: <key>Ctrl</key>+<key>Shift</key>+<key>W</key>
-    - New horizontal pane:   <key>Alt</key>+<key>Shift</key>-<key>-</key>
-    - New vertical pane:     <key>Alt</key>+<key>Shift</key>-<key>=</key>
+    - New horizontal pane:   <key>Alt</key>+<key>Shift</key>+<key>-</key>
+    - New vertical pane:     <key>Alt</key>+<key>Shift</key>+<key>=</key>
     - Switch pane:           <key>Alt</key>+*Arrow keys*
     - Resize pane:           <key>Alt</key>+<key>Shift</key>+*Arrow keys*
     </ans>
@@ -1373,7 +1336,6 @@
 
 #file=python/encode-uri-query-string-from-dictionary.md
     # Encode URI query string from dictionary in Python
-    #overwrite=0
 
     <ans>
     ```python
@@ -1391,7 +1353,6 @@
 
 #file=git/set-user-name-and-email.md
     # Set user name and email in Git
-    #overwrite=1
 
     <ans>
     ```bash
@@ -1399,7 +1360,275 @@
     git config --global user.email "masbicudo@gmail.com"
     ```
 
-#file=
+#file=python/encode-string-to-utf-8.md
+    # Encode string to UTF-8 in Python
+
+
+#file=python/save-text-file-using-utf-8.md
+    # Save text file using UTF-8 in Python
+
+    <ans>
+    with open("filename.txt", "w", encoding="utf-8") as tfs:
+        tfs.write(string_value)
+    </ans>
+
+#file=python/convert-string-to-utf-8-before-saving-file.md
+    #delete
+#file=python/write-utf-8-encoded-text-inside-binary-file.md
+    # Write UTF-8 encoded text inside binary file in Python
+
+    <ans>
+    ```python
+    content = "MASBicudo"
+    bytes_utf8 = content.encode("utf-8")
+    with open("filename.txt", "wb") as fs:
+        fs.write(bytes_utf8)
+    ```
+    </ans>
+
+    `str` has the `encode` method, that returns `bytes` with the encoded string.
+
+#file=python/read-utf-8-encoded-text-from-binary-file.md
+    #publish=0
+    #ref=https://docs.python.org/3/howto/unicode.html
+
+#file=python/sqlite-builtin-database.md
+    #publish=0
+
+#file=javascript/sqlite-database-on-static-web-pages.md
+    #publish=0
+    #ref=https://phiresky.github.io/blog/2021/hosting-sqlite-databases-on-github-pages/
+
+#file=postgresql/starting-and-stopping-postgresql-database-service-in-ubuntu.md
+    # Starting and stopping a PostgreSQL database service in Ubuntu
+
+    **To start run:**
+    <ans>
+    ```bash
+    sudo service postgresql start
+    ```
+    </ans>
+
+    **To stop run:**
+    <ans>
+    ```bash
+    sudo service postgresql stop
+    ```
+    </ans>
+
+#file=postgresql/starting-postgresql-database-service-in-ubuntu.md
+    # Starting a PostgreSQL database service in Ubuntu
+
+    <ans>
+    ```bash
+    sudo service postgresql start
+    ```
+    </ans>
+
+#file=postgresql/stopping-postgresql-database-service-in-ubuntu.md
+    # Stopping a PostgreSQL database service in Ubuntu
+
+    <ans>
+    ```bash
+    sudo service postgresql stop
+    ```
+    </ans>
+
+#file=postgresql/starting-postgresql-database-service-in-windows-via-cmd.md
+    # Starting a PostgreSQL database service in Windows using CMD
+
+    <ans>
+    ```bash
+    pg_ctl -D "C:\Program Files\PostgreSQL\15\data" start
+    ```
+    </ans>
+
+#file=postgresql/stopping-postgresql-database-service-in-windows-via-cmd.md
+    # Stopping a PostgreSQL database service in Windows using CMD
+
+    <ans>
+    ```bash
+    pg_ctl -D "C:\Program Files\PostgreSQL\15\data" stop
+    ```
+    </ans>
+
+#file=postgresql/restarting-postgresql-database-service-in-windows-via-cmd.md
+    # Restarting a PostgreSQL database service in Windows using CMD
+
+    <ans>
+    ```bash
+    pg_ctl -D "C:\Program Files\PostgreSQL\15\data" restart
+    ```
+    </ans>
+
+#file=postgresql/managing-postgresql-database-service-in-windows.md
+    # Managing a PostgreSQL database service in Windows
+
+    Use Windows Services manager to start, stop, pause and restart the PostgreSQL database service.
+
+    <ans>
+    1. Use <key>WinKey + R</key> for *Run Window*
+    2. Type `services.msc`
+    3. Search for `postgresql` in the list
+       - You can type to search!
+    4. Top bar contains buttons to **start**, **stop**, **pause** and **restart**.
+    </ans>
+
+#file=windows/what-is-the-windows-key-used-for.md
+    ---
+    keywords: ["winkey", "win-key", "windows key", "windows-key"]
+    ---
+    # What is the Windows key used for?
+
+    <ans>
+    Windows key is used to activate useful keyboard shortcuts.
+    </ans>
+
+    Short list of known shortcuts on Windows:
+    - <key>WinKey + R</key>: open "Run" dialog
+    - <key>WinKey + D</key>: show Desktop/restore windows
+    - <key>WinKey + X</key>: system menu
+
+#file=windows/how-to-open-on-screen-keyboard-in-windows.md
+    # How to open On-Screen Keyboard in Windows?
+
+    <ans>
+    1. <key>WinKey + R</key>
+    2. **Settings** > **Accessibility** > **Keyboard**
+    3. **On-Screen Keyboard** toggle
+    </ans>
+
+#file=c-sharp/know-if-file-cloudapi-status-is-offline.md
+    # How to check CloudAPI offline status?
+
+    <ans>
+    ```c#
+    var FILE_ATTRIBUTES_RECALL_ON_DATA_ACCESS = 4194304;
+    var isNotReady = (File.GetFileInfo(filePath)
+        & FILE_ATTRIBUTES_RECALL_ON_DATA_ACCESS) != 0;
+    ```
+    </ans>
+
+#file=markdown/c-sharp-code-fence.md
+    # C# code inside a Markdown file
+
+    <ans>
+    ````c#
+    ```c#
+    // C# code fence in markdown
+    ```
+    ````
+    </ans>
+
+#file=pdm/ModuleNotFoundError-No-module-named-pdm-core.md
+
+    # ModuleNotFoundError: No module named 'pdm.core'
+
+    <ans>Remove PDM by hand, then reinstall by hand.</ans>
+
+    ```
+    cd ~
+    curl -sSLO https://pdm.fming.dev/dev/install-pdm.py
+    python install-pdm.py --remove
+    python install-pdm.py
+    rm install-pdm.py
+    ```
+
+#file=windows/edit-user-and-system-environment-variables.md
+    # Edit user and system environment variables in Windows
+
+    <ans>
+    1. <key>WinKey + R</key>
+    2. Type in `sysdm.cpl`
+    3. **Advanced** tab
+    4. **Environment Variables...** button
+    </ans>
+
+#file=windows/edit-user-environment-variables.md
+    # Edit user environment variables in Windows
+
+    <ans>
+    1. <key>WinKey</key>
+    2. Type in `var`
+    3. Locate **Edit environment variables for your account**
+    </ans>
+
+#file=windows/edit-system-environment-variables.md
+    # Edit system environment variables in Windows
+
+    <ans>
+    1. <key>WinKey</key>
+    2. Type in `var`
+    3. Locate **Edit the system environment variables**
+    </ans>
+
+#file=pyenv/pyenv-is-not-recognized-as-the-name-of-a-cmdlet-function.md
+    # 'pyenv' is not recognized as the name of a cmdlet, function
+
+    <ans>
+    Reinstall PyEnv-Win:
+    ```powershell
+    Invoke-WebRequest -UseBasicParsing -Uri "https://raw.githubusercontent.com/pyenv-win/pyenv-win/master/pyenv-win/install-pyenv-win.ps1" -OutFile "./install-pyenv-win.ps1"; &"./install-pyenv-win.ps1"
+    ```
+    </ans>
+
+    See [pyenv for Windows](https://github.com/pyenv-win/pyenv-win)
+
+#file=batch/maths-division-cmd.md
+    # Division using CMD
+
+    <ans>
+    ```
+    set /a result=10/2
+    ```
+    </and>
+
+    You can use variable in the place of numbers.
+
+#file=batch/maths-in-cmd.md
+    # Mathematics using CMD
+
+    <ans>
+    ```
+    set /a result=10/(2+1)
+    ```
+    </and>
+
+    Supported operations:
+    - addition (`+`) and subtraction (`-`)
+    - multiplication (`*`) and division (`/`) (i.e. integer division)
+    - modulo (`%`) (aka remainder from division)
+    - parentheses (`(` and `)`) (aka precedence operators)
+    You can use variable in the place of numbers.
+
+#file=batch/assign-output-of-command-to-variable.md
+    # Assign the output of a command to a variable
+
+    <ans>
+    ```bat
+    FOR /F "tokens=*" %%A IN ('dir "."') DO (
+        SET var=%%A
+    )
+    ECHO %var%
+    ```
+    </ans>
+
+#file=batch/run-powershell-command.md
+    # Run PowerShell command in CMD
+
+#file=windows/what-is-powershell.md
+    ---
+    keywords: ["powershell"]
+    ---
+    # What is PowerShell?
+
+    <ans>
+    PowerShell is a shell command and scripting language.
+    Key features:
+    - pipes to redirect streams
+    - use native .Net commands and variables
+    - use environment commands and variables
+    </ans>
 
 #file=
     #ref=https://realpython.com/python-modulo-operator/#how-to-check-if-a-number-is-even-or-odd
