@@ -12,3 +12,5 @@ __pycache__/
 /_tools/lib/build/
 /.pdm-python
 *.bak
+/_tests/_output/
+*.local.*
