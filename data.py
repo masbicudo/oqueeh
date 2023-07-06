@@ -1,6 +1,15 @@
 category_names = {
+    "api": "API",
+    "c-sharp": "C#",
     "css": "CSS",
+    #"batch": "Batch",
+    "firefox": "FireFox",
+    "github": "GitHub",
+    "html": "HTML",
+    "javascript": "JavaScript",
+    "nodejs": "Node.js",
+    "pdm": "PDM",
     "postgresql": "PostgreSQL",
     "powershell": "PowerShell",
-    "html": "HTML",
+    #"windows": "Windows",
 }

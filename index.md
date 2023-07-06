@@ -4,6 +4,8 @@ title:
 
 [Batch](batch)
 
+[C#](c-sharp)
+
 [Computing](computing)
 
 [CSS](css)
@@ -22,9 +24,15 @@ title:
 
 [Markdown](markdown)
 
+[PDM](pdm)
+
 [PostgreSQL](postgresql)
 
 [PowerShell](powershell)
+
+[Pt BR](pt-BR)
+
+[Pyenv](pyenv)
 
 [Python](python)
 
