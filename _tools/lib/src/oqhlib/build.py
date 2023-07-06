@@ -3,7 +3,7 @@ import re
 import os
 import argparse
 
-import func_cache as fc
+import oqhlib.func_cache as fc
 import datetime as dt
 import distutils.util as du
 
