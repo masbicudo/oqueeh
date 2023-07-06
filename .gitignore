@@ -6,3 +6,9 @@ Gemfile.lock
 /_func_cache.json
 /_test.py
 *uncommited*
+.pyprojectx/
+oqhlib.egg-info/
+__pycache__/
+/_tools/lib/build/
+/.pdm-python
+*.bak
