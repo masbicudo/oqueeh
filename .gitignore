@@ -14,3 +14,4 @@ __pycache__/
 *.bak
 /_tests/_output/
 *.local.*
+/list-qa.txt

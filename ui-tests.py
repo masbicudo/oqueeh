@@ -86,8 +86,18 @@ class TestInfo(object):
     def __init__(self) -> None:
         super().__init__()
         self.address = run_server()
+        options = webdriver.ChromeOptions()
+        # options.set_headless()
+        # options.add_argument("no-sandbox")
+        # options.add_argument("--disable-gpu")
+        # options.add_argument("--window-size=800,600")
+        # options.add_argument("--disable-dev-shm-usage")
+        options.add_argument("--app=data:,")
+        options.add_experimental_option("useAutomationExtension", False)
+        options.add_experimental_option("excludeSwitches",["enable-automation"])
         self.browser = webdriver.Chrome(
                 executable_path=ChromeDriverManager().install(),
+                options=options,
             )
         html = ""
         with open("ui-test.html", "r") as fp:
@@ -98,6 +108,7 @@ class TestInfo(object):
                 document.open('text/html')
                 document.write(html)
                 document.close()
+                document.title = "Layout testing"
             })
             .apply(null, arguments)
             """, html)
