@@ -151,10 +151,11 @@ _replace_ans_close_tag = lambda line: _pattern_ans_close_tag.sub(r'\1</div>', li
 _allowed_exts = [".md"]
 
 class ParseException(Exception):
-    def __init__(self, message, value=None):
+    def __init__(self, message, value=None, line_number=0):
         super().__init__()
         self.message = message
         self.value = value
+        self.line_number = line_number
 
 class FileData(object):
     def __init__(self, name=None):
@@ -170,6 +171,7 @@ class FileData(object):
         self.source_filename = None
         self.cyclic_dependency = None
         self.dependency_count = 0
+        self.content = None
         self.content_b = None
         self.persisted = False
         self.overwrite = None # tristate variable
@@ -256,7 +258,7 @@ def preproc_file(input_filename, errors_list):
             except ParseException as pex:
                 errors_list.append(format_error(
                         input_filename,
-                        lnum + 1,
+                        lnum + pex.line_number + 1,
                         pex.message,
                         pex.value,
                     ))
@@ -271,12 +273,12 @@ def preproc_line(cur_file : FileData, line : str):
         value = get_value_from_string(str_value)
         if name == "file":
             cur_file = FileData(name=value)
-            if value == "":
+            m_fname = re.match(r"^(.*?)(([^\\/]+)(\.[^\.\\/]+))?$", value)
+            if m_fname[3] is None:
                 raise ParseException("empty file name", value)
-            m_fname = re.match(r"^(.*?)(\.[^\.]*)$", value)
-            if m_fname is None:
+            if m_fname[4] is None:
                 raise ParseException("file without extension", value)
-            if m_fname[2] not in _allowed_exts:
+            if m_fname[4] not in _allowed_exts:
                 raise ParseException(f"allowed extensions are {' '.join(_allowed_exts)}", value)
             return cur_file, line_data
         if name in ["publish", "include", "ref", "overwrite", "delete"]:
@@ -359,20 +361,72 @@ def get_files_sorted_by_dependency(
             sort_by_dependency(file, singles, sorted_files)
     return sorted_files
 
-def process_files_contents(sorted_files_dict : dict, errors_list : list[str]):
-    include_files_dict = dict(sorted_files_dict)
+def process_files_contents(
+            sorted_files_dict : dict,
+            errors_list : list[str],
+            include_files_dict : dict,
+        ):
     for cur_file in sorted_files_dict.values():
         try:
             adjust_prefix(cur_file)
             file_lines = [*process_directives(cur_file, include_files_dict)]
             file_lines = [*process_content(file_lines)]
             file_lines = process_front_matter(cur_file, file_lines)
-            cur_file.content_b = '\n'.join(file_lines).encode('utf-8')
-            cur_file.hash_code = hashlib.sha256(cur_file.content_b).hexdigest()
+            cur_file.content = '\n'.join(file_lines)
         except ParseException as pex:
             errors_list.append(format_error(
                     cur_file.source_filename,
-                    cur_file.source_linenumber,
+                    cur_file.source_linenumber + pex.line_number,
+                    pex.message,
+                    pex.value,
+                ))
+
+def post_process_link(title:str, url:str, include_files_dict:dict[int,FileData]):
+    if title == "":
+        if url.startswith("http://") or url.startswith("https://"):
+            title = url
+        else:
+            if url in include_files_dict:
+                file_data = include_files_dict[url]
+                import io
+                with io.StringIO(file_data.content) as ms:
+                    for include_line, include_state in parse_post(ms):
+                        if include_state == 1:
+                            title_match = re.match(r"^title:\s*(.*)$\s*", include_line)
+                            if title_match is not None:
+                                file_data.title = title_match[1]
+                title = file_data.title
+            else:
+                title = url
+
+    result = f"[{title}]({url})"
+    return result
+
+def post_process_files_contents(
+            sorted_files_dict : dict[str, FileData],
+            errors_list : list[str],
+            include_files_dict : dict,
+        ):
+    for cur_file in sorted_files_dict.values():
+        if cur_file.content is None:
+            continue
+        try:
+            # filling title of links that are without title
+            # by looking inside the linked file-data
+            cur_file.content = re.sub(
+                    r"\[\]\(([^\(\)]*)\)",
+                    lambda m: post_process_link("", m[1], include_files_dict),
+                    cur_file.content,
+                )
+
+            # generating contents and hashing
+            cur_file.content_b = cur_file.content.encode('utf-8')
+            cur_file.hash_code = hashlib.sha256(cur_file.content_b).hexdigest()
+            
+        except ParseException as pex:
+            errors_list.append(format_error(
+                    cur_file.source_filename,
+                    cur_file.source_linenumber + pex.line_number,
                     pex.message,
                     pex.value,
                 ))
@@ -386,7 +440,10 @@ def adjust_prefix(file_data):
                 if line.text.strip() == "":
                     line.text = None
                 else:
-                    raise Exception("should be impossible to get to here: all directives must be the first non-space chars at a line")
+                    raise Exception(
+                        "should be impossible to get to here: "+
+                        "all directives must be the first non-space "
+                        +"chars at a line")
                     # raise ParseException("text not allowed before directive {}")
         elif line.text is not None:
             new_text = line.text.rstrip()
@@ -417,22 +474,48 @@ def parse_post(file_lines):
             state = 2
         yield ltext, state
 
-def process_directives(cur_file : FileData, include_files_dict):
+def get_persisted_file_data(filename):
+    if not os.path.isfile(filename):
+        return None
+    with _open(filename, "rb") as fs_inc:
+        file_data = FileData(filename)
+        file_data.persisted = True
+        file_data.content_b = fs_inc.read()
+        return file_data
+
+def process_directives(cur_file : FileData, include_files_dict : dict):
     import io
-    for line_data in cur_file.lines:
+    for line_num, line_data in enumerate(cur_file.lines, start=1):
         if line_data.directive is not None:
-            filename = line_data.directive.value
+            filename:str = line_data.directive.value
             if line_data.directive.name == "ref":
-                link_line = f"{line_data.text}- {get_link_cached(filename)}"
+                link_line = None
+                if filename.startswith("http://") or filename.startswith("https://"):
+                    link_line = f"{line_data.text}- {get_link_cached(filename)}"
+                else:
+                    # Loading data that will be needed to fill in
+                    # the link title afterwards
+                    if filename not in include_files_dict:
+                        file_data = get_persisted_file_data(filename)
+                        if file_data is None:
+                            raise ParseException("Invalid reference", filename, line_num)
+                        include_files_dict[filename] = file_data
+                        
+                    # Leave title empty so that the post-processing
+                    # can fill in the correct title of the reference.
+                    link_line = f"{line_data.text}- []({filename})"
                 yield link_line
             elif line_data.directive.name == "include":
                 if filename not in include_files_dict:
-                    with _open(filename, "rb") as fs_inc:
-                        file_data = FileData(filename)
-                        persisted.persisted = True
-                        file_data.content_b = fs_inc.read()
-                        files_dict[filename] = file_data
-                with io.StringIO(include_files_dict[filename].content_b.decode('utf-8')) as ms:
+                    file_data = get_persisted_file_data(filename)
+                    if file_data is None:
+                        raise ParseException("Invalid include", filename, line_num)
+                    include_files_dict[filename] = file_data
+                file_data:FileData = include_files_dict[filename]
+                
+                # content will be filled here because all dependencies
+                # are processed before the file containing the includes.
+                with io.StringIO(file_data.content) as ms:
                     for include_line, include_state in parse_post(ms):
                         if include_state == 2:
                             yield include_line
@@ -506,6 +589,10 @@ def get_file_action(
         return "remove:publish=False"
     if file_data.delete == True:
         return "remove"
+
+    # TODO: detect error by other means
+    if file_data.content_b is None:
+        return "skip:error"
 
     # content and hash-code
     if file_data.content_b is None or file_data.content_b == b"":
@@ -636,8 +723,16 @@ def split_files(
     pre_files = preproc_files(input_filenames, errors_list)
 
     sorted_files_dict = get_files_sorted_by_dependency(pre_files, errors_list)
+    
+    # The include_files_dict is a copy of the sorted_files_dict.
+    # This allows the following codes to add new includes in the list.
+    # New includes are needed because it is possible to reference
+    # files that are not in the current compilation list.
+    include_files_dict = dict(sorted_files_dict)
 
-    process_files_contents(sorted_files_dict, errors_list)
+    process_files_contents(sorted_files_dict, errors_list, include_files_dict)
+    
+    post_process_files_contents(sorted_files_dict, errors_list, include_files_dict)
 
     file_hashes = load_hashes()
     for cur_file in sorted_files_dict.values():
