@@ -1,4 +1,4 @@
-#file=python/remove-spaces-at-end-of-string.md
+#file=en-US/python/remove-spaces-at-end-of-string.md
     ---
     title: Remove spaces at end of string in Python
     ---
@@ -11,7 +11,7 @@
 
     Result is `"MASBicudo"`.
 
-#file=python/remove-spaces-at-start-of-string.md
+#file=en-US/python/remove-spaces-at-start-of-string.md
     ---
     title: Remove spaces at start of string in Python
     ---
@@ -24,7 +24,7 @@
 
     Result is `"MASBicudo"`.
 
-#file=python/remove-spaces-surrounding-string.md
+#file=en-US/python/remove-spaces-surrounding-string.md
     ---
     title: Remove spaces surrounding string in Python
     ---
@@ -39,7 +39,7 @@
 
     This removes spaces from both ends of a string.
 
-#file=python/remove-characters-at-end-of-string.md
+#file=en-US/python/remove-characters-at-end-of-string.md
     ---
     title: Remove characters at end of string in Python
     ---
@@ -55,7 +55,7 @@
     This removes any of the characters from the given string.
     Order does not matter.
 
-#file=python/remove-characters-at-start-of-string.md
+#file=en-US/python/remove-characters-at-start-of-string.md
     ---
     title: Remove characters at start of string in Python
     ---
@@ -71,7 +71,7 @@
     This removes any of the characters from the beginning of the string.
     Order does not matter.
 
-#file=python/remove-characters-surrounding-string.md
+#file=en-US/python/remove-characters-surrounding-string.md
     ---
     title: Remove characters surrounding string in Python
     ---
@@ -87,7 +87,7 @@
     This removes any of the characters from both ends of the string.
     Order does not matter.
 
-#file=python/slice-array.md
+#file=en-US/python/slice-array.md
     ---
     title: Slice array in Python
     ---
@@ -108,7 +108,7 @@
 
     Remains after slicing the `list` variable at index 1 and 2.
 
-#file=python/tuples-immutable-lists.md
+#file=en-US/python/tuples-immutable-lists.md
     ---
     title: "Tuples: Immutable lists in Python"
     ---
@@ -127,7 +127,7 @@
     (1,)
     ```
 
-#file=python/remove-item-from-tuple.md
+#file=en-US/python/remove-item-from-tuple.md
     ---
     title: Remove item from tuple in Python
     ---
@@ -155,7 +155,7 @@
     t2 = t1[1:]
     ```
 
-#file=python/pop-or-dequee-item-from-tuple.md
+#file=en-US/python/pop-or-dequee-item-from-tuple.md
     ---
     title: Pop or dequee item from tuple in Python
     ---
@@ -174,7 +174,7 @@
     t1, v = t1[1:], t1[0]
     ```
 
-#file=jekyll/iterating-tags.md
+#file=en-US/jekyll/iterating-tags.md
     ---
     title: Iterating tags in Jekyll
     ---
@@ -192,7 +192,7 @@
     - for pages, use `page.tags`
     - for posts, use `post.tags`
 
-#file=jekyll/convert-date-to-string.md
+#file=en-US/jekyll/convert-date-to-string.md
     ---
     title: Convert date to string in Jekyll
     ---
@@ -205,7 +205,7 @@
     {% endraw %}
     </ans>
 
-#file=jekyll/supported-languages-in-a-code-block.md
+#file=en-US/jekyll/supported-languages-in-a-code-block.md
     ---
     title: Supported languages in a code block
     ---
@@ -224,7 +224,7 @@
 
     #ref=https://github.com/rouge-ruby/rouge/wiki/List-of-supported-languages-and-lexers
 
-#file=python/check-number-is-even-or-odd.md
+#file=en-US/python/check-number-is-even-or-odd.md
     ---
     title: Chack if a number is even or odd in Python
     ---
@@ -245,7 +245,7 @@
     ```
     </ans>
 
-#file=jekyll/categories-of-page-is-empty.md
+#file=en-US/jekyll/categories-of-page-is-empty.md
     ---
     title: Categories of page is empty in Jekyll
     ---
@@ -256,7 +256,7 @@
 
     For pages to have categories, they must indicate them in the **front matter**.
 
-#file=jekyll/front-matter.md
+#file=en-US/jekyll/front-matter.md
     ---
     title: Front matter in Jekyll
     ---
@@ -285,7 +285,7 @@
     {{ page.title }}
     ```
 
-#file=jekyll/last-item-of-array.md
+#file=en-US/jekyll/last-item-of-array.md
     ---
     title: Last item of array in Jekyll
     ---
@@ -298,7 +298,7 @@
     {% endraw %}
     </ans>
 
-#file=css/custom-properties.md
+#file=en-US/css/custom-properties.md
     ---
     title: Custom properties in CSS
     ---
@@ -320,7 +320,7 @@
     ```
     </ans>
 
-#file=css/font-size-relative-to-resolution.md
+#file=en-US/css/font-size-relative-to-resolution.md
     #publish=false
     ---
     title: Font size relative to resolution in CSS
@@ -331,7 +331,7 @@
     #ref=https://www.w3schools.com/css/css_rwd_mediaqueries.asp
     #ref=https://stackoverflow.com/questions/11777598/font-size-relative-to-the-users-screen-resolution
 
-#file=python/cannot-read-open-mode-x.md
+#file=en-US/python/cannot-read-open-mode-x.md
     ---
     title: Cannot read from file opened with mode "x" in Python
     ---
@@ -340,7 +340,7 @@
     Mode "x" is write only, to also read from file, use mode "x+".
     </ans>
 
-#file=python/psycopg2-copy_from-cannot-insert-field-with-delimiter-even-if-quoted.md
+#file=en-US/python/psycopg2-copy_from-cannot-insert-field-with-delimiter-even-if-quoted.md
     ---
     title: psycopg2 copy_from cannot insert field with delimiter, even if quoted
     ---
@@ -357,7 +357,7 @@
     ```
     </ans>
 
-#file=postgresql/create-table-if-not-exists.md
+#file=en-US/postgresql/create-table-if-not-exists.md
     ---
     title: Create table if it does not exist in PostgreSQL
     ---
@@ -368,7 +368,7 @@
     ```
     </ans>
 
-#file=postgresql/drop-table-if-exists.md
+#file=en-US/postgresql/drop-table-if-exists.md
     ---
     title: Drop table if it exists in PostgreSQL
     ---
@@ -387,7 +387,7 @@
     DROP TABLE IF EXISTS table_name CASCADE
     ```
 
-#file=postgresql/drop-database-connections.md
+#file=en-US/postgresql/drop-database-connections.md
     ---
     title: Drop database connections in PostgreSQL
     ---
@@ -400,7 +400,7 @@
     ```
     </ans>
 
-#file=python/iterate-dict-key-value-pairs.md
+#file=en-US/python/iterate-dict-key-value-pairs.md
     ---
     title: Iterate dictionary key/value pairs in Python
     ---
@@ -412,7 +412,7 @@
     ```
     </ans>
 
-#file=windows-terminal/open-new-tab.md
+#file=en-US/windows-terminal/open-new-tab.md
     # Open new tab in Windows Terminal
 
     <ans>
@@ -433,7 +433,7 @@
 
     #ref=https://docs.microsoft.com/en-us/windows/terminal/command-line-arguments?tabs=windows#options-and-commands
 
-#file=windows-terminal/execute-command-in-new-tab.md
+#file=en-US/windows-terminal/execute-command-in-new-tab.md
     # Execute command in new tab in Windows Terminal
 
     <ans>
@@ -454,7 +454,7 @@
 
     #ref=https://docs.microsoft.com/en-us/windows/terminal/command-line-arguments?tabs=windows#options-and-commands
 
-#file=windows-terminal/execute-command-in-new-split-pane.md
+#file=en-US/windows-terminal/execute-command-in-new-split-pane.md
     # Execute command in new split pane in Windows Terminal
 
     <ans>
@@ -470,7 +470,7 @@
 
     #ref=https://docs.microsoft.com/en-us/windows/terminal/command-line-arguments?tabs=windows#options-and-commands
 
-#file=windows-terminal/open-new-split-pane.md
+#file=en-US/windows-terminal/open-new-split-pane.md
     # Open new split pane in Windows Terminal
 
     <ans>
@@ -486,7 +486,7 @@
 
     #ref=https://docs.microsoft.com/en-us/windows/terminal/command-line-arguments?tabs=windows#options-and-commands
 
-#file=powershell/clear-screen.md
+#file=en-US/powershell/clear-screen.md
     # Clear screen in PowerShell
 
     <ans>
@@ -495,7 +495,7 @@
     ```
     </ans>
 
-#file=powershell/execute-multiple-commands-in-single-line.md
+#file=en-US/powershell/execute-multiple-commands-in-single-line.md
     # Execute multiple commands in a single line in PowerShell
 
     <ans>
@@ -504,7 +504,7 @@
     ```
     </ans>
 
-#file=batch/execute-multiple-commands-in-single-line.md
+#file=en-US/batch/execute-multiple-commands-in-single-line.md
     # Execute multiple commands in a single line in Batch
 
     <ans>
@@ -513,7 +513,7 @@
     ```
     </ans>
 
-#file=python/execute-function-at-exit.md
+#file=en-US/python/execute-function-at-exit.md
     # Execute function at exit in Python
 
     ```
@@ -530,7 +530,7 @@
     import atexit
     ```
 
-#file=css/condition-styles-to-screen-orientation.md
+#file=en-US/css/condition-styles-to-screen-orientation.md
     # Condition CSS styles to screen orientation
 
     <ans>
@@ -545,7 +545,7 @@
     - `portrait`: height greater than width
     - `landscape`: width greater than height
 
-#file=python/better-performance-with-compiled-regex.md
+#file=en-US/python/better-performance-with-compiled-regex.md
     # Better performance with compiled regex in Python
     <ans>
     ```python
@@ -566,7 +566,7 @@
 
     #ref=https://docs.python.org/3/library/re.html#regular-expression-objects
 
-#file=python/get-all-capture-groups-from-regex-match.md
+#file=en-US/python/get-all-capture-groups-from-regex-match.md
     # Get all capture groups from regex match in Python
     <ans>
     ```python
@@ -593,7 +593,7 @@
 
     #ref=https://docs.python.org/3/library/re.html#re.Match.groups
 
-#file=html/anchor-with-reference-to-page-element.md
+#file=en-US/html/anchor-with-reference-to-page-element.md
     # Anchor with reference to page element in HTML
 
     <ans>
@@ -605,7 +605,7 @@
 
     Also works with more URI params filled, e.g. query string, path, domain, and so on.
 
-#file=html/set-name-of-file-to-be-downloaded-via-link.md
+#file=en-US/html/set-name-of-file-to-be-downloaded-via-link.md
     # Set the name of a file to be downloaded via a link in HTML
 
     <ans>
@@ -619,7 +619,7 @@
 
     `download` attribute can be used to suggest a file name.
 
-#file=javascript/create-data-uri-from-web-content.md
+#file=en-US/javascript/create-data-uri-from-web-content.md
     # Create data URI from web content in JavaScript
 
     <ans>
@@ -642,9 +642,9 @@
 	    .then(data_uri => document.write(data_uri))
     ```
 
-    #ref=html/data-uri-generator.md
+    #ref=en-US/html/data-uri-generator.md
 
-#file=html/encode-file-data-inside-link-href-attribute.md
+#file=en-US/html/encode-file-data-inside-link-href-attribute.md
     # Encode file data inside link href attribute
 
     <ans>
@@ -659,16 +659,16 @@
     <a href="data:text/plain;charset=utf-8;base64,TUFTQmljdWRv"
         download="masbicudo.txt">Download</a>
 
-    #ref=html/data-uri-generator.md
+    #ref=en-US/html/data-uri-generator.md
 
-#file=html/set-selected-item-in-html-select-element.md
+#file=en-US/html/set-selected-item-in-html-select-element.md
     # Set selected item in HTML select element
 
     ```html
     <option selected>Item text</option>
     ```
 
-#file=css/ordering-of-values-on-margin-and-padding.md
+#file=en-US/css/ordering-of-values-on-margin-and-padding.md
     # Ordering of values on CSS margin and padding
 
     #### 4 values
@@ -703,7 +703,7 @@
     margin: top+bottom+right+left
     ```
 
-#file=javascript/load-file-as-data-uri.md
+#file=en-US/javascript/load-file-as-data-uri.md
     # Load file as data-URI
 
     <ans>
@@ -725,7 +725,7 @@
     ```
     </ans>
 
-#file=javascript/generator-functions.md
+#file=en-US/javascript/generator-functions.md
     # Generator functions in JavaScript
 
     <ans>
@@ -737,7 +737,7 @@
     ```
     </ans>
 
-#file=javascript/async-and-await-with-map.md
+#file=en-US/javascript/async-and-await-with-map.md
     # Using asynchronous functions with Array map in JavaScript
 
     <ans>
@@ -750,7 +750,7 @@
 
     `Promise.all` returns a promise that resolves with the values of all listed promises.
 
-#file=javascript/infinite-generator-functions.md
+#file=en-US/javascript/infinite-generator-functions.md
     # Generator functions in JavaScript
 
     <ans>
@@ -762,10 +762,11 @@
     ```
     </ans>
 
-#file=javascript/window-load-dom-content-loaded-ready-state-change-events.md
-    #include=javascript/page-load-events-in-web-browser.md
+#file=en-US/javascript/window-load-dom-content-loaded-ready-state-change-events.md
 
-#file=javascript/page-load-events-in-web-browser.md
+    #include=en-US/javascript/page-load-events-in-web-browser.md
+
+#file=en-US/javascript/page-load-events-in-web-browser.md
     # Page load events in web browser JavaScript
 
     <ans>
@@ -790,7 +791,7 @@
 
     #ref=https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event
 
-#file=javascript/declaring-variables-with-var-let-and-const.md
+#file=en-US/javascript/declaring-variables-with-var-let-and-const.md
     # Declaring variables with var, let and const in JavaScript
 
     <ans>
@@ -799,11 +800,11 @@
     - `const`: block scope constants
     </ans>
 
-#file=javascript/difference-between-var-let-and-const.md
+#file=en-US/javascript/difference-between-var-let-and-const.md
     # Difference between var, let and const in JavaScript
-    #include=javascript/declaring-variables-with-var-let-and-const.md
+    #include=en-US/javascript/declaring-variables-with-var-let-and-const.md
 
-#file=css/split-long-words-to-next-line.md
+#file=en-US/css/split-long-words-to-next-line.md
     # Split long words to next line using CSS
 
     <ans>
@@ -814,7 +815,7 @@
     ```
     </ans>
 
-#file=javascript/wait-for-many-promises.md
+#file=en-US/javascript/wait-for-many-promises.md
     # Wait for many promises in JavaScript
 
     <ans>
@@ -823,7 +824,7 @@
     ```
     </ans>
 
-#file=html/data-uri-generator.md
+#file=en-US/html/data-uri-generator.md
     # Data URI generator
 
     <style>
@@ -904,7 +905,7 @@
         })
     </script>
 
-#file=github/api-to-get-info-about-a-repository.md
+#file=en-US/github/api-to-get-info-about-a-repository.md
     # API to get information about a repository from GitHub
 
     <ans>
@@ -913,7 +914,7 @@
     Example: https://api.github.com/repos/masbicudo/oqueeh
     </ans>
 
-#file=javascript/creating-iterable-class.md
+#file=en-US/javascript/creating-iterable-class.md
     # Creating an iterable class in JavaScript
 
     <ans>
@@ -934,9 +935,9 @@
     console.log([...iterable])
     ```
 
-    #ref=javascript/iterables-usage.md
+    #ref=en-US/javascript/iterables-usage.md
 
-#file=javascript/creating-iterable-object.md
+#file=en-US/javascript/creating-iterable-object.md
     # Creating an iterable object in JavaScript
 
     <ans>
@@ -957,9 +958,9 @@
     console.log([...iterable])
     ```
 
-    #ref=javascript/iterables-usage.md
+    #ref=en-US/javascript/iterables-usage.md
 
-#file=javascript/making-object-iterable.md
+#file=en-US/javascript/making-object-iterable.md
     # Making an object iterable in JavaScript
 
     ```js
@@ -977,9 +978,9 @@
     console.log([...iterable])
     ```
 
-    #ref=javascript/iterables-usage.md
+    #ref=en-US/javascript/iterables-usage.md
 
-#file=javascript/iterables-usage.md
+#file=en-US/javascript/iterables-usage.md
     # Iterables usage in JavaScript
 
     <ans>
@@ -996,7 +997,7 @@
     ```
     </ans>
 
-#file=javascript/convert-iterable-object-to-array.md
+#file=en-US/javascript/convert-iterable-object-to-array.md
     # Convert iterable object to Array in JavaScript
 
     <ans>
@@ -1013,7 +1014,7 @@
     ```
     </ans>
 
-#file=javascript/rest-parameters.md
+#file=en-US/javascript/rest-parameters.md
     # Rest parameters in JavaScript
 
     ```js
@@ -1033,13 +1034,13 @@
 
     Output: `1 2 [ 5, 8 ]`
 
-#file=javascript/create-function-with-variable-number-of-parameters.md
+#file=en-US/javascript/create-function-with-variable-number-of-parameters.md
     #publish=false
     # Create function with variable number of parameters in JavaScript
 
-    #include=javascript/rest-parameters.md
+    #include=en-US/javascript/rest-parameters.md
 
-#file=javascript/convert-arguments-object-to-array.md
+#file=en-US/javascript/convert-arguments-object-to-array.md
     # Convert arguments object to Array in JavaScript
 
     <ans>
@@ -1070,16 +1071,16 @@
     Array.prototype.slice.call(arguments)
     ```
 
-    #ref=javascript/convert-iterable-object-to-array.md
+    #ref=en-US/javascript/convert-iterable-object-to-array.md
 
-#file=javascript/what-is-vanilla-javascript.md
+#file=en-US/javascript/what-is-vanilla-javascript.md
     # What is vanilla JavaScript
 
     <ans>
     To rely on standard JavaScript instead of using external libraries.
     </ans>
 
-#file=javascript/what-is-ecmascript.md
+#file=en-US/javascript/what-is-ecmascript.md
     # What is ECMAScript?
 
     <ans>
@@ -1090,9 +1091,9 @@
 
     There is one new edition of the ECMAScript per year.
 
-    #ref=javascript/specification-dialects-and-engine-implementations.md
+    #ref=en-US/javascript/specification-dialects-and-engine-implementations.md
 
-#file=javascript/specification-dialects-and-engine-implementations.md
+#file=en-US/javascript/specification-dialects-and-engine-implementations.md
     # Dialects and engine implementations of JavaScript?
 
     <ans>
@@ -1113,7 +1114,7 @@
     - Chakra
     </ans>
 
-#file=javascript/what-is-javascript.md
+#file=en-US/javascript/what-is-javascript.md
     # What is JavaScript?
 
     <ans>
@@ -1121,9 +1122,9 @@
     It is used in many modern browsers, backend servers and also in no-sql document databases.
     </ans>
 
-    #ref=javascript/specification-dialects-and-engine-implementations.md
+    #ref=en-US/javascript/specification-dialects-and-engine-implementations.md
 
-#file=javascript/what-is-jscript.md
+#file=en-US/javascript/what-is-jscript.md
     # What is JScript?
 
     <ans>
@@ -1131,9 +1132,9 @@
     It is used in Internet Explorer, Edge and Windows Script (WScript).
     </ans>
 
-    #ref=javascript/specification-dialects-and-engine-implementations.md
+    #ref=en-US/javascript/specification-dialects-and-engine-implementations.md
 
-#file=javascript/what-is-chakra.md
+#file=en-US/javascript/what-is-chakra.md
     # What is Chakra?
 
     <ans>
@@ -1141,9 +1142,9 @@
     It is used in Internet Explorer, Edge and Windows Script (WScript).
     </ans>
 
-    #ref=javascript/specification-dialects-and-engine-implementations.md
+    #ref=en-US/javascript/specification-dialects-and-engine-implementations.md
 
-#file=javascript/what-is-spidermonkey.md
+#file=en-US/javascript/what-is-spidermonkey.md
     # What is SpiderMonkey?
 
     <ans>
@@ -1152,18 +1153,18 @@
     Also used in no-sql, i.e. document databases, like MongoDB.
     </ans>
 
-    #ref=javascript/specification-dialects-and-engine-implementations.md
+    #ref=en-US/javascript/specification-dialects-and-engine-implementations.md
 
-#file=javascript/what-is-actionscript.md
+#file=en-US/javascript/what-is-actionscript.md
     # What is ActionScript?
 
     <ans>
     ActionScript is the Adobe's dialect of ECMAScript, used in Adobe Flash.
     </ans>
 
-    #ref=javascript/specification-dialects-and-engine-implementations.md
+    #ref=en-US/javascript/specification-dialects-and-engine-implementations.md
 
-#file=javascript/what-is-v8.md
+#file=en-US/javascript/what-is-v8.md
     # What is V8?
 
     <ans>
@@ -1172,16 +1173,16 @@
     It is used in Google Chrome browser and also in Node.js.
     </ans>
 
-    #ref=javascript/specification-dialects-and-engine-implementations.md
+    #ref=en-US/javascript/specification-dialects-and-engine-implementations.md
 
-#file=javascript/firefox-browser-name.md
+#file=en-US/javascript/firefox-browser-name.md
     # Firefox or FireFox?
 
     <ans>
     Firefox, with lower f in fox.
     </ans>
 
-#file=javascript/javascript-language-name.md
+#file=en-US/javascript/javascript-language-name.md
     # JavaScript or Javascript?
 
     <ans>
@@ -1192,9 +1193,9 @@
 
     #ref=https://en.wikipedia.org/wiki/JavaScript
     #ref=https://developer.mozilla.org/en-US/docs/Web/JavaScript
-    #ref=javascript/specification-dialects-and-engine-implementations.md
+    #ref=en-US/javascript/specification-dialects-and-engine-implementations.md
 
-#file=javascript/delay-code-execution.md
+#file=en-US/javascript/delay-code-execution.md
 
     <ans>
     ```js
@@ -1202,7 +1203,7 @@
     ```
     </ans>
 
-#file=javascript/use-async-function-in-synchronous-context.md
+#file=en-US/javascript/use-async-function-in-synchronous-context.md
 
     <ans>
     ```js
@@ -1216,7 +1217,7 @@
     (async () => proc(await promise))()
     ```
 
-#file=javascript/get-name-of-fetched-file.md
+#file=en-US/javascript/get-name-of-fetched-file.md
 
     <ans>
     ```js
@@ -1230,7 +1231,7 @@
     const response = await fetch(uri)
     ```
 
-#file=javascript/cancel-delayed-code-execution.md
+#file=en-US/javascript/cancel-delayed-code-execution.md
 
     <ans>
     ```js
@@ -1244,7 +1245,7 @@
     timer = setTimeout(() => el.innerText = "Update text after 5 seconds", 5000)
     ```
 
-#file=javascript/fire-change-event-after-user-stops-typing.md
+#file=en-US/javascript/fire-change-event-after-user-stops-typing.md
 
     <ans>
     ```js
@@ -1262,7 +1263,7 @@
     <div id="output"></div>
     ```
 
-#file=windows-terminal/close-pane-key-binding.md
+#file=en-US/windows-terminal/close-pane-key-binding.md
     # Close pane key binding in Windows Terminal
 
     <ans>
@@ -1272,7 +1273,7 @@
     Closing the last pane will close the tab.
     Closing the last tab will close the window.
 
-#file=windows-terminal/new-pane-key-binding.md
+#file=en-US/windows-terminal/new-pane-key-binding.md
     # New pane key binding in Windows Terminal
 
     <ans>
@@ -1280,7 +1281,7 @@
     - New vertical pane:   <key>Alt</key>+<key>Shift</key>+<key>=</key>
     </ans>
 
-#file=javascript/get-select-element-option-values.md
+#file=en-US/javascript/get-select-element-option-values.md
     # Get select element option values in JavaScript
 
     <ans>
@@ -1289,7 +1290,7 @@
     ```
     </ans>
 
-#file=javascript/toggle-html-element-class.md
+#file=en-US/javascript/toggle-html-element-class.md
     # Toggle HTML element class in JavaScript
 
     <ans>
@@ -1298,7 +1299,7 @@
     ```
     </ans>
 
-#file=javascript/prevent-default-dom-event-action.md
+#file=en-US/javascript/prevent-default-dom-event-action.md
     # Prevent default DOM event action in JavaScript
 
     <ans>
@@ -1307,7 +1308,7 @@
     ```
     </ans>
 
-#file=javascript/get-select-element-options.md
+#file=en-US/javascript/get-select-element-options.md
     # Get select element options in JavaScript
 
     <ans>
@@ -1321,7 +1322,7 @@
     #ref=https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement
     #ref=https://developer.mozilla.org/en-US/docs/Web/API/HTMLOptionElement
 
-#file=windows-terminal/default-key-bindings.md
+#file=en-US/windows-terminal/default-key-bindings.md
     # Default key bindings in Windows Terminal
 
     <ans>
@@ -1334,7 +1335,7 @@
 
     *Arrow keys*: <key>Down</key> \| <key>Up</key> \| <key>Left</key> \| <key>Right</key>
 
-#file=python/encode-uri-query-string-from-dictionary.md
+#file=en-US/python/encode-uri-query-string-from-dictionary.md
     # Encode URI query string from dictionary in Python
 
     <ans>
@@ -1351,7 +1352,7 @@
     import urllib.parse
     ```
 
-#file=git/set-user-name-and-email.md
+#file=en-US/git/set-user-name-and-email.md
     # Set user name and email in Git
 
     <ans>
@@ -1360,11 +1361,11 @@
     git config --global user.email "masbicudo@gmail.com"
     ```
 
-#file=python/encode-string-to-utf-8.md
+#file=en-US/python/encode-string-to-utf-8.md
     # Encode string to UTF-8 in Python
 
 
-#file=python/save-text-file-using-utf-8.md
+#file=en-US/python/save-text-file-using-utf-8.md
     # Save text file using UTF-8 in Python
 
     <ans>
@@ -1372,9 +1373,9 @@
         tfs.write(string_value)
     </ans>
 
-#file=python/convert-string-to-utf-8-before-saving-file.md
+#file=en-US/python/convert-string-to-utf-8-before-saving-file.md
     #delete
-#file=python/write-utf-8-encoded-text-inside-binary-file.md
+#file=en-US/python/write-utf-8-encoded-text-inside-binary-file.md
     # Write UTF-8 encoded text inside binary file in Python
 
     <ans>
@@ -1388,18 +1389,18 @@
 
     `str` has the `encode` method, that returns `bytes` with the encoded string.
 
-#file=python/read-utf-8-encoded-text-from-binary-file.md
+#file=en-US/python/read-utf-8-encoded-text-from-binary-file.md
     #publish=0
     #ref=https://docs.python.org/3/howto/unicode.html
 
-#file=python/sqlite-builtin-database.md
+#file=en-US/python/sqlite-builtin-database.md
     #publish=0
 
-#file=javascript/sqlite-database-on-static-web-pages.md
+#file=en-US/javascript/sqlite-database-on-static-web-pages.md
     #publish=0
     #ref=https://phiresky.github.io/blog/2021/hosting-sqlite-databases-on-github-pages/
 
-#file=postgresql/starting-and-stopping-postgresql-database-service-in-ubuntu.md
+#file=en-US/postgresql/starting-and-stopping-postgresql-database-service-in-ubuntu.md
     # Starting and stopping a PostgreSQL database service in Ubuntu
 
     **To start run:**
@@ -1416,7 +1417,7 @@
     ```
     </ans>
 
-#file=postgresql/starting-postgresql-database-service-in-ubuntu.md
+#file=en-US/postgresql/starting-postgresql-database-service-in-ubuntu.md
     # Starting a PostgreSQL database service in Ubuntu
 
     <ans>
@@ -1425,7 +1426,7 @@
     ```
     </ans>
 
-#file=postgresql/stopping-postgresql-database-service-in-ubuntu.md
+#file=en-US/postgresql/stopping-postgresql-database-service-in-ubuntu.md
     # Stopping a PostgreSQL database service in Ubuntu
 
     <ans>
@@ -1434,7 +1435,7 @@
     ```
     </ans>
 
-#file=postgresql/starting-postgresql-database-service-in-windows-via-cmd.md
+#file=en-US/postgresql/starting-postgresql-database-service-in-windows-via-cmd.md
     # Starting a PostgreSQL database service in Windows using CMD
 
     <ans>
@@ -1443,7 +1444,7 @@
     ```
     </ans>
 
-#file=postgresql/stopping-postgresql-database-service-in-windows-via-cmd.md
+#file=en-US/postgresql/stopping-postgresql-database-service-in-windows-via-cmd.md
     # Stopping a PostgreSQL database service in Windows using CMD
 
     <ans>
@@ -1452,7 +1453,7 @@
     ```
     </ans>
 
-#file=postgresql/restarting-postgresql-database-service-in-windows-via-cmd.md
+#file=en-US/postgresql/restarting-postgresql-database-service-in-windows-via-cmd.md
     # Restarting a PostgreSQL database service in Windows using CMD
 
     <ans>
@@ -1461,7 +1462,7 @@
     ```
     </ans>
 
-#file=postgresql/managing-postgresql-database-service-in-windows.md
+#file=en-US/postgresql/managing-postgresql-database-service-in-windows.md
     # Managing a PostgreSQL database service in Windows
 
     Use Windows Services manager to start, stop, pause and restart the PostgreSQL database service.
@@ -1474,7 +1475,7 @@
     4. Top bar contains buttons to **start**, **stop**, **pause** and **restart**.
     </ans>
 
-#file=windows/what-is-the-windows-key-used-for.md
+#file=en-US/windows/what-is-the-windows-key-used-for.md
     ---
     keywords: ["winkey", "win-key", "windows key", "windows-key"]
     ---
@@ -1489,7 +1490,7 @@
     - <key>WinKey + D</key>: show Desktop/restore windows
     - <key>WinKey + X</key>: system menu
 
-#file=windows/how-to-open-on-screen-keyboard-in-windows.md
+#file=en-US/windows/how-to-open-on-screen-keyboard-in-windows.md
     # How to open On-Screen Keyboard in Windows?
 
     <ans>
@@ -1498,7 +1499,7 @@
     3. **On-Screen Keyboard** toggle
     </ans>
 
-#file=c-sharp/know-if-file-cloudapi-status-is-offline.md
+#file=en-US/c-sharp/know-if-file-cloudapi-status-is-offline.md
     # How to check CloudAPI offline status?
 
     <ans>
@@ -1509,7 +1510,7 @@
     ```
     </ans>
 
-#file=markdown/c-sharp-code-fence.md
+#file=en-US/markdown/c-sharp-code-fence.md
     # C# code inside a Markdown file
 
     <ans>
@@ -1520,13 +1521,13 @@
     ````
     </ans>
 
-#file=pdm/ModuleNotFoundError-No-module-named-pdm-core.md
+#file=en-US/pdm/ModuleNotFoundError-No-module-named-pdm-core.md
 
     # ModuleNotFoundError: No module named 'pdm.core'
 
     <ans>Remove PDM by hand, then reinstall by hand.</ans>
 
-    ```
+    ```bash
     cd ~
     curl -sSLO https://pdm.fming.dev/dev/install-pdm.py
     python install-pdm.py --remove
@@ -1534,7 +1535,7 @@
     rm install-pdm.py
     ```
 
-#file=windows/edit-user-and-system-environment-variables.md
+#file=en-US/windows/edit-user-and-system-environment-variables.md
     # Edit user and system environment variables in Windows
 
     <ans>
@@ -1544,16 +1545,16 @@
     4. **Environment Variables...** button
     </ans>
 
-#file=windows/edit-user-environment-variables.md
+#file=en-US/windows/edit-user-environment-variables.md
     # Edit user environment variables in Windows
 
     <ans>
-    1. <key>WinKey</key>
+    1. <key>WinKey</key> to open **Start Menu**
     2. Type in `var`
     3. Locate **Edit environment variables for your account**
     </ans>
 
-#file=windows/edit-system-environment-variables.md
+#file=en-US/windows/edit-system-environment-variables.md
     # Edit system environment variables in Windows
 
     <ans>
@@ -1562,46 +1563,49 @@
     3. Locate **Edit the system environment variables**
     </ans>
 
-#file=pyenv/pyenv-is-not-recognized-as-the-name-of-a-cmdlet-function.md
+#file=en-US/pyenv/pyenv-is-not-recognized-as-the-name-of-a-cmdlet-function.md
     # 'pyenv' is not recognized as the name of a cmdlet, function
 
     <ans>
     Reinstall PyEnv-Win:
     ```powershell
-    Invoke-WebRequest -UseBasicParsing -Uri "https://raw.githubusercontent.com/pyenv-win/pyenv-win/master/pyenv-win/install-pyenv-win.ps1" -OutFile "./install-pyenv-win.ps1"; &"./install-pyenv-win.ps1"
+    Invoke-WebRequest -UseBasicParsing `
+        -Uri "https://raw.githubusercontent.com/pyenv-win/pyenv-win/master/pyenv-win/install-pyenv-win.ps1" `
+        -OutFile "./install-pyenv-win.ps1"; &"./install-pyenv-win.ps1"
     ```
     </ans>
 
     See [pyenv for Windows](https://github.com/pyenv-win/pyenv-win)
 
-#file=batch/maths-division-cmd.md
+#file=en-US/batch/maths-division-cmd.md
     # Division using CMD
 
     <ans>
     ```
     set /a result=10/2
     ```
-    </and>
+    </ans>
 
-    You can use variable in the place of numbers.
+    You can use variables in the place of numbers.
 
-#file=batch/maths-in-cmd.md
+#file=en-US/batch/maths-in-cmd.md
     # Mathematics using CMD
 
     <ans>
     ```
     set /a result=10/(2+1)
     ```
-    </and>
+    </ans>
 
     Supported operations:
     - addition (`+`) and subtraction (`-`)
     - multiplication (`*`) and division (`/`) (i.e. integer division)
     - modulo (`%`) (aka remainder from division)
     - parentheses (`(` and `)`) (aka precedence operators)
-    You can use variable in the place of numbers.
 
-#file=batch/assign-output-of-command-to-variable.md
+    You can use variables in the place of numbers.
+
+#file=en-US/batch/assign-output-of-command-to-variable.md
     # Assign the output of a command to a variable
 
     <ans>
@@ -1613,10 +1617,16 @@
     ```
     </ans>
 
-#file=batch/run-powershell-command.md
+#file=en-US/batch/run-powershell-command.md
     # Run PowerShell command in CMD
 
-#file=windows/what-is-powershell.md
+    <ans>
+    ```bat
+    powershell -command "ls"
+    ```
+    </ans>
+
+#file=en-US/windows/what-is-powershell.md
     ---
     keywords: ["powershell"]
     ---
@@ -1629,6 +1639,21 @@
     - use native .Net commands and variables
     - use environment commands and variables
     </ans>
+
+#file=en-US/markdown/set-code-block-language.md
+    # Set Markdown code block language
+
+    ## To Python
+
+    ````markdown
+    ```python
+    ````
+
+    ## To Javascript
+
+    ````markdown
+    ```javascript
+    ````
 
 #file=
     #ref=https://realpython.com/python-modulo-operator/#how-to-check-if-a-number-is-even-or-odd

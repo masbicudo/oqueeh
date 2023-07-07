@@ -1,4 +1,7 @@
 {
+    "pt-BR": "pt-BR",
+    "data-hora": "Data Hora",
+    "en-US": "en-US",
     "batch": "Batch",
     "computing": "Computing",
     "css": "CSS",
@@ -8,8 +11,6 @@
     "html": "HTML",
     "javascript": "JavaScript",
     "jekyll": "Jekyll",
-    "pt-BR": "Pt BR",
-    "data-hora": "Data Hora",
     "markdown": "Markdown",
     "postgresql": "PostgreSQL",
     "powershell": "PowerShell",
