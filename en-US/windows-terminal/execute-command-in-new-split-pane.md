@@ -14,4 +14,4 @@ wt -w 0 sp -V cmd /K echo MASBicudo
 
 #### Reference
 
-- https://docs.microsoft.com/en-us/windows/terminal/command-line-arguments?tabs=windows#options-and-commands
+- [Windows Terminal command line arguments \| Microsoft Learn](https://docs.microsoft.com/en-us/windows/terminal/command-line-arguments?tabs=windows#options-and-commands)

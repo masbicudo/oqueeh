@@ -11,5 +11,5 @@ s.options
 
 #### References
 
-- https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement
-- https://developer.mozilla.org/en-US/docs/Web/API/HTMLOptionElement
+- [HTMLSelectElement - Web APIs \| MDN - developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement)
+- [HTMLOptionElement - Web APIs \| MDN - developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/API/HTMLOptionElement)

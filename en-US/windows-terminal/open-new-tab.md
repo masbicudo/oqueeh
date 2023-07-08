@@ -19,4 +19,4 @@ The profile name is not culture invariant, so using it in scripts could be a pro
 
 #### Reference
 
-- https://docs.microsoft.com/en-us/windows/terminal/command-line-arguments?tabs=windows#options-and-commands
+- [Windows Terminal command line arguments \| Microsoft Learn](https://docs.microsoft.com/en-us/windows/terminal/command-line-arguments?tabs=windows#options-and-commands)

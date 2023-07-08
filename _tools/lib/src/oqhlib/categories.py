@@ -1,6 +1,5 @@
 import os
 import re
-import sys
 from oqhlib.utils import get_category_name
 
 def onerror(oserror):

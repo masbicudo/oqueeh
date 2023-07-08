@@ -15,4 +15,4 @@ rougify list
 
 #### Website
 
-- https://github.com/rouge-ruby/rouge/wiki/List-of-supported-languages-and-lexers
+- [List of supported languages and lexers · rouge-ruby/rouge Wiki · GitHub](https://github.com/rouge-ruby/rouge/wiki/List-of-supported-languages-and-lexers)

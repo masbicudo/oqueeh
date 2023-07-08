@@ -9,6 +9,6 @@ JavaScript, with upper S is the correct name.
 
 #### References
 
-- https://en.wikipedia.org/wiki/JavaScript
-- https://developer.mozilla.org/en-US/docs/Web/JavaScript
+- [JavaScript - Wikipedia](https://en.wikipedia.org/wiki/JavaScript)
+- [JavaScript \| MDN - developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [Dialects and engine implementations of JavaScript?](en-US/javascript/specification-dialects-and-engine-implementations.md)

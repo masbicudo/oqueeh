@@ -23,4 +23,4 @@ document.addEventListener('DOMContentLoaded',
 
 #### Reference
 
-- https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event
+- [Document: DOMContentLoaded event - Web APIs \| MDN - developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event)
