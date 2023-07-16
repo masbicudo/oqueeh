@@ -154,7 +154,7 @@ def make(header="", path=".", url_path="", ignore_files=False):
 
     # Generating a new index.md with links to child pages.
     text, ext = generate_index_file(header, items)
-    with open(os.path.join(path, f"index{ext}"), "w") as fs:
+    with open(os.path.join(path, f"index{ext}"), "w", encoding="utf-8") as fs:
         fs.write(text)
 
 def make_children(path=".", url_path=""):
