@@ -1,7 +1,7 @@
 {
-    "pt-BR": "pt-BR",
+    "pt-BR": "Todos os t\u00f3picos",
     "data-hora": "Data Hora",
-    "en-US": "en-US",
+    "en-US": "All topics",
     "batch": "Batch",
     "computing": "Computing",
     "css": "CSS",
@@ -19,5 +19,7 @@
     "windows-terminal": "Windows Terminal",
     "c-sharp": "C#",
     "pdm": "PDM",
-    "pyenv": "Pyenv"
+    "pyenv": "Pyenv",
+    "visual-studio": "Visual Studio",
+    "liquid-templates": "Liquid Templates"
 }

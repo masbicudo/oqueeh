@@ -12,8 +12,8 @@ category_names = {
     "postgresql": "PostgreSQL",
     "powershell": "PowerShell",
     #"windows": "Windows",
-    "pt-BR": "pt-BR",
-    "en-US": "en-US",
+    "pt-BR": "Todos os tópicos",
+    "en-US": "All topics",
 }
 
 # Equivalence classes of words
