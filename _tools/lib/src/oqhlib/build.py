@@ -262,13 +262,20 @@ def preproc_file(input_filename, errors_list):
                         pex.message,
                         pex.value,
                     ))
+                
+all_directives = ["file", "publish", "include", "ref", "overwrite", "delete"]
 
 def preproc_line(cur_file : FileData, line : str):
     line_data = None
-    m_directive = re.match(r"^(\s*)#(\b[^=]*)\s*(?:=\s*(.*)\s*)?", line)
+    rgx_all = "|".join(all_directives)
+    m_directive = re.match(r"^((?:[^#]|##+\b)*)#(\b"+rgx_all+r"\b)\s*(?:=\s*(.*)\s*)?\s*$", line)
     if m_directive is not None:
         prefix = m_directive[1]
         name = m_directive[2]
+        if name not in all_directives:
+            raise ParseException("unknown directive", name)
+        if name not in _directives_that_allow_text and prefix.strip() != "":
+            raise ParseException("directive does not allow text", name)
         str_value = m_directive[3]
         value = get_value_from_string(str_value)
         if name == "file":
@@ -386,8 +393,12 @@ def post_process_link(title:str, url:str, include_files_dict:dict[int,FileData])
         if url.startswith("http://") or url.startswith("https://"):
             title = url
         else:
-            if url in include_files_dict:
-                file_data = include_files_dict[url]
+            if url.startswith("/"):
+                filename = url[1:]
+            if url.endswith(".md"):
+                url = url[:-3]
+            if filename in include_files_dict:
+                file_data = include_files_dict[filename]
                 import io
                 with io.StringIO(file_data.content) as ms:
                     for include_line, include_state in parse_post(ms):
@@ -491,7 +502,7 @@ def process_directives(cur_file : FileData, include_files_dict : dict):
             if line_data.directive.name == "ref":
                 link_line = None
                 if filename.startswith("http://") or filename.startswith("https://"):
-                    link_line = f"{line_data.text}- {get_link_cached(filename)}"
+                    link_line = f"{line_data.text}{get_link_cached(filename)}"
                 else:
                     # Loading data that will be needed to fill in
                     # the link title afterwards
@@ -503,7 +514,7 @@ def process_directives(cur_file : FileData, include_files_dict : dict):
                         
                     # Leave title empty so that the post-processing
                     # can fill in the correct title of the reference.
-                    link_line = f"{line_data.text}- []({filename})"
+                    link_line = f"{line_data.text}[](/{filename})"
                 yield link_line
             elif line_data.directive.name == "include":
                 if filename not in include_files_dict:
@@ -716,10 +727,10 @@ def get_input_filenames(input_filenames):
     return new_input_filename
 
 def split_files(
-        input_filenames,
-        args,
-        errors_list : list[str],
-    ):
+            input_filenames,
+            args,
+            errors_list : list[str],
+        ):
     pre_files = preproc_files(input_filenames, errors_list)
 
     sorted_files_dict = get_files_sorted_by_dependency(pre_files, errors_list)
