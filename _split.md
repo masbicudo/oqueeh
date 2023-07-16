@@ -1655,7 +1655,142 @@
     ```javascript
     ````
 
-#file=
+#file=en-US/c-sharp/reading-embedded-resources.md
+    # Reading embedded resources in C#
+
+    <ans>
+    ```c#
+    var assembly = Assembly.GetExecutingAssembly();
+    var resourceName = "AssemblyNamespace.FolderNamespace.FileName";
+    using (Stream stream = assembly.GetManifestResourceStream(resourceName))
+    ```
+    </ans>
+
+    - **AssemblyNamespace:** the default root namespace of the assembly containing the embedded resource
+    - **FolderNamespace:** path for the file inside the project with dots (`"."`) separating path items
+    - **FileName:** name of the file including extension
+
+    Know more:
+    - #ref=en-US/visual-studio/embedding-resource-files.md
+    - #ref=en-US/c-sharp/listing-embedded-resources.md
+
+#file=en-US/c-sharp/listing-embedded-resources.md
+    # Listing embedded resources in C#
+
+    <ans>
+    ```c#
+    assembly.GetManifestResourceNames()
+    ```
+    </ans>
+
+    Know more:
+    - #ref=en-US/visual-studio/embedding-resource-files.md
+    - #ref=en-US/c-sharp/reading-embedded-resources.md
+
+#file=en-US/visual-studio/embedding-resource-files.md
+    # Embedding resource files in Visual Studio
+
+    <ans>
+    1. Include the file in the project structure
+    2. Select file and open properties window
+    3. Set *Build Action* to **Embedded Resource**
+    </ans>
+
+    Know more:
+    - #ref=en-US/c-sharp/reading-embedded-resources.md
+    - #ref=en-US/c-sharp/listing-embedded-resources.md
+
+#file=en-US/c-sharp/reading-embedded-resource-from-resx-file.md
+    # Reading embedded resource from *.resx* file
+
+    <ans>
+    ```c#
+    AssemblyNamespace.FolderStructure.ResourceFileName.resource_name
+    ```
+    </ans>
+
+    **Example:**
+    ```c#
+    AssemblyNamespace.Properties.Resources.foo_txt
+    ```
+
+    **Notes:**
+    - **AssemblyNamespace:** is the default namespace of the assembly containing the embedded resource
+    - **FolderStructure:** is the relative path to the *.resx* file separated by dots (`"."`)
+    - **ResourceFileName:** is the name of resource file, without *.resx* extension
+    - **resource_name:** is the name of the resource item inside the resource file
+    - can only access from another assembly if resource is *public*
+
+    Know more:
+    - #ref=en-US/visual-studio/adding-embedded-resource-to-resources-resx-file.md
+
+#file=en-US/visual-studio/adding-embedded-resource-to-resources-resx-file.md
+    # Adding embedded resource to *Resources.resx* file
+
+    <ans>
+    1. Right click the project, then select *Properties*
+       - *-or-* select project, and press <key>Alt</key>+<key>Enter</key>
+    2. Go to *Resources*
+    3. Open or create resource file
+    4. Select the option *Files* from tool-box menu
+    5. *Add resource*
+    </ans>
+
+    **Notes:**
+    - *Resources.resx* file will be created inside the *Properties* folder
+
+    Know more:
+    - #ref=en-US/c-sharp/reading-embedded-resource-from-resx-file.md
+
+#file=en-US/c-sharp/localized-embedded-resource-files.md
+    # Localizing embedded resource files
+
+    <ans>
+    Add localization to file name.
+    - e.g. *Resources.en-US.resx*.
+    </ans>
+
+    Know more:
+    - #ref=en-US/visual-studio/adding-embedded-resource-to-resources-resx-file.md
+    - #ref=en-US/c-sharp/reading-embedded-resource-from-resx-file.md
+
+#file=en-US/liquid-templates/adding-numbers.md
+    # Adding numbers in Liquid templates
+
+    <ans>
+    ```
+    {{"{%"}} assign number = number1 | plus: number2 %}
+    ```
+    </ans>
+
+#file=en-US/liquid-templates/multiply-numbers.md
+    # Multiplying numbers in Liquid templates
+
+    <ans>
+    ```
+    {{"{%"}} assign number = number1 | times: number2 %}
+    ```
+    </ans>
+
+#file=en-US/liquid-templates/subtract-numbers.md
+    # Subtracting numbers in Liquid templates
+
+    <ans>
+    ```
+    {{"{%"}} assign number = number1 | minus: number2 %}
+    ```
+    </ans>
+
+#file=en-US/liquid-templates/escaping-tags.md
+    # Escaping tags in Liquid templates
+
+    <ans>
+    Escape only the opening of tags:
+    - For {{"{%"}}, use {{"{{"}}"{{"{%"}}"}}
+    - For {{"{{"}}, use {{"{{"}}"{{"{{"}}"}}
+    </ans>
+
+#file=_.md
     #ref=https://realpython.com/python-modulo-operator/#how-to-check-if-a-number-is-even-or-odd
     #ref=https://jekyllrb.com/docs/variables/
     #ref=https://github.com/daattali/beautiful-jekyll

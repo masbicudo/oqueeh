@@ -15,4 +15,4 @@ generated: true
 <a href="data:text/plain;charset=utf-8;base64,TUFTQmljdWRv"
     download="masbicudo.txt">Download</a>
 
-- [Data URI generator](en-US/html/data-uri-generator.md)
+[Data URI generator](/en-US/html/data-uri-generator)

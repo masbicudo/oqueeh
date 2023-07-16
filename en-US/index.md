@@ -1,5 +1,5 @@
 ---
-title: en-US
+title: All topics
 ---
 
 [Batch](batch)
@@ -22,6 +22,8 @@ title: en-US
 
 [Jekyll](jekyll)
 
+[Liquid Templates](liquid-templates)
+
 [Markdown](markdown)
 
 [PDM](pdm)
@@ -33,6 +35,8 @@ title: en-US
 [Pyenv](pyenv)
 
 [Python](python)
+
+[Visual Studio](visual-studio)
 
 [Windows](windows)
 

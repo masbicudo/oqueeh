@@ -9,4 +9,4 @@ It is used in Firefox browser and other Mozilla projects.
 Also used in no-sql, i.e. document databases, like MongoDB.
 </div>
 
-- [Dialects and engine implementations of JavaScript?](en-US/javascript/specification-dialects-and-engine-implementations.md)
+[Dialects and engine implementations of JavaScript?](/en-US/javascript/specification-dialects-and-engine-implementations)

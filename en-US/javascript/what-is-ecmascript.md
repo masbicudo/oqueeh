@@ -11,4 +11,4 @@ The purpose is to provide wide compatibility between browsers and web applicatio
 
 There is one new edition of the ECMAScript per year.
 
-- [Dialects and engine implementations of JavaScript?](en-US/javascript/specification-dialects-and-engine-implementations.md)
+[Dialects and engine implementations of JavaScript?](/en-US/javascript/specification-dialects-and-engine-implementations)

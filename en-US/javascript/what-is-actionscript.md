@@ -7,4 +7,4 @@ generated: true
 ActionScript is the Adobe's dialect of ECMAScript, used in Adobe Flash.
 </div>
 
-- [Dialects and engine implementations of JavaScript?](en-US/javascript/specification-dialects-and-engine-implementations.md)
+[Dialects and engine implementations of JavaScript?](/en-US/javascript/specification-dialects-and-engine-implementations)

@@ -23,4 +23,4 @@ generated: true
 	    .then(data_uri => document.write(data_uri))
     ```
 
-    - [Data URI generator](en-US/html/data-uri-generator.md)
+    [Data URI generator](/en-US/html/data-uri-generator)

@@ -18,4 +18,4 @@ for (let x of iterable) console.log(x)
 console.log([...iterable])
 ```
 
-- [Iterables usage in JavaScript](en-US/javascript/iterables-usage.md)
+[Iterables usage in JavaScript](/en-US/javascript/iterables-usage)

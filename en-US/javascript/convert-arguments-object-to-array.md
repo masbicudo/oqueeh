@@ -31,4 +31,4 @@ Array.from(arguments)
 Array.prototype.slice.call(arguments)
 ```
 
-- [Convert iterable object to Array in JavaScript](en-US/javascript/convert-iterable-object-to-array.md)
+[Convert iterable object to Array in JavaScript](/en-US/javascript/convert-iterable-object-to-array)

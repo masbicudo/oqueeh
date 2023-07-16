@@ -2,6 +2,6 @@
 title: 
 ---
 
-[en-US](en-US)
+[All topics](en-US)
 
-[pt-BR](pt-BR)
+[Todos os tópicos](pt-BR)

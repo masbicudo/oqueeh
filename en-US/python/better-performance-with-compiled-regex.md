@@ -19,4 +19,4 @@ pattern.sub(r"\1", "The brown fox jumps!")
 
 #### Reference
 
-- [re — Regular expression operations — Python 3.11.4 documentation](https://docs.python.org/3/library/re.html#regular-expression-objects)
+[re — Regular expression operations — Python 3.11.4 documentation](https://docs.python.org/3/library/re.html#regular-expression-objects)
