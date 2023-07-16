@@ -10,12 +10,18 @@
     <nav>
       <a href="/" class="sitename"><span>oqueeh<span class="smaller">.net</span></span></a>
       {% assign cat_url = '/' %}
-      {% assign path_cats = page.dir | split: '/' %}
+      {% assign path_cats = page.url | split: '/' %}
+      {% assign path_cats_print = path_cats.size | minus: 2 %}
+      {% assign path_count = 0 %}
       {% for pg_cat in path_cats %}
         {% if pg_cat != '' %}
           {% assign cat_url = cat_url | append: pg_cat | append: '/' %}
-          {% if cat_url != page.url %}
+          {% if path_cats_print > path_count %}
+            {% if path_count > 0 %}
+              &gt;
+            {% endif %}
             <a class="sidebar-nav-item" href="{{ cat_url }}">{{ site.data.category_names[pg_cat] }}</a>
+            {% assign path_count = path_count | plus: 1 %}
           {% endif %}
         {% endif %}
       {% endfor %}
