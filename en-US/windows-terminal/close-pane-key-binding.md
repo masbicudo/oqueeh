@@ -4,7 +4,7 @@ generated: true
 ---
 
 <div markdown="1" class="ans">
-<key>Ctrl</key>+<key>Shift</key>+<key>W</key>
+<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>W</kbd>
 </div>
 
 Closing the last pane will close the tab.

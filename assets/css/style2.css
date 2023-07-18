@@ -103,3 +103,16 @@ ul {
         padding: 0 1.2em 0 1.8em;
     }
 }
+
+kbd {
+    color: black;
+    vertical-align: middle;
+    background-color: white;
+    border: solid 1px gray;
+    border-bottom-color: gray;
+    box-shadow: inset -0.05rem -0.15rem 0 gray;
+    border-radius: .35rem;
+    padding: .3rem;
+    font-size: 0.8em;
+    display: inline-block;
+}

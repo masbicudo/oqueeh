@@ -261,8 +261,6 @@
     title: Front matter in Jekyll
     ---
 
-    #ref=http://simpleprimate.com/blog/front-matter
-
     <ans>
     {% raw %}
     ```
@@ -273,17 +271,22 @@
     {% endraw %}
     </ans>
 
+    **Remarks:**
+
     The front matter of a Jekyll page is like a header of the file.
-
     It is used to define variables associated with the file.
-
     These variables are then used in various contexts.
-
     The variables go directly into the `page` or `post` variable.
 
+    **Example:**
+
+    {% assign var1 = "{{ page.title }}" %}
     ```
-    {{ page.title }}
+    {{ var1 }}
     ```
+
+    **References:**
+    - #ref=http://simpleprimate.com/blog/front-matter
 
 #file=en-US/jekyll/last-item-of-array.md
     ---
@@ -522,7 +525,7 @@
 
     This can be used inside a module.
 
-    The function will be called in the end of the Python program, even if the program is terminated by pressing <key>ctrl+c</key>.
+    The function will be called in the end of the Python program, even if the program is terminated by pressing <kbd>ctrl+c</kbd>.
 
     #### Prerequisite:
 
@@ -1267,7 +1270,7 @@
     # Close pane key binding in Windows Terminal
 
     <ans>
-    <key>Ctrl</key>+<key>Shift</key>+<key>W</key>
+    <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>W</kbd>
     </ans>
 
     Closing the last pane will close the tab.
@@ -1277,8 +1280,8 @@
     # New pane key binding in Windows Terminal
 
     <ans>
-    - New horizontal pane: <key>Alt</key>+<key>Shift</key>+<key>-</key>
-    - New vertical pane:   <key>Alt</key>+<key>Shift</key>+<key>=</key>
+    - New horizontal pane: <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>-</kbd>
+    - New vertical pane:   <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>=</kbd>
     </ans>
 
 #file=en-US/javascript/get-select-element-option-values.md
@@ -1326,14 +1329,14 @@
     # Default key bindings in Windows Terminal
 
     <ans>
-    - Close pane/tab/window: <key>Ctrl</key>+<key>Shift</key>+<key>W</key>
-    - New horizontal pane:   <key>Alt</key>+<key>Shift</key>+<key>-</key>
-    - New vertical pane:     <key>Alt</key>+<key>Shift</key>+<key>=</key>
-    - Switch pane:           <key>Alt</key>+*Arrow keys*
-    - Resize pane:           <key>Alt</key>+<key>Shift</key>+*Arrow keys*
+    - Close pane/tab/window: <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>W</kbd>
+    - New horizontal pane:   <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>-</kbd>
+    - New vertical pane:     <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>=</kbd>
+    - Switch pane:           <kbd>Alt</kbd>+*Arrow kbds*
+    - Resize pane:           <kbd>Alt</kbd>+<kbd>Shift</kbd>+*Arrow kbds*
     </ans>
 
-    *Arrow keys*: <key>Down</key> \| <key>Up</key> \| <key>Left</key> \| <key>Right</key>
+    *Arrow keys*: <kbd>Down</kbd> \| <kbd>Up</kbd> \| <kbd>Left</kbd> \| <kbd>Right</kbd>
 
 #file=en-US/python/encode-uri-query-string-from-dictionary.md
     # Encode URI query string from dictionary in Python
@@ -1468,7 +1471,7 @@
     Use Windows Services manager to start, stop, pause and restart the PostgreSQL database service.
 
     <ans>
-    1. Use <key>WinKey + R</key> for *Run Window*
+    1. Use <kbd>WinKey</kbd>+<kbd>R</kbd> for *Run Window*
     2. Type `services.msc`
     3. Search for `postgresql` in the list
        - You can type to search!
@@ -1486,15 +1489,15 @@
     </ans>
 
     Short list of known shortcuts on Windows:
-    - <key>WinKey + R</key>: open "Run" dialog
-    - <key>WinKey + D</key>: show Desktop/restore windows
-    - <key>WinKey + X</key>: system menu
+    - <kbd>WinKey</kbd>+<kbd>R</kbd>: open "Run" dialog
+    - <kbd>WinKey</kbd>+<kbd>D</kbd>: show Desktop/restore windows
+    - <kbd>WinKey</kbd>+<kbd>X</kbd>: system menu
 
 #file=en-US/windows/how-to-open-on-screen-keyboard-in-windows.md
     # How to open On-Screen Keyboard in Windows?
 
     <ans>
-    1. <key>WinKey + R</key>
+    1. <kbd>WinKey</kbd>+<kbd>R</kbd>
     2. **Settings** > **Accessibility** > **Keyboard**
     3. **On-Screen Keyboard** toggle
     </ans>
@@ -1539,7 +1542,7 @@
     # Edit user and system environment variables in Windows
 
     <ans>
-    1. <key>WinKey + R</key>
+    1. <kbd>WinKey</kbd>+<kbd>R</kbd>
     2. Type in `sysdm.cpl`
     3. **Advanced** tab
     4. **Environment Variables...** button
@@ -1549,7 +1552,7 @@
     # Edit user environment variables in Windows
 
     <ans>
-    1. <key>WinKey</key> to open **Start Menu**
+    1. <kbd>WinKey</kbd> to open **Start Menu**
     2. Type in `var`
     3. Locate **Edit environment variables for your account**
     </ans>
@@ -1558,7 +1561,7 @@
     # Edit system environment variables in Windows
 
     <ans>
-    1. <key>WinKey</key>
+    1. <kbd>WinKey</kbd>
     2. Type in `var`
     3. Locate **Edit the system environment variables**
     </ans>
@@ -1729,17 +1732,17 @@
 
     <ans>
     1. Right click the project, then select *Properties*
-       - *-or-* select project, and press <key>Alt</key>+<key>Enter</key>
+       - *-or-* select project, and press <kbd>Alt</kbd>+<kbd>Enter</kbd>
     2. Go to *Resources*
     3. Open or create resource file
     4. Select the option *Files* from tool-box menu
-    5. *Add resource*
+    5. Click *Add resource* button
     </ans>
 
     **Notes:**
     - *Resources.resx* file will be created inside the *Properties* folder
 
-    Know more:
+    **Know more:**
     - #ref=en-US/c-sharp/reading-embedded-resource-from-resx-file.md
 
 #file=en-US/c-sharp/localized-embedded-resource-files.md
@@ -1786,9 +1789,137 @@
 
     <ans>
     Escape only the opening of tags:
-    - For {{"{%"}}, use {{"{{"}}"{{"{%"}}"}}
-    - For {{"{{"}}, use {{"{{"}}"{{"{{"}}"}}
+    - For `{{"{%"}}`, use `{{"{{"}}"{{"{%"}}"}}`
+    - For `{{"{{"}}`, use `{{"{{"}}"{{"{{"}}"}}`
     </ans>
+
+#file=en-US/liquid-templates/get-size-of-array.md
+    # Getting the size of arrays in a Liquid template
+
+    <ans>
+    Using dot notation: `array.size`
+    *-or-* using pipe notation: `array | size`
+    </ans>
+
+    References:
+    - #ref:https://shopify.github.io/liquid/filters/size/
+
+#file=en-US/pgadmin4/nonetype-object-has-no-attribute-value.md
+    # 'NoneType' object has no attribute 'value'
+
+    <ans>
+    Downgrade pgAdmin4
+    </ans>
+
+#file=en-US/pgadmin4/missing-from-clause-entry-for-table-rel.md
+    # missing FROM-clause entry for table "rel"
+
+    <ans>
+    Downgrade pgAdmin4
+    </ans>
+
+#file=en-US/c-sharp/redirect-output-of-child-process.md
+    # Redirect output of child process using C#
+
+    ```c#
+    var process = Process.Start(
+        new ProcessStartInfo("ping", "google.com") {
+            UseShellExecute = false,
+            RedirectStandardOutput = true,
+            RedirectStandardError = true,
+            RedirectStandardInput = true });
+    Console.WriteLine(process.StandardOutput.ReadToEnd());
+    ```
+
+    **Notes:**
+    - `UseShellExecute` must be false, otherwise reading from `StandardOutput` throws an exception.
+    - `RedirectStandardInput` may be needed even if you don't need to redirect input stream.
+
+    **References:**
+    - #ref=https://learn.microsoft.com/en-us/dotnet/api/system.diagnostics.processstartinfo.redirectstandardoutput?view=net-7.0
+    - #ref=https://7thzero.com/blog/
+    process-startinfo-redirectstandardoutput-not-quite-what-you-d-ex
+
+#file=en-US/c-sharp/get-exit-code-of-child-process.md
+    # Get exit code of a child process using C#
+
+    ```c#
+    process.WaitForExit();
+    int exitCode = process.ExitCode;
+    ```
+
+    **References:**
+    - #ref=https://stackoverflow.com/questions/37144749/how-to-run-and-get-output-from-another-application-using-c-sharp
+
+#file=en-US/windows/create-desktop-shortcut-for-uwp-app.md
+    # Create desktop shortcut for UWP app
+
+    <ans>
+    Drag and drop from the Start Menu
+    </ans>
+
+    **Note:**
+    - Does not work in Windows 11
+
+#file=en-US/python/what-are-enter-and-exit-functions.md
+    # What are __enter__ and __exit__ functions in Python
+
+    <ans>
+    - Manage the usage of resources which need to be freed.
+    - `__enter__` allocates the resource
+    - `__exit__` release the resource
+    </ans>
+
+    **Notes:**
+    - Can be used to create code-blocks in which a context is valid.
+
+#file=en-US/python/string-interpolation.md
+    # String interpolation in Python
+
+    <ans>
+    ```python
+    f"Some value: {someValue}"
+    ```
+    </ans>
+
+#file=en-US/c-sharp/string-interpolation.md
+    # String interpolation in C#
+
+    <ans>
+    ```c#
+    $"Some value: {someValue}"
+    ```
+    </ans>
+
+    **References:**
+    - #ref=https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/interpolated
+
+#file=en-US/c-sharp/string-interpolation-formatting.md
+    # String interpolation formatting in C#
+
+    <ans>
+    ```c#
+    $"Some value: {someValue:0.0}"
+    ```
+    </ans>
+
+    **References:**
+    - #ref=https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/interpolated
+
+#file=en-US/c-sharp/string-interpolation-escaping.md
+    # String interpolation escaping in C#
+
+    <ans>
+    ```c#
+    $$"{someValue}: {{"{{"}}someValue:0.0}}"
+    ```
+    </ans>
+
+    **Notes:**
+    - Use multiple *$* to denote that braces (*{* and *}*)should be also the same multiple.
+
+    **References:**
+    - #ref=https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/interpolated
 
 #file=_.md
     #ref=https://realpython.com/python-modulo-operator/#how-to-check-if-a-number-is-even-or-odd

@@ -2,6 +2,8 @@
 title: Windows
 ---
 
+[Create desktop shortcut for UWP app](create-desktop-shortcut-for-uwp-app)
+
 [Edit system environment variables in Windows](edit-system-environment-variables)
 
 [Edit user and system environment variables in Windows](edit-user-and-system-environment-variables)

@@ -4,11 +4,11 @@ generated: true
 ---
 
 <div markdown="1" class="ans">
-- Close pane/tab/window: <key>Ctrl</key>+<key>Shift</key>+<key>W</key>
-- New horizontal pane:   <key>Alt</key>+<key>Shift</key>+<key>-</key>
-- New vertical pane:     <key>Alt</key>+<key>Shift</key>+<key>=</key>
-- Switch pane:           <key>Alt</key>+*Arrow keys*
-- Resize pane:           <key>Alt</key>+<key>Shift</key>+*Arrow keys*
+- Close pane/tab/window: <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>W</kbd>
+- New horizontal pane:   <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>-</kbd>
+- New vertical pane:     <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>=</kbd>
+- Switch pane:           <kbd>Alt</kbd>+*Arrow kbds*
+- Resize pane:           <kbd>Alt</kbd>+<kbd>Shift</kbd>+*Arrow kbds*
 </div>
 
-*Arrow keys*: <key>Down</key> \| <key>Up</key> \| <key>Left</key> \| <key>Right</key>
+*Arrow keys*: <kbd>Down</kbd> \| <kbd>Up</kbd> \| <kbd>Left</kbd> \| <kbd>Right</kbd>

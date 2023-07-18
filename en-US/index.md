@@ -28,6 +28,8 @@ title: All topics
 
 [PDM](pdm)
 
+[Pgadmin4](pgadmin4)
+
 [PostgreSQL](postgresql)
 
 [PowerShell](powershell)

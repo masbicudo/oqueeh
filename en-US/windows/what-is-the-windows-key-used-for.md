@@ -9,6 +9,6 @@ Windows key is used to activate useful keyboard shortcuts.
 </div>
 
 Short list of known shortcuts on Windows:
-- <key>WinKey + R</key>: open "Run" dialog
-- <key>WinKey + D</key>: show Desktop/restore windows
-- <key>WinKey + X</key>: system menu
+- <kbd>WinKey</kbd>+<kbd>R</kbd>: open "Run" dialog
+- <kbd>WinKey</kbd>+<kbd>D</kbd>: show Desktop/restore windows
+- <kbd>WinKey</kbd>+<kbd>X</kbd>: system menu

@@ -84,11 +84,15 @@ title: Python
 
 [str reserved keyword in Python](str-reserved-keyword)
 
+[String interpolation in Python](string-interpolation)
+
 [String to lowercase in Python](string-to-lowercase)
 
 [Trim string in Python](trim-string)
 
 [Tuples: Immutable lists in Python](tuples-immutable-lists)
+
+[What are __enter__ and __exit__ functions in Python](what-are-enter-and-exit-functions)
 
 [Where is OSError defined in Python](where-is-oserror-defined)
 

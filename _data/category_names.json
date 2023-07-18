@@ -21,5 +21,6 @@
     "pdm": "PDM",
     "pyenv": "Pyenv",
     "visual-studio": "Visual Studio",
-    "liquid-templates": "Liquid Templates"
+    "liquid-templates": "Liquid Templates",
+    "pgadmin4": "Pgadmin4"
 }
