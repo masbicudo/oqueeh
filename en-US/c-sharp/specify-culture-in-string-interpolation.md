@@ -1,20 +1,15 @@
 ---
-title: String interpolation escaping in C#
+title: How to specify culture in a C# interpolated string?
 generated: true
 ---
 
 <div markdown="1" class="ans">
+Use the conversion to *FormattableString* or *IFormattable*:
 ```c#
-$$"{someValue}: {{"{{"}}someValue:0.0}}"
-```
-*-or-*
-```c#
-$"{{"{{"}}someValue}}: {someValue:0.0}"
+FormattableString message = $"Value is {value}";
+message.ToString(specificCulture);
 ```
 </div>
-
-**Notes:**
-- Use multiple *$* to denote that braces (*{* and *}*)should be also the same multiple.
 
 **Know more:**
 - [$ - string interpolation - format string output \| Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/interpolated)

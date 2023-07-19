@@ -1,12 +1,13 @@
 ---
-title: String interpolation formatting in C#
+title: String interpolation conversions types in C#
 generated: true
 ---
 
 <div markdown="1" class="ans">
-```c#
-$"Some value: {someValue:0.0}"
-```
+These are the builtin string interpolation handler types:
+- String
+- FormattableString
+- IFormattable
 </div>
 
 **Know more:**

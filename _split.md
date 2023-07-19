@@ -1903,7 +1903,7 @@
     ```
     </ans>
 
-    **References:**
+    **Know more:**
     - #ref=https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/interpolated
 
 #file=en-US/c-sharp/string-interpolation-escaping.md
@@ -1913,13 +1913,122 @@
     ```c#
     $$"{someValue}: {{"{{"}}someValue:0.0}}"
     ```
+    *-or-*
+    ```c#
+    $"{{"{{"}}someValue}}: {someValue:0.0}"
+    ```
     </ans>
 
     **Notes:**
     - Use multiple *$* to denote that braces (*{* and *}*)should be also the same multiple.
 
-    **References:**
+    **Know more:**
     - #ref=https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/interpolated
+
+#file=en-US/c-sharp/string-interpolation-conversions-types.md
+    # String interpolation conversions types in C#
+
+    <ans>
+    These are the builtin string interpolation handler types:
+    - String
+    - FormattableString
+    - IFormattable
+    </ans>
+
+    **Know more:**
+    - #ref=https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/interpolated
+
+#file=en-US/c-sharp/string-interpolation-formattable-string.md
+    # String interpolation conversion to FormattableString in C#
+
+    <ans>
+    ```c#
+    FormattableString message = $"Value is {value}";
+    ```
+    </ans>
+
+    **Know more:**
+    - #ref=https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/interpolated
+
+#file=en-US/c-sharp/specify-culture-in-string-interpolation.md
+    # How to specify culture in a C# interpolated string?
+
+    <ans>
+    Use the conversion to *FormattableString* or *IFormattable*:
+    ```c#
+    FormattableString message = $"Value is {value}";
+    message.ToString(specificCulture);
+    ```
+    </ans>
+
+    **Know more:**
+    - #ref=https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/interpolated
+
+#file=en-US/c-sharp/creating-custom-string-interpolation-handler.md
+    # Creating a custom string interpolation handler in C#
+
+    Create a class with the following:
+    <ans>
+    - Attribute *InterpolatedStringHandler* applied to the class
+    - Constructor with parameters `int literalLength` and `int formatCount`
+    - Public methods *AppendLiteral* and *AppendFormatted*:
+      - `public void AppendLiteral(string s)`
+      - `public void AppendFormatted<T>(T t)`
+    </ans>
+
+    **Notes:**
+    - *AppendFormatted* may have additional parameters `int alignment` and `string format`:
+      - e.g. when using `$"{value,-15:red}"`
+    - The methods may return *bool* to stop interpolation at any point.
+
+    **Know more:**
+    - #ref=en-US/c-sharp/passing-parameters-to-interpolation-handler-constructor.md
+
+    **References:**
+    - #ref=https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/tutorials/interpolated-string-handler
+
+#file=en-US/c-sharp/passing-parameters-to-interpolation-handler-constructor.md
+    # Passing parameters to a string interpolation handler constructor in C#
+
+    Annotate the argument receiving the interpolated string handler with the attribute *InterpolatedStringHandlerArgument*, for example:
+
+    <ans>
+    ```c#
+    public void PrintMessage(
+        string color,
+        [InterpolatedStringHandlerArgument("", "color")]
+        ColorInterpolatedStringHandler builder
+      )
+    ```
+    </ans>
+
+    **Remarks:**
+    - `""` parameter refers to `this` in that context.
+    - `"color"` parameter refers to the argument named *color*.
+      - The constructor of *ColorInterpolatedStringHandler* must receive both parameters:
+        e.g. `ctor(int literalLength, int formatCount, MyClass my, string color)`
+
+    **Know more:**
+    - #ref=en-US/c-sharp/creating-custom-string-interpolation-handler.md
+
+    **References:**
+    - #ref=https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/tutorials/interpolated-string-handler
+
+#file=en-US/c-sharp/compare-arrays.md
+    # Comparing arrays in C#
+
+    <ans>
+    ```c#
+    Enumerable.SequenceEquals(array1, array2)
+    ```
+    *-or-*
+    ```c#
+    array1.AsSpan().SequenceEqual(array2)
+    ```
+    </ans>
+
+    **References:**
+    - #ref=https://code-maze.com/csharp-compare-arrays/
 
 #file=_.md
     #ref=https://realpython.com/python-modulo-operator/#how-to-check-if-a-number-is-even-or-odd
