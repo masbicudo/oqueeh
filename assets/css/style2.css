@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400&display=swap');
 
 body {
     margin: 0.5cm 0.3cm calc(0.5cm + 1.2em + 0.5cm) 0.5cm;
-    font-size: calc(0.6*(1vw + 1vh + 0.5cm));
+    font-size: calc(0.6*(1vw + 0.8vh + 0.5cm));
     --header-size-max: 1.5em;
     --header-size-min: 0.8em;
     font-family: 'Roboto', sans-serif;
@@ -13,7 +14,7 @@ ans {
 }
 
 ans, .ans {
-    font-size: 1.5em;
+    font-size: 1.4em;
 }
 
 code, kbd, pre, samp {
@@ -23,6 +24,10 @@ code, kbd, pre, samp {
 pre {
     display: block;
     overflow-x: auto;
+}
+
+code.language-plaintext {
+    background-color: aliceblue;
 }
 
 .sitename {
@@ -37,16 +42,19 @@ pre {
     position: fixed;
     bottom: 0.5cm;
     left: 0.5cm;
-    border-bottom: 0.1em solid transparent;
     font-size: 1.2em;
+    background-color: white;
+    border-radius: 0.3rem;
+    padding: 4px 8px;
 }
 
-.sitename:hover {
+.sitename:hover > span {
     border-bottom: 0.1em solid crimson;
 }
 
-.sitename span {
+.sitename > span {
     display: inline-block;
+    border-bottom: 0.1em solid transparent;
 }
 
 .smaller{
@@ -63,6 +71,8 @@ footer {
     bottom: 0.5cm;
     right: 0.5cm;
     font-size: 0.8em;
+    background-color: white;
+    border-radius: 0.3rem;
 }
 
 /* pre > code {
@@ -71,6 +81,8 @@ footer {
 
 h1, h2, h3, h4, h5, h6 {
     margin: 1em 0 0.2em -0.5em;
+    font-family: 'Merriweather', serif;
+    word-spacing: 0.15rem;
 }
 
 h1 {
