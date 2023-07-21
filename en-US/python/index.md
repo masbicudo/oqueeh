@@ -34,6 +34,8 @@ title: Python
 
 [Get type of object in Python](get-type-of-object)
 
+[Initializing a PyProjectX Python project](initializing-pyprojectx-project-manager)
+
 [Iterate dictionary key/value pairs in Python](iterate-dict-key-value-pairs)
 
 [Join list into string in Python](join-list-into-string)

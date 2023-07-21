@@ -22,5 +22,6 @@
     "pyenv": "Pyenv",
     "visual-studio": "Visual Studio",
     "liquid-templates": "Liquid Templates",
-    "pgadmin4": "Pgadmin4"
+    "pgadmin4": "Pgadmin4",
+    "dot-net": "Dot Net"
 }

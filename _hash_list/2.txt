@@ -46,3 +46,15 @@ fa1f7412787044dc71fd40fc43e9334fe57cea5f4c8e34fbee2f79fa81785496 en-US/pgadmin4/
 769949527fac51595f5b13a980fbe59bbe7ce42cc0be7edd3aec86c7c482ce5d en-US/c-sharp/passing-parameters-to-interpolation-handler.md
 e3f1cdb66dfc261bed1ff149e9b6648f2f0d224cb8b3b752036ed4a023480551 en-US/c-sharp/passing-parameters-to-interpolation-handler-constructor.md
 a40c3445b91a27afc5c11b1410530c4caae8d3458f26e3f46f055b0f8f5bf009 en-US/c-sharp/compare-arrays.md
+ed22d0d8e717321a43c908c62f9a28babc62e8cb2c7c0ffdcb56f6548f233088 en-US/postgresql/replace-string-using-regex-pattern.md
+f8e391a8713a12d10a47ac1e43dd26770ac3bc998c200315d51ac29b4729ed41 en-US/postgresql/convert-string-to-number.md
+43ce4b1cc0162b6655788acdb416e92e8f585ee84323bb8486e352b6b70e7d69 en-US/postgresql/convert-specific-value-to-null.md
+6c005d8e5e0146ed5ad26a06dd4ec2da99a0fd84baf84be8bed373f15b4622b1 en-US/c-sharp/how-to-parse-html.md
+06b093170a14536d220a4076af3b8d00bce36a20023b2968df53e3a716d09042 en-US/c-sharp/parsing-html-using-angle-sharp.md
+b8f3be761bde0c46511f42ecdf87735c45cf776c530f82418a3cbb69802da2db en-US/c-sharp/parsing-html-using-html-agility-pack.md
+c4de196dd7a6b1af2426337e6019fe413dedd3ec354a328e8b1f10a590c300ca en-US/c-sharp/parsing-html-using-fizzler-extensions-for-html-agility-pack.md
+9e1ab924b3bfdddb59db0ab90671755577f040ac9d126e188060db35ec2331d4 en-US/c-sharp/parsing-html-using-cs-query.md
+fa48f9cab49f472633d57bb8d651382724fade63bda2aa97a7b614ce133c9879 en-US/python/initializing-pyprojectx-project-manager.md
+34a09ead3af06a4233db172532ce4fa5f23a9ba3b72c26683ee1e93b074ef3f1 en-US/dot-net/what-is-angle-sharp.md
+87d6c7181a17fa74ca25c7779bc72318e595866e7601bd6d1fdeb917091ff6b1 en-US/dot-net/what-is-cs-query.md
+2e999ec4bed0277e60c586485198fc22780571093807a90e6eaa5ffec8a0251c en-US/dot-net/what-is-html-agility-pack.md

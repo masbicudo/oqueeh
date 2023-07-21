@@ -8,11 +8,21 @@ title: C#
 
 [Get exit code of a child process using C#](get-exit-code-of-child-process)
 
+[Parsing HTML in C#?](how-to-parse-html)
+
 [How to check CloudAPI offline status?](know-if-file-cloudapi-status-is-offline)
 
 [Listing embedded resources in C#](listing-embedded-resources)
 
 [Localizing embedded resource files](localized-embedded-resource-files)
+
+[Parsing HTML5 using Angle Sharp](parsing-html-using-angle-sharp)
+
+[Parsing HTML5 using CsQuery](parsing-html-using-cs-query)
+
+[Parsing HTML using CSS selectors with HtmlAgilityPack and Fizzler](parsing-html-using-fizzler-extensions-for-html-agility-pack)
+
+[Parsing HTML using HtmlAgilityPack](parsing-html-using-html-agility-pack)
 
 [Passing parameters to a string interpolation handler constructor in C#](passing-parameters-to-interpolation-handler-constructor)
 

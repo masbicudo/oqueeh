@@ -2030,6 +2030,184 @@
     **References:**
     - #ref=https://code-maze.com/csharp-compare-arrays/
 
+#file=en-US/postgresql/replace-string-using-regex-pattern.md
+    # Replace string using regex pattern in PostgreSQL
+
+    <ans>
+    ```sql
+    regexp_replace(string_value, '(\w)s*=\s*(\d)', '\1', 'g')
+    ```
+    </ans>
+    
+    The previous example extracts the name of a variable being assigned inside the text of *string_value*.
+
+#file=en-US/postgresql/convert-string-to-number.md
+    # Convert string to number in PostgreSQL
+
+    <ans>
+    ```sql
+    string_value::numeric
+    ```
+    </ans>
+
+    This example converts *string_value* to numeric type.
+
+#file=en-US/postgresql/convert-specific-value-to-null.md
+    # Convert specific value to Null in PostgreSQL
+
+    <ans>
+    ```sql
+    NULLIF(input_value, '')
+    ```
+    </ans>
+
+    This example converts the empty string in *input_value* to NULL.
+
+#file/en-US/c-sharp/downloading-file-from-internet.md
+    # How to download a file from the Internet using C#?
+
+    <ans>
+    ```c#
+    using System.Net;
+    using (WebClient webClient = new WebClient())
+        webClient.DownloadFile(remoteUrl, localDestination);
+    ```
+    *-or-*
+    ```c#
+    using (HttpClient client = new HttpClient())
+    {
+        var contents = await client.GetStringAsync(url1);
+        await File.WriteAllTextAsync(filePath, contents);
+    }
+    ```
+    </ans>
+
+#file=en-US/c-sharp/how-to-parse-html.md
+    # Parsing HTML in C#?
+
+    There are multiple libraries for parsing HTML in a .Net environment:
+    <ans>
+    - HtmlAgilityPack
+      - Fizzler
+    - AngleSharp
+    - CsQuery
+    </ans>
+
+    **Know more:**
+    - #ref=en-US/c-sharp/parsing-html-using-html-agility-pack.md
+      - #ref=en-US/c-sharp/parsing-html-using-fizzler-extensions-for-html-agility-pack.md
+    - #ref=en-US/c-sharp/parsing-html-using-angle-sharp.md
+    - #ref=en-US/c-sharp/parsing-html-using-cs-query.md
+
+#file=en-US/c-sharp/parsing-html-using-angle-sharp.md
+    # Parsing HTML5 using Angle Sharp
+
+    <ans>
+    ```c#
+    var parser = new HtmlParser();
+    var document = await parser.ParseDocumentAsync(html);
+    var linkElements = document.QuerySelectorAll("a");
+    ```
+    </ans>
+    
+    **Know more:**
+    - #ref=https://anglesharp.github.io/
+    - #ref=en-US/dot-net/what-is-angle-sharp.md
+
+#file=en-US/c-sharp/parsing-html-using-html-agility-pack.md
+    # Parsing HTML using HtmlAgilityPack
+
+    <ans>
+    ```c#
+    var parser = new HtmlDocument();
+    parser.LoadHtml(html);
+    var linkElements = parser.DocumentNode.SelectNodes("//a[@href]");
+    ```
+    </ans>
+
+    **Know more:**
+    - #ref=en-US/c-sharp/parsing-html-using-fizzler-extensions-for-html-agility-pack.md
+    - #ref=en-US/dot-net/what-is-html-agility-pack.md
+
+#file=en-US/c-sharp/parsing-html-using-fizzler-extensions-for-html-agility-pack.md
+    # Parsing HTML using CSS selectors with HtmlAgilityPack and Fizzler
+
+    *Fizzler* is a library that contains extensions for *HtmlAgilityPack*
+    that allows using CSS selectors instead of XPath.
+    <ans>
+    ```c#
+    var parser = new HtmlDocument();
+    parser.LoadHtml(html);
+    var linkElements = parser.DocumentNode.QuerySelectorAll("a");
+    ```
+    </ans>
+
+    **Know more:**
+    - #ref=https://github.com/atifaziz/Fizzler
+    - #ref=en-US/dot-net/what-is-html-agility-pack.md
+
+#file=en-US/c-sharp/parsing-html-using-cs-query.md
+    # Parsing HTML5 using CsQuery
+
+    <ans>
+    ```c#
+    CQ cq = CQ.Create(html);
+    var linkElements = cq.Find("a");
+    ```
+    </ans>
+
+    **Know more:**
+    - #ref=https://github.com/jamietre/CsQuery
+    - #ref=en-US/dot-net/what-is-cs-query.md
+
+#file=en-US/dot-net/what-is-angle-sharp.md
+    #keywords=["anglesharp", "angle-sharp"]
+    # What is AngleSharp?
+
+    <ans>
+    AngleSharp is a library made for parsing HTML in .Net environment.
+    </ans>
+
+    **Know more:**
+    - #ref=https://anglesharp.github.io/
+
+#file=en-US/dot-net/what-is-cs-query.md
+    #keywords=["csquery", "cs-query"]
+    # What is CsQuery?
+
+    <ans>
+    CsQuery is a library made for parsing HTML in .Net environment.
+    It supports all CSS2 and CSS3 selectors.
+    </ans>
+
+    **Know more:**
+    - #ref=https://github.com/jamietre/CsQuery
+
+#file=en-US/dot-net/what-is-html-agility-pack.md
+    #keywords=["htmlagilitypack", "html-agility-pack"]
+    # What is HtmlAgilityPack?
+
+    <ans>
+    HtmlAgilityPack is a library made for parsing HTML in .Net environment.
+    </ans>
+    
+    **Know more:**
+    - #ref=https://html-agility-pack.net/
+
+#file=en-US/python/initializing-pyprojectx-project-manager.md
+    # Initializing a PyProjectX Python project
+
+    <ans>
+    Download PyProjectX tool to project directory:
+    - Linux: `curl -LO https://github.com/pyprojectx/pyprojectx/releases/latest/download/wrappers.zip && unzip wrappers.zip && rm -f wrappers.zip`
+    - Windows: `powershell
+    Invoke-WebRequest https://github.com/pyprojectx/pyprojectx/releases/latest/download/wrappers.zip -OutFile wrappers.zip; Expand-Archive -Path wrappers.zip -DestinationPath .; Remove-Item -Path wrappers.zip
+    `
+    Then initialize, using one of the following:
+    - `./pw --init pdm`
+    - `./pw --init poetry`
+    </ans>
+
 #file=_.md
     #ref=https://realpython.com/python-modulo-operator/#how-to-check-if-a-number-is-even-or-odd
     #ref=https://jekyllrb.com/docs/variables/
