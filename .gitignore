@@ -16,3 +16,4 @@ __pycache__/
 *.local.*
 /list-qa.txt
 /_.md
+/.jekyll-metadata
