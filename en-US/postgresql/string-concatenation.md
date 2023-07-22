@@ -11,7 +11,16 @@ SELECT 'a' || 'b'
 ```sql
 SELECT concat('a', 'b')
 ```
+*-or-*
+```sql
+SELECT concat_ws(',', 'a', 'b')
+```
 </div>
+
+*concat_ws* stands for concatenate with separator.
 
 **Know more:**
 - [String concatenation aggregation in PostgreSQL](/en-US/postgresql/string-concatenation-aggregation)
+
+**References:**
+- https://www.postgresqltutorial.com/postgresql-string-functions/postgresql-concat-function/

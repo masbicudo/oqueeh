@@ -2219,10 +2219,19 @@
     ```sql
     SELECT concat('a', 'b')
     ```
+    *-or-*
+    ```sql
+    SELECT concat_ws(',', 'a', 'b')
+    ```
     </ans>
+
+    *concat_ws* stands for concatenate with separator.
 
     **Know more:**
     - #ref=en-US/postgresql/string-concatenation-aggregation.md
+
+    **References:**
+    - #ref=https://www.postgresqltutorial.com/postgresql-string-functions/postgresql-concat-function/
 
 #file=en-US/postgresql/string-concatenation-aggregation.md
     # String concatenation aggregation in PostgreSQL
@@ -2290,6 +2299,29 @@
     **Know more:**
     - #ref=en-US/postgresql/escaping-characters-in-string-literal.md
     - #ref=en-US/postgresql/new-line-character.md
+
+#file=en-US/postgresql/return-any-row-in-aggregation.md
+    # Enter and search for new-line character in JSONB column in PostgreSQL
+
+    <ans>
+    ```sql
+    select distinct on (column1) column1, column2
+    from sample_table
+    ```
+    *-or-*
+    ```sql
+    select column1, max(column2)
+    from sample_table
+    group by column1
+    ```
+    </ans>
+
+    These examples return one of the values aggregated in *column2*.
+    While the first example will return the first that it finds,
+    the second will return the maximum value, which is one of the values.
+
+    **References:**
+    - #ref=https://stackoverflow.com/questions/42556344/aggregate-function-that-returns-any-value-for-a-group
 
 #file=_.md
     #ref=https://realpython.com/python-modulo-operator/#how-to-check-if-a-number-is-even-or-odd

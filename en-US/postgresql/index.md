@@ -26,6 +26,8 @@ title: PostgreSQL
 
 [Restarting a PostgreSQL database service in Windows using CMD](restarting-postgresql-database-service-in-windows-via-cmd)
 
+[Enter and search for new-line character in JSONB column in PostgreSQL](return-any-row-in-aggregation)
+
 [Starting and stopping a PostgreSQL database service in Ubuntu](starting-and-stopping-postgresql-database-service-in-ubuntu)
 
 [Starting a PostgreSQL database service in Ubuntu](starting-postgresql-database-service-in-ubuntu)
