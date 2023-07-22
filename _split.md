@@ -2208,6 +2208,89 @@
     - `./pw --init poetry`
     </ans>
 
+#file=en-US/postgresql/string-concatenation.md
+    # String concatenation in PosgreSQL
+
+    <ans>
+    ```sql
+    SELECT 'a' || 'b'
+    ```
+    *-or-*
+    ```sql
+    SELECT concat('a', 'b')
+    ```
+    </ans>
+
+    **Know more:**
+    - #ref=en-US/postgresql/string-concatenation-aggregation.md
+
+#file=en-US/postgresql/string-concatenation-aggregation.md
+    # String concatenation aggregation in PostgreSQL
+
+    <ans>
+    ```sql
+    SELECT STRING_AGG(col_name, ',')
+    FROM SampleTable
+    ```
+    </ans>
+
+    **Know more:**
+    - #ref=en-US/postgresql/string-concatenation.md
+
+#file=en-US/postgresql/escaping-characters-in-string-literal.md
+    # Escaping characters in String literal in PostgreSQL
+
+    <ans>
+    There is a special escaped string representation in PostgreSQL:
+    ```sql
+    SELECT 'line1' || E'\n' || 'line2'
+    SELECT E'lin 1\nline 2'
+    ```
+    </ans>
+
+    **Know more:**
+    - #ref=en-US/postgresql/new-line-character.md
+    - #ref=en-US/postgresql/enter-and-search-new-line-character-in-jsonb.md
+
+#file=en-US/postgresql/new-line-character.md
+    # New line character in PostgreSQL
+
+    <ans>
+    ```sql
+    SELECT 'a' || chr(10) || 'b'
+    SELECT 'a' || E'\n' || 'b'
+    ```
+    </ans>
+
+    **Know more:**
+    - #ref=en-US/postgresql/escaping-characters-in-string-literal.md
+    - #ref=en-US/postgresql/enter-and-search-new-line-character-in-jsonb.md
+
+#file=en-US/postgresql/enter-and-search-new-line-character-in-jsonb.md
+    # Enter and search for new-line character in JSONB column in PostgreSQL
+
+    <ans>
+    ```sql
+    with sample_table(jsonb_column) as (
+        values ('{"data": "line 1\nline 2"}'::jsonb)
+    )
+    select *
+    from sample_table
+    where jsonb_column->>'data' ~ '^.*\n.*$'
+    ```
+    </ans>
+
+    The escaped string '\n' has no special meaning in PostgreSQL,
+    but it has a meaning inside JSONB column.
+
+    If you try to enter a new line character (`chr(10)`) in a JSONB column,
+    there will be an error stating:
+    - Character with value 0x0a must be escaped.
+
+    **Know more:**
+    - #ref=en-US/postgresql/escaping-characters-in-string-literal.md
+    - #ref=en-US/postgresql/new-line-character.md
+
 #file=_.md
     #ref=https://realpython.com/python-modulo-operator/#how-to-check-if-a-number-is-even-or-odd
     #ref=https://jekyllrb.com/docs/variables/

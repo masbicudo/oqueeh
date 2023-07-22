@@ -14,7 +14,13 @@ title: PostgreSQL
 
 [Drop table if it exists in PostgreSQL](drop-table-if-exists)
 
+[Enter and search for new-line character in JSONB column in PostgreSQL](enter-and-search-new-line-character-in-jsonb)
+
+[Escaping characters in String literal in PostgreSQL](escaping-characters-in-string-literal)
+
 [Managing a PostgreSQL database service in Windows](managing-postgresql-database-service-in-windows)
+
+[New line character in PostgreSQL](new-line-character)
 
 [Replace string using regex pattern in PostgreSQL](replace-string-using-regex-pattern)
 
@@ -29,3 +35,7 @@ title: PostgreSQL
 [Stopping a PostgreSQL database service in Ubuntu](stopping-postgresql-database-service-in-ubuntu)
 
 [Stopping a PostgreSQL database service in Windows using CMD](stopping-postgresql-database-service-in-windows-via-cmd)
+
+[String concatenation aggregation in PostgreSQL](string-concatenation-aggregation)
+
+[String concatenation in PosgreSQL](string-concatenation)
