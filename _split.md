@@ -2614,6 +2614,226 @@
     - #ref=en-US/postgresql/get-current-date-and-time.md
     - #ref=en-US/postgresql/get-current-date.md
 
+#file=en-US/matplotlib/change-scatter-plot-transparency.md
+    # How to change the transparency of a scatter plot points?
+    <ans>
+    Argument *alpha*:
+    ```python
+    ax.scatter(x=xs, y=ys, alpha=0.5)
+    ```
+    </ans>
+
+    Where:
+    - **0:** transparent
+    - **1:** opaque
+
+#file=en-US/git/force-end-of-line-to-lf-on-checkout.md
+    # How to force end-of-lines to LF on checkout using git?
+
+    <ans>
+    Inside the *.gitattributes* file:
+    ```
+    *.txt text=auto eol=lf
+    ```
+    </ans>
+
+#file=en-US/git/get-all-changes-but-dont-apply-them-immediately.md
+    # How to get all changes from origin without applying them using git?
+
+    <ans>
+    ```bash
+    git fetch --all
+    ```
+    </ans>
+
+    **Remarks:**
+
+    Use `git merge` afterwards to merge changes.
+
+#file=en-US/pandoc/converting-markdown-containing-emojis-to-pdf.md
+    # Converting MD containing emojis to PDF
+
+    <ans>
+    Use [Pandoc-Emojis-Filter](https://github.com/masbicudo/Pandoc-Emojis-Filter)
+    </ans>
+
+#file=en-US/bash/shebang.md
+    # Shebang for Bash?
+
+    <ans>
+    ```bash
+    #!/bin/bash
+    ```
+    </ans>
+
+    `#!/usr/bin/env bash` is more portable, but less predictable.
+
+#file=en-US/texlive/installing-packages.md
+    # Installing new packages in TexLive
+
+    <ans>
+    Example - installing *xcolor* package:
+    ```bash
+    tlmgr install xcolor
+    ```
+    </ans>
+
+#file=en-US/texlive/latex-error-file-footnote-sty-not-found.md
+    # LaTeX Error: File 'footnote.sty' not found
+
+    <ans>
+    Install *mdwtools* package:
+    ```bash
+    tlmgr install mdwtools
+    ```
+    </ans>
+
+#file=en-US/python/open-text-file.md
+    # Open text file in Python
+
+    <ans>
+    with open("filename.txt") as fs:
+        for line in fs:
+            print(line)
+    </ans>
+
+    **Know more:**
+    - #ref=en-US/python/open-binary-file.md
+
+#file=en-US/python/open-binary-file.md
+    # Open binary file in Python
+
+    <ans>
+    with open("filename.txt", "rb") as fs:
+        for line in fs:
+            print(line)
+    </ans>
+
+    **Remarks:**
+    Even though lines are a concept of text files, it works with binary files too.
+
+    **Know more:**
+    - #ref=en-US/python/open-text-file.md
+
+#file=en-US/bash/get-file-size.md
+    # How to get the size of a file in bash script?
+
+    <ans>
+    ```bash
+    stat -c%s "$filename"
+    ```
+    </ans>
+
+#file=en-US/vscode/remove-all-extensions.md
+    # How to remove all VS Code extensions?
+    <ans>
+    In Bash (Linux or Mac):
+
+    ```bash
+    rm -rf ~/.vscode/extensions
+    ```
+
+    In Batch (Windows):
+
+    ```bash
+    rmdir %USERPROFILE%\.vscode\extensions /s
+    ```
+    </ans>
+
+#file=en-US/c-sharp/detect-offline-or-not-synchronized-files.md
+    # Detect offline or not synchronized files
+
+    <ans>
+    ```c#
+    const FILE_ATTRIBUTE_RECALL_ON_DATA_ACCESS
+        = (FileAttributes)4194304; // (0x00400000)
+    var attributes = (File.GetAttributes(filename)
+        & FILE_ATTRIBUTE_RECALL_ON_DATA_ACCESS) != 0;
+    ```
+    </ans>
+
+    **Know more:**
+    - #ref=https://learn.microsoft.com/pt-br/dotnet/api/system.io.fileattributes?view=net-7.0
+    - #ref=https://learn.microsoft.com/en-us/windows/win32/fileio/file-attribute-constants
+
+#file=en-US/python/upgrade-pip.md
+
+    <ans>
+    ```bash
+    python -m pip install --upgrade pip
+    ```
+    </ans>
+
+#file=en-US/pdm/install-pdm.md
+
+    # How to install PDM
+
+    <ans>
+    On Windows:
+
+    ```powershell
+    (Invoke-WebRequest -Uri https://pdm.fming.dev/install-pdm.py -UseBasicParsing).Content | python -
+    ```
+
+    On Linux/Mac:
+
+    ```bash
+    curl -sSL https://pdm.fming.dev/install-pdm.py | python3 -
+    ```
+    </ans>
+
+    ```bash
+    cd ~
+    curl -sSLO https://pdm.fming.dev/dev/install-pdm.py
+    python install-pdm.py --remove
+    python install-pdm.py
+    rm install-pdm.py
+    ```
+
+#file=en-US/python/get-currently-executing-filename.md
+    # Get currently executing file name
+
+    <ans>
+    ```python
+    __file__
+    ```
+    </ans>
+
+    **Know more:**
+
+    - #ref-en-US/python/get-currently-executing-file-path.md
+    - #ref-en-US/python/get-current-working-directory.md
+
+#file=en-US/python/get-currently-executing-file-path.md
+    # Get currently executing file path
+
+    <ans>
+    ```python
+    import pathlib
+    pathlib.Path(__file__).parent.resolve()
+    ```
+    </ans>
+
+    **Know more:**
+
+    - #ref-en-US/python/get-currently-executing-filename.md
+    - #ref-en-US/python/get-current-working-directory.md
+
+#file=en-US/python/get-current-working-directory.md
+    # Get current working directory
+
+    <ans>
+    ```python
+    import pathlib
+    pathlib.Path().resolve()
+    ```
+    </ans>
+
+    **Know more:**
+
+    - #ref-en-US/python/get-currently-executing-filename.md
+    - #ref-en-US/python/get-currently-executing-file-path.md
+
 #file=_.md
     #ref=https://realpython.com/python-modulo-operator/#how-to-check-if-a-number-is-even-or-odd
     #ref=https://jekyllrb.com/docs/variables/

@@ -32,6 +32,12 @@ title: Python
 
 [Get all capture groups from regex match in Python](get-all-capture-groups-from-regex-match)
 
+[Get current working directory](get-current-working-directory)
+
+[Get currently executing file path](get-currently-executing-file-path)
+
+[Get currently executing file name](get-currently-executing-filename)
+
 [Get type of object in Python](get-type-of-object)
 
 [Initializing a PyProjectX Python project](initializing-pyprojectx-project-manager)
@@ -47,6 +53,10 @@ title: Python
 [How to list installed Python packages?](list-installed-packages)
 
 [AttributeError: 'list' object has no attribute 'join'](list-object-has-no-attribute-join)
+
+[Open binary file in Python](open-binary-file)
+
+[Open text file in Python](open-text-file)
 
 [Pop or dequee item from tuple in Python](pop-or-dequee-item-from-tuple)
 
@@ -97,6 +107,8 @@ title: Python
 [Trim string in Python](trim-string)
 
 [Tuples: Immutable lists in Python](tuples-immutable-lists)
+
+[](upgrade-pip)
 
 [What are __enter__ and __exit__ functions in Python](what-are-enter-and-exit-functions)
 

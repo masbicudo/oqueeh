@@ -2,6 +2,8 @@
 title: Matplotlib
 ---
 
+[How to change the transparency of a scatter plot points?](change-scatter-plot-transparency)
+
 [Creating a scatter plot using MatPlotLib](creating-scatter-plot)
 
 [How to get the GridSpec from Axes in PyPlot?](how-to-get-gridspec-from-axes)

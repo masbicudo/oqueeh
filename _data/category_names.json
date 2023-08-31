@@ -27,5 +27,9 @@
     "matplotlib": "Matplotlib",
     "numpy": "NumPy",
     "streamlit": "Streamlit",
-    "nssm": "NSSM"
+    "nssm": "NSSM",
+    "pandoc": "Pandoc",
+    "bash": "Bash",
+    "texlive": "TeX Live",
+    "vscode": "VS Code"
 }

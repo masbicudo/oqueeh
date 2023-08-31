@@ -18,7 +18,9 @@ category_names = {
     "matplotlib": "Matplotlib",
     "numpy": "NumPy",
     "streamlit": "Streamlit",
-    "nssm": "NSSM"
+    "nssm": "NSSM",
+    "texlive": "TeX Live",
+    "vscode": "VS Code",
 }
 
 # Equivalence classes of words

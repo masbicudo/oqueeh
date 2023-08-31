@@ -2,6 +2,8 @@
 title: All topics
 ---
 
+[Bash](bash)
+
 [Batch](batch)
 
 [C#](c-sharp)
@@ -34,6 +36,8 @@ title: All topics
 
 [NumPy](numpy)
 
+[Pandoc](pandoc)
+
 [PDM](pdm)
 
 [Pgadmin4](pgadmin4)
@@ -48,7 +52,11 @@ title: All topics
 
 [Streamlit](streamlit)
 
+[TeX Live](texlive)
+
 [Visual Studio](visual-studio)
+
+[VS Code](vscode)
 
 [Windows](windows)
 

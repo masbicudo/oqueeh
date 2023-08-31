@@ -1,0 +1,2 @@
+2492d5360575e1e95dca7c9259c75c6e58d8c038fc7e5ec09ab92c321c106980 en-US/python/get-currently-executing-file-path.md
+7ac0c2c107a1998d606b0620e751acc6d6f646bab0c07d2d2bdf63a24c7ab077 en-US/python/get-current-working-directory.md
