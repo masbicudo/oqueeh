@@ -31,5 +31,6 @@
     "pandoc": "Pandoc",
     "bash": "Bash",
     "texlive": "TeX Live",
-    "vscode": "VS Code"
+    "vscode": "VS Code",
+    "pyprojectx": "Pyprojectx"
 }

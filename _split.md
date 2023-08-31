@@ -2834,6 +2834,111 @@
     - #ref-en-US/python/get-currently-executing-filename.md
     - #ref-en-US/python/get-currently-executing-file-path.md
 
+#file=en-US/pyprojectx/what-is-it.md
+    # What is Pyprojectx?
+
+    <ans>
+    Pyprojectx makes it easy to create all-inclusive Python projects; no need to install any tools upfront, not even Pyprojectx itself!
+    </ans>
+
+#file=en-US/pyprojectx/installing.md
+    # Installing Pyprojectx to manage Python project
+
+    <ans>
+    - #ref=en-US/pyprojectx/install-in-bash.md
+    - #ref=en-US/pyprojectx/install-in-powershell.md
+    </ans>
+
+#file=en-US/pyprojectx/install-in-bash.md
+    # Installing Pyprojectx using Bash
+
+    <ans>
+    ```bash
+    curl -LO https://github.com/pyprojectx/pyprojectx/releases/latest/download/wrappers.zip && unzip -o wrappers.zip && rm -f wrappers.zip
+    ```
+    </ans>
+
+    Then setup files in Git:
+    ```bash
+    git add pw pw.bat
+    git update-index --chmod=+x pw
+    echo .pyprojectx/ >> .gitignore
+    ```
+
+    **Know more:**
+    - #ref=en-US/pyprojectx/install-in-powershell.md
+    - #ref=en-US/pyprojectx/initialize.md
+
+#file=en-US/pyprojectx/install-in-powershell.md
+    # Installing Pyprojectx using PowerShell
+
+    <ans>
+    ```powershell
+    Invoke-WebRequest https://github.com/pyprojectx/pyprojectx/releases/latest/download/wrappers.zip -OutFile wrappers.zip; Expand-Archive -Force -Path wrappers.zip -DestinationPath .; Remove-Item -Path wrappers.zip
+    ```
+    </ans>
+
+    Then setup files in Git:
+    ```bash
+    git add pw pw.bat
+    git update-index --chmod=+x pw
+    echo .pyprojectx/ >> .gitignore
+    ```
+
+    **Know more:**
+    - #ref=en-US/pyprojectx/install-in-bash.md
+    - #ref=en-US/pyprojectx/initialize.md
+
+#file=en-US/pyprojectx/initialize.md
+    # Initializing a Python project using Pyprojectx
+
+    <ans>
+    - #ref=en-US/pyprojectx/initialize-plain-python-project.md
+    - #ref=en-US/pyprojectx/initialize-poetry-python-project.md
+    - #ref=en-US/pyprojectx/initialize-pdm-python-project.md
+    </ans>
+
+#file=en-US/pyprojectx/initialize-plain-python-project.md
+    # Initialize a plain Python project using Pyprojectx
+
+    <ans>
+    ```bash
+    .\pw --init project
+    ```
+
+    **Know more:**
+    - #ref=en-US/pyprojectx/installing.md
+    - #ref=en-US/pyprojectx/initialize-poetry-python-project.md
+    - #ref=en-US/pyprojectx/initialize-pdm-python-project.md
+
+
+#file=en-US/pyprojectx/initialize-poetry-python-project.md
+    # Initialize a project with poetry's init command using Pyprojectx
+
+    <ans>
+    ```bash
+    .\pw --init poetry
+    ```
+
+    **Know more:**
+    - #ref=en-US/pyprojectx/installing.md
+    - #ref=en-US/pyprojectx/initialize-plain-python-project.md
+    - #ref=en-US/pyprojectx/initialize-pdm-python-project.md
+
+#file=en-US/pyprojectx/initialize-pdm-python-project.md
+    # Initialize a project with pdm's init command using Pyprojectx
+
+    <ans>
+    ```bash
+    .\pw --init pdm
+    ```
+    </ans>
+
+    **Know more:**
+    - #ref=en-US/pyprojectx/installing.md
+    - #ref=en-US/pyprojectx/initialize-plain-python-project.md
+    - #ref=en-US/pyprojectx/initialize-poetry-python-project.md
+
 #file=_.md
     #ref=https://realpython.com/python-modulo-operator/#how-to-check-if-a-number-is-even-or-odd
     #ref=https://jekyllrb.com/docs/variables/

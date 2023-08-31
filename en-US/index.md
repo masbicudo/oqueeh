@@ -48,6 +48,8 @@ title: All topics
 
 [Pyenv](pyenv)
 
+[Pyprojectx](pyprojectx)
+
 [Python](python)
 
 [Streamlit](streamlit)
