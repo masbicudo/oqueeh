@@ -42,6 +42,10 @@ title: Python
 
 [Lambda functions in Python](lambda-function)
 
+[How to list installed Python packages with Conda?](list-installed-packages-conda)
+
+[How to list installed Python packages?](list-installed-packages)
+
 [AttributeError: 'list' object has no attribute 'join'](list-object-has-no-attribute-join)
 
 [Pop or dequee item from tuple in Python](pop-or-dequee-item-from-tuple)

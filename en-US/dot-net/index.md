@@ -1,5 +1,5 @@
 ---
-title: Dot Net
+title: .NET
 ---
 
 [What is AngleSharp?](what-is-angle-sharp)

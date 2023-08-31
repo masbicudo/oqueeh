@@ -14,6 +14,11 @@ category_names = {
     #"windows": "Windows",
     "pt-BR": "Todos os tópicos",
     "en-US": "All topics",
+    "dot-net": ".NET",
+    "matplotlib": "Matplotlib",
+    "numpy": "NumPy",
+    "streamlit": "Streamlit",
+    "nssm": "NSSM"
 }
 
 # Equivalence classes of words

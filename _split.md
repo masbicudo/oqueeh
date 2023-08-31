@@ -2063,7 +2063,7 @@
 
     This example converts the empty string in *input_value* to NULL.
 
-#file/en-US/c-sharp/downloading-file-from-internet.md
+#file=en-US/c-sharp/downloading-file-from-internet.md
     # How to download a file from the Internet using C#?
 
     <ans>
@@ -2322,6 +2322,297 @@
 
     **References:**
     - #ref=https://stackoverflow.com/questions/42556344/aggregate-function-that-returns-any-value-for-a-group
+
+#file=en-US/matplotlib/how-to-get-gridspec-from-axes.md
+    # How to get the GridSpec from Axes in PyPlot?
+    <ans>
+    ```python
+    ax.get_gridspec()
+    ```
+    </ans>
+    
+    **Know more:**
+    - #ref=en-US/matplotlib/how-to-subdivide-axes-using-gridspec.md
+
+#file=en-US/matplotlib/how-to-subdivide-axes-using-gridspec.md
+    # How to subdivide Axes using GridSpec in PyPlot?
+    <ans>
+    ```python
+    import matplotlib.gridspec as gridspec
+    gs = ax.get_gridspec()
+    subgs = gridspec.GridSpecFromSubplotSpec(
+        2, 2,
+        subplot_spec=gs,
+        wspace=0.1, hspace=0.1)
+    for it in range(len(subgs))
+        ax = plt.Subplot(fig, inner[it])
+        # ax.plot(...)
+    ```
+    </ans>
+
+    **Know more:**
+    - #ref=en-US/matplotlib/how-to-get-gridspec-from-axes.md
+
+#file=en-US/streamlit/cache-data-from-function-between-runs.md
+    # Cache data from a function between runs in StreamLit
+
+    <ans>
+    ```python
+    import streamlit as st
+    @st.cache_data
+    def get_some_data():
+        # ... do something here!
+        return result
+    ```
+    </ans>
+
+    **Know more:**
+    - #ref=en-US/streamlit/clear-cache-for-function.md
+    - #ref=en-US/streamlit/cache-function-data-in-disk.md
+
+    **Reference:**
+    - #ref=https://docs.streamlit.io/library/api-reference/performance/st.cache_data
+
+#file=en-US/streamlit/clear-cache-for-function.md
+    # Clear cache of a specific cached function in StreamLit
+
+    <ans>
+    Just call clear function on the cached function itself.
+    
+    ```python
+    get_some_data.clear()
+    ```
+    </ans>
+
+    ```python
+    import streamlit as st
+    @st.cache_data
+    def get_some_data():
+        # ... function code
+        return result
+    ```
+
+    **Know more:**
+    - #ref=en-US/streamlit/cache-data-from-function-between-runs.md
+    - #ref=en-US/streamlit/cache-function-data-in-disk.md
+
+    **Reference:**
+    - #ref=https://docs.streamlit.io/library/api-reference/performance/st.cache_data
+
+#file=en-US/streamlit/cache-function-data-in-disk.md
+    # Cache function data in disk using StreamLit
+
+    <ans>
+    Use atribute *cache_data* with argument `persist="disk"`.
+    
+    ```python
+    import streamlit as st
+    @st.cache_data(persist="disk")
+    def get_some_data():
+        # ... function code!
+        return result
+    ```
+    </ans>
+
+    **Know more:**
+    - #ref=en-US/streamlit/cache-data-from-function-between-runs.md
+    - #ref=en-US/streamlit/clear-cache-for-function.md
+
+    **Reference:**
+    - #ref=https://docs.streamlit.io/library/api-reference/performance/st.cache_data
+
+#file=en-US/matplotlib/creating-scatter-plot.md
+    # Creating a scatter plot using MatPlotLib
+
+    <ans>
+    ```python
+    import matplotlib.pyplot as plt
+    plt.scatter(x=xs, y=ys, s=sizes, c=colors)
+    ```
+    </ans>
+
+    Other important parameters:
+    - marker
+    - linewidths
+
+    **Reference:**
+    - #ref=https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.scatter.html
+
+#file=en-US/matplotlib/scatter-plot-marker-size.md
+    # How to change marker size in a scatter plot in MatPlotLib?
+
+    <ans>
+    Use *s* parameter with a single size value or an array of sizes:
+    ```python
+    import matplotlib.pyplot as plt
+    plt.scatter(x=xs, y=ys, s=sizes, c=colors)
+    ```
+    </ans>
+
+    **Know more:**
+    - #ref=en-US/matplotlib/creating-scatter-plot.md
+
+    **Reference:**
+    - #ref=https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.scatter.html
+
+#file=en-US/matplotlib/plot-distribution-from-data-using-seaborn.md
+    # Plotting the distribution from data using SeaBorn and MatPlotLib
+
+    A distribution can be represented by a PDF or a CDF using one of the following functions:
+
+    <ans>
+    ```python
+    import seaborn as sns
+    sns.kdeplot(data=values, cumulative=True)
+    sns.histplot(values, bins=15, cumulative=True)
+    sns.displot(values, kde=True, bins=15, cumulative=False)
+    ```
+
+    The *displot* function draws a histogram and a line chart of the distribution.
+
+    Parameters:
+    - **bins:** controls the number of bin for the histogram
+    - **cumulative:** controls whether to draw PDF or CDF
+    </ans>
+
+    References:
+    - #ref=https://seaborn.pydata.org/generated/seaborn.kdeplot.html
+
+#file=en-US/numpy/cdf-distribution-from-pdf.md
+    # Getting the CDF of a distribution given the PDF using Numpy
+
+    <ans>
+    ```python
+    dX = 0.01 # X distance between values inside PDF
+    cdf = np.cumsum(pdf*dX)
+    ```
+    </ans>
+
+    References:
+    - #ref=https://stackoverflow.com/a/9379432/195417
+
+#file=en-US/python/list-installed-packages.md
+    # How to list installed Python packages?
+
+    <ans>
+    ```bash
+    pip list
+    ```
+    </ans>
+
+#file=en-US/python/list-installed-packages-conda.md
+    # How to list installed Python packages with Conda?
+
+    <ans>
+    ```bash
+    conda list
+    ```
+    </ans>
+
+#file=en-US/nssm/what-is-nssm.md
+    # What is NSSM?
+
+    <ans>
+    Non-sucking Service Manager -
+    Registers and runs anything as a service in Windows
+    with multiple options, such as restart service if it stops.
+    </ans>
+
+#file=en-US/nssm/list-services.md
+    # How to list NSSM services?
+
+    <ans>
+    ```bash
+    nssm list
+    ```
+    </ans>
+
+    *- or -* a more detailed list:
+    
+    ```powershell
+    Get-WmiObject win32_service | ?{$_.PathName -like '*nssm*'} | select Name, DisplayName, State
+    ```
+
+#file=en-US/postgresql/create-date-type-value.md
+    # Creating a Date type value in PostgreSQL
+
+    <ans>
+    ```sql
+    DATE('2023-08-21')
+    ```
+    *- or -*
+    ```sql
+    '2023-08-21'::DATE
+    ```
+    </ans>
+
+#file=en-US/postgresql/date-type-column-with-current-date.md
+    # Creating a Date type column with current date as default value in PostgreSQL
+
+    <ans>
+    ```sql
+    CREATE TABLE documents (
+        ...
+        some-Date DATE DEFAULT CURRENT_DATE
+        ...
+    );
+    ```
+    </ans>
+
+#file=en-US/postgresql/get-current-date.md
+    # Get current date in PostgreSQL
+
+    <ans>
+    ```sql
+    now()::DATE
+    ```
+    *- or -*
+    ```sql
+    DATE(now())
+    ```
+    *- or -*
+    ```sql
+    CURRENT_DATE
+    ```
+    </ans>
+
+    *Know more:*
+    - #ref=en-US/postgresql/get-current-date-and-time.md
+    - #ref=en-US/postgresql/get-current-time.md
+
+#file=en-US/postgresql/get-current-date-and-time.md
+    # Get current date and time in PostgreSQL
+
+    <ans>
+    ```sql
+    now()
+    ```
+    *- or -*
+    ```sql
+    CURRENT_DATE + CURRENT_TIME
+    ```
+    </ans>
+
+    *Know more:*
+    - #ref=en-US/postgresql/get-current-date.md
+    - #ref=en-US/postgresql/get-current-time.md
+
+#file=en-US/postgresql/get-current-time.md
+    # Get current time in PostgreSQL
+
+    <ans>
+    ```sql
+    now()::TIME
+    ```
+    *- or -*
+    ```sql
+    CURRENT_TIME
+    ```
+    </ans>
+
+    *Know more:*
+    - #ref=en-US/postgresql/get-current-date-and-time.md
+    - #ref=en-US/postgresql/get-current-date.md
 
 #file=_.md
     #ref=https://realpython.com/python-modulo-operator/#how-to-check-if-a-number-is-even-or-odd

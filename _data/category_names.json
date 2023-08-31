@@ -23,5 +23,9 @@
     "visual-studio": "Visual Studio",
     "liquid-templates": "Liquid Templates",
     "pgadmin4": "Pgadmin4",
-    "dot-net": "Dot Net"
+    "dot-net": ".NET",
+    "matplotlib": "Matplotlib",
+    "numpy": "NumPy",
+    "streamlit": "Streamlit",
+    "nssm": "NSSM"
 }

@@ -8,7 +8,11 @@ title: PostgreSQL
 
 [Convert string to number in PostgreSQL](convert-string-to-number)
 
+[Creating a Date type value in PostgreSQL](create-date-type-value)
+
 [Create table if it does not exist in PostgreSQL](create-table-if-not-exists)
+
+[Creating a Date type column with current date as default value in PostgreSQL](date-type-column-with-current-date)
 
 [Drop database connections in PostgreSQL](drop-database-connections)
 
@@ -17,6 +21,12 @@ title: PostgreSQL
 [Enter and search for new-line character in JSONB column in PostgreSQL](enter-and-search-new-line-character-in-jsonb)
 
 [Escaping characters in String literal in PostgreSQL](escaping-characters-in-string-literal)
+
+[Get current date and time in PostgreSQL](get-current-date-and-time)
+
+[Get current date in PostgreSQL](get-current-date)
+
+[Get current time in PostgreSQL](get-current-time)
 
 [Managing a PostgreSQL database service in Windows](managing-postgresql-database-service-in-windows)
 

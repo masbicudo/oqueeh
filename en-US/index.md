@@ -10,7 +10,7 @@ title: All topics
 
 [CSS](css)
 
-[Dot Net](dot-net)
+[.NET](dot-net)
 
 [Git](git)
 
@@ -28,6 +28,12 @@ title: All topics
 
 [Markdown](markdown)
 
+[Matplotlib](matplotlib)
+
+[NSSM](nssm)
+
+[NumPy](numpy)
+
 [PDM](pdm)
 
 [Pgadmin4](pgadmin4)
@@ -39,6 +45,8 @@ title: All topics
 [Pyenv](pyenv)
 
 [Python](python)
+
+[Streamlit](streamlit)
 
 [Visual Studio](visual-studio)
 

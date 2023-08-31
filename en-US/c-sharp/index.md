@@ -6,6 +6,8 @@ title: C#
 
 [Creating a custom string interpolation handler in C#](creating-custom-string-interpolation-handler)
 
+[How to download a file from the Internet using C#?](downloading-file-from-internet)
+
 [Get exit code of a child process using C#](get-exit-code-of-child-process)
 
 [Parsing HTML in C#?](how-to-parse-html)
