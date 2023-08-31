@@ -2939,6 +2939,104 @@
     - #ref=en-US/pyprojectx/initialize-plain-python-project.md
     - #ref=en-US/pyprojectx/initialize-poetry-python-project.md
 
+#file=en-US/pdm/adding-library-dependencies.md
+    # Adding library dependencies using PDM
+
+    <ans>
+    ```bash
+    pdm add pandas numpy
+    ```
+    </ans>
+
+    You can specify multiple package names.
+
+    **Know more:**
+    - #ref=en-US/pdm/adding-development-library-dependencies.md
+    - #ref=en-US/pdm/adding-editable-library-dependencies.md
+
+#file=en-US/pdm/adding-development-library-dependencies.md
+    # Adding development library dependencies using PDM
+
+    <ans>
+    ```bash
+    pdm add pandas --dev
+    ```
+    </ans>
+
+    You can specify multiple package names.
+
+    **Know more:**
+    - #ref=en-US/pdm/adding-library-dependencies.md
+    - #ref=en-US/pdm/adding-editable-library-dependencies.md
+
+#file=en-US/pdm/adding-editable-library-dependencies.md
+    # Adding editable library dependencies using PDM
+
+    <ans>
+    ```bash
+    # A relative path to the directory
+    pdm add -e ./sub-package --dev
+    # A file URL to a local directory
+    pdm add -e file:///path/to/sub-package --dev
+    # A VCS URL
+    pdm add -e git+https://github.com/pallets/click.git@main#egg=click --dev
+    ```
+    </ans>
+
+    **Remarks:**
+    Editable installs are only allowed in the dev dependency group.
+
+    **Know more:**
+    - #ref=en-US/pdm/adding-library-dependencies.md
+    - #ref=en-US/pdm/adding-development-library-dependencies.md
+
+#file=en-US/pdm/error-cannot-add-editables-to-default-or-optional-dependency-group.md
+    # [PdmUsageError]: Cannot add editables to the default or optional dependency group
+
+    <ans>
+    Editables must be added to the *dev* dependency group, by using `--dev`.
+    </ans>
+
+    **Know more:**
+    - #ref=en-US/pdm/adding-editable-library-dependencies.md
+    - #ref=en-US/pdm/adding-development-library-dependencies.md
+
+#file=en-US/vscode/error-crashing-on-restart.md
+    # Crashing on restarting VS Code
+
+    <ans>
+    If you see the following after restarting VS Code:
+    > We are sorry for the inconvenience!
+    > You can reopen the window to continue where you left off.
+    Just downgrade, some versions of VS Code are bogus.
+    <ans>
+
+#file=en-US/vscode/change-indentation-of-tree-file-structure.md
+    # How to change indentation in VS Code tree file structure?
+
+    <ans>
+    1. Go to *File* > *Preference* > *Settings*
+    2. In the search box type: *tree indent*
+    3. Option *Workbench › Tree: Indent*
+
+    *- or -*
+
+    1. In your *settings.json* file
+    2. Enter this: `"workbench.tree.indent": 20`
+    <ans>
+
+#file=en-US/c-sharp/generating-criptographic-signature-of-a-stream.md
+    # Generating a criptographic hash of a stream in C#
+
+    <ans>
+    ```c#
+    using System.Security.Cryptography;
+    var algorithm = SHA256.Create();
+    var hash = await algorithm.ComputeHashAsync(stream);
+    return Convert.ToBase64String(hash);
+    ```
+    </ans>
+
 #file=_.md
     #ref=https://realpython.com/python-modulo-operator/#how-to-check-if-a-number-is-even-or-odd
     #ref=https://jekyllrb.com/docs/variables/
