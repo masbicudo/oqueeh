@@ -539,8 +539,18 @@ class LineTypes(object):
     content = 2
 
 def process_content(file_lines):
+    state_fence = None
     for line in file_lines:
         if line is not None:
+            m_fence = re.match(r"^\s*(```+)([^\s]*)\s*$", line)
+            if m_fence is not None:
+                if state_fence == None:
+                    state_fence = m_fence[1]
+                elif state_fence == m_fence[1]:
+                    state_fence = None
+            if state_fence is not None:
+                yield line, LineTypes.content
+                continue
             m_title = re.match(r"^(\s*)(#+)\s+(.*)\s*$", line)
             if m_title is not None:
                 if m_title[2] == "#":
