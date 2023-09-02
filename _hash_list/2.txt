@@ -94,7 +94,7 @@ c23cfe94f7692d1cf779058190720d00b40335336d8fdce751965c7684a17327 en-US/texlive/l
 63cc335ba2d8d4ad2dca7b57ed36688892f8403621681203b9ef50a0fe2a396d en-US/python/open-binary-file.md
 eafbb94acbd99b5699a5006b7036ebc6968553a3bab03e3fa67b94238869cd55 en-US/bash/get-file-size.md
 9411344139afa35911a98aa261c199dfd4313ec314a4cea36d50b428239a422b en-US/vscode/remove-all-extensions.md
-0756c130ba22714cc78c61a6316be5055f87fbe7b6b6dedb9f3320577475ec66 en-US/c-sharp/detect-offline-or-not-synchronized-files.md
+a536601991e01dc030869768f32efebb8ca1a3c0f227886f1f74eb4593b6ac59 en-US/c-sharp/detect-offline-or-not-synchronized-files.md
 da20ac4cd73fc81d70cf79dd437ebf0e9997a73af7891afc03c13594475e433b en-US/python/upgrade-pip.md
 383f4a5beba03f0c080176ac356838011cea6b5ceaa4c3f1eb7c2f81ea1fae08 en-US/pdm/install-pdm.md
 f0ab4c01ab538c177177c124c96b137def00b8d2b820858f71fbf3d66f26407c en-US/python/get-currently-executing-filename.md

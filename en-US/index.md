@@ -26,6 +26,8 @@ title: All topics
 
 [Jekyll](jekyll)
 
+[Licensing](licensing)
+
 [Liquid Templates](liquid-templates)
 
 [Markdown](markdown)

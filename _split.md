@@ -1513,6 +1513,10 @@
     ```
     </ans>
 
+    **References:**
+    - #ref=https://learn.microsoft.com/pt-br/dotnet/api/system.io.fileattributes?view=net-7.0
+    - #ref=https://learn.microsoft.com/en-us/windows/win32/fileio/file-attribute-constants
+
 #file=en-US/markdown/c-sharp-code-fence.md
     # C# code inside a Markdown file
 
@@ -2747,12 +2751,12 @@
     ```c#
     const FILE_ATTRIBUTE_RECALL_ON_DATA_ACCESS
         = (FileAttributes)4194304; // (0x00400000)
-    var attributes = (File.GetAttributes(filename)
+    var isNotReady = (File.GetAttributes(filename)
         & FILE_ATTRIBUTE_RECALL_ON_DATA_ACCESS) != 0;
     ```
     </ans>
 
-    **Know more:**
+    **References:**
     - #ref=https://learn.microsoft.com/pt-br/dotnet/api/system.io.fileattributes?view=net-7.0
     - #ref=https://learn.microsoft.com/en-us/windows/win32/fileio/file-attribute-constants
 
@@ -3036,6 +3040,147 @@
     return Convert.ToBase64String(hash);
     ```
     </ans>
+
+#file=en-US/powershell/get-directory-size.md
+    # Get directory size in PowerShell
+
+    <ans>
+    Example - measuring Documents folder:
+    ```powershell
+    ls -r ~/Documents | measure -sum Length
+    ```
+    </ans>
+
+    You can do it from CMD:
+    ```bash
+    powershell -noprofile -command "ls -r ~/Documents | measure -sum Length"
+    ```
+
+#file=en-US/powershell/run-powershell-command-from-cmd.md
+    # Run PowerShell command from CMD
+
+    <ans>
+    Example - running *ls*:
+    ```powershell
+    powershell -noprofile -command "ls"
+    ```
+    </ans>
+
+#file=en-US/python/argparse-attribute-error-namespace-object-has-no-attribute-name.md
+    # AttributeError: 'Namespace' object has no attribute 'name'
+
+    <ans>
+    Use `args.name` instead of `args["name"]`
+    </ans>
+
+#file=en-US/python/argparse-show-help-if-no-arguments.md
+    # Display help message when no arguments are provided using Python argparse
+
+    <ans>
+    ```
+    if len(sys.argv) == 1:
+        parser.print_usage(sys.stderr)
+        sys.exit(1)
+    ```
+    </ans>
+
+#file=en-US/c-sharp/list-files-in-directory.md
+    # List files in directory in C#
+
+    <ans>
+    ```c#
+    var allfiles = Directory.GetFiles(
+            "D:\",
+            "*",
+            SearchOption.AllDirectories
+        );
+    ```
+    </ans>
+
+    **Remarks:**
+
+    This may fail with *UnauthorizedAccessException* if any path in the structure requires privileges you don't have.
+
+    If you need directories too, use `Directory.GetFileSystemEntries`.
+
+#file=en-US/licensing/cc-by-sa-30.md
+    # What is CC BY-SA 3.0?
+
+    <ans>
+    Attribution-ShareAlike 3.0 Unported
+    - Can share and adapt
+    - Must give attribution, and be under same license, without other restrictions
+    </ans>
+
+    **References:**
+    - #ref=https://creativecommons.org/licenses/by-sa/3.0/
+
+#file=en-US/python/checking-variable-exists-in-namespace.md
+    # Checking if variable exists in *Namespace* in Python
+
+    <ans>
+    ```python
+    hasattr(ns, "name")
+    ```
+    *- or -*
+    ```python
+    'name' in vars(ns)
+    ```
+    </ans>
+
+#file=en-US/python/get-list-of-true-values-in-namespace.md
+    # Get a list of True values inside a *Namespace* in Python
+
+    <ans>
+    ```python
+    list_true_keys = [ k for (k, v) in ns.items() if v ]
+    ```
+    </ans>
+
+#file=en-US/python/group-iterable-list-in-chunks.md
+    # Group iterable sequence in chunks of N elements in Python
+
+    <ans>
+    ```python
+    import itertools as it
+    def grouped(chunk_size, sequence):
+        iterable = iter(sequence)
+        return iter(lambda: (*it.islice(iterable, chunk_size),), ())
+    ```
+    </ans>
+
+#file=en-US/python/convert-list-of-characters-into-string.md
+    # Convert list of characters into string in Python
+
+    <ans>
+    ```python
+    "".join(["a", "b", "c"])
+    ```
+    </ans>
+
+#file=en-US/python/convert-char-code-to-string.md
+    # Convert char-code to string in Python
+
+    <ans>
+    ```python
+    chr(97)
+    ```
+    </ans>
+
+    **Know more:**
+    - #ref=en-US/python/convert-character-to-char-code.md
+
+#file=en-US/python/convert-character-to-char-code.md
+    # Convert string containing character to char-code in Python
+
+    <ans>
+    ```python
+    ord('a')
+    ```
+    </ans>
+
+    **Know more:**
+    - #ref=en-US/python/convert-char-code-to-string.md
 
 #file=_.md
     #ref=https://realpython.com/python-modulo-operator/#how-to-check-if-a-number-is-even-or-odd

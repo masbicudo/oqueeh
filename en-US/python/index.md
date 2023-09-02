@@ -2,11 +2,17 @@
 title: Python
 ---
 
+[AttributeError: 'Namespace' object has no attribute 'name'](argparse-attribute-error-namespace-object-has-no-attribute-name)
+
+[Display help message when no arguments are provided using Python argparse](argparse-show-help-if-no-arguments)
+
 [Better performance with compiled regex in Python](better-performance-with-compiled-regex)
 
 [Cannot read from file opened with mode "x" in Python](cannot-read-open-mode-x)
 
 [Chack if a number is even or odd in Python](check-number-is-even-or-odd)
+
+[Checking if variable exists in *Namespace* in Python](checking-variable-exists-in-namespace)
 
 [Command line arguments in Python](command-line-arguments)
 
@@ -37,6 +43,8 @@ title: Python
 [Get currently executing file path](get-currently-executing-file-path)
 
 [Get currently executing file name](get-currently-executing-filename)
+
+[Get a list of True values inside a *Namespace* in Python](get-list-of-true-values-in-namespace)
 
 [Get type of object in Python](get-type-of-object)
 

@@ -89,7 +89,7 @@ d9419198a03095c34f2b7cb6028d517d5e397f333bb6a90841a4385d0a0b9fd3 en-US/postgresq
 d67c24853410a955ba0b483cef079d853e9d2fb519f6920083f21e4aa2f09c6f en-US/postgresql/managing-postgresql-database-service-in-windows.md
 7e9780a2b3ffd561cf9c3ce43948d5582658466a6e8b5e1d4a99a7d46721aed0 en-US/windows/what-is-the-windows-key-used-for.md
 84e2930829388c20fa7ac3f84017c2e5af21bf920faba14a2524df1be5d2d2c7 en-US/windows/how-to-open-on-screen-keyboard-in-windows.md
-1996f5d6dd624f32194e7dd9b8e3c5cf418c3ec0982b65d24f0fc3dc57b731a0 en-US/c-sharp/know-if-file-cloudapi-status-is-offline.md
+93f967447b737e8ac3331f76e13a9811bf06da3242ab4bdb3003e136780babf8 en-US/c-sharp/know-if-file-cloudapi-status-is-offline.md
 9d5b161acb9dcbfa80011404f73936c87938c6b63a97109aa667feb8bf857d5e en-US/markdown/c-sharp-code-fence.md
 bde6590ae393c2fab5a9f5a55a3732b04e2d881388daf8a3ca30ad9eb3022f9c en-US/pdm/ModuleNotFoundError-No-module-named-pdm-core.md
 6eadfba6953b17374d733a317dd1ddb2b828c3d58c645e7957760408bf99cce5 en-US/windows/edit-user-and-system-environment-variables.md

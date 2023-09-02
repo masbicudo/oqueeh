@@ -18,6 +18,8 @@ title: C#
 
 [How to check CloudAPI offline status?](know-if-file-cloudapi-status-is-offline)
 
+[List files in directory in C#](list-files-in-directory)
+
 [Listing embedded resources in C#](listing-embedded-resources)
 
 [Localizing embedded resource files](localized-embedded-resource-files)

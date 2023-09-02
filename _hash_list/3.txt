@@ -15,3 +15,11 @@ d3f70cd4c1d285e9d350fe4a0d4de472222a7ceab5a67f9613c0a6d3a6ec8340 en-US/pdm/error
 7cf7e00a6c279af9af26e665e076fc7c6b256e3c19d1bcfb15161b6ecd7a3266 en-US/vscode/error-crashing-on-restart.md
 d834d1cbc21b5ee9e0223b1ff03b0a42f654eed418921750173449f6403cbdfc en-US/vscode/change-indentation-of-tree-file-structure.md
 6aa69855dca42cbf0fe3b51af7c841c9b8625dfd8c6905572e6a184a4ac6f7ca en-US/c-sharp/generating-criptographic-signature-of-a-stream.md
+f30278f87dac2e827542894256ee6c03b4d399aa817be68c6d5948ba4661659d en-US/powershell/get-directory-size.md
+8d555b42d68685fa81b1ba3c363b2e6ca09e4d9145027819fa2b9954e7833edc en-US/powershell/run-powershell-command-from-cmd.md
+6797cc55199a4f4a9e17ee940cf0eb2a994ee821600322cacc8c65754b719595 en-US/python/argparse-attribute-error-namespace-object-has-no-attribute-name.md
+59d2df1231feb5bf4592c5212c052481f4a583e677aace1d1340e13dce4fee1a en-US/python/argparse-show-help-if-no-arguments.md
+0c41561f46687297f52d262c93f95d75f1716df6df54829bb10be0c3600216f7 en-US/c-sharp/list-files-in-directory.md
+6338242f9701b670be2f904c6aef30aa7d1cd74232c11ed6f7e57c9f6bce2be9 en-US/licensing/cc-by-sa-30.md
+fb9f45019144bafc165c35fb88437ffa5cb3dff245667f2ecdb0be98a2894231 en-US/python/checking-variable-exists-in-namespace.md
+b19efd0f293df3c6ecda70ba5cf6ba8a6a483d85c5db681c0bbac975f41e97dd en-US/python/get-list-of-true-values-in-namespace.md
