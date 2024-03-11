@@ -1,5 +1,5 @@
 ---
-title: Getting the CDF of a distribution given the PDF using Numpy
+title: Getting the CDF of a distribution given the PDF using NumPy
 generated: true
 ---
 

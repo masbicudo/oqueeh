@@ -78,6 +78,10 @@ title: Python
 
 [psycopg2 copy_from cannot insert field with delimiter, even if quoted](psycopg2-copy_from-cannot-insert-field-with-delimiter-even-if-quoted)
 
+[Raise exception from None in Python](raise-exception-from-none)
+
+[Re-raise exception in Python](re-raise-exception)
+
 [Read a file line by line in Python](read-file-line-by-line)
 
 [Read keyboard input in Python](read-keyboard-input)
@@ -120,11 +124,15 @@ title: Python
 
 [String to lowercase in Python](string-to-lowercase)
 
+[Time delays using `time.sleep` in Python](time-delays-using-time-sleep)
+
 [Trim string in Python](trim-string)
 
 [Tuples: Immutable lists in Python](tuples-immutable-lists)
 
 [](upgrade-pip)
+
+[urllib2.HTTPError: HTTP Error 403: Forbidden using urlopen in Python](urllib2-httperror-403-forbidden-with-urlopen)
 
 [What are __enter__ and __exit__ functions in Python](what-are-enter-and-exit-functions)
 

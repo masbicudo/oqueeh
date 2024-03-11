@@ -2483,7 +2483,7 @@
     - #ref=https://seaborn.pydata.org/generated/seaborn.kdeplot.html
 
 #file=en-US/numpy/cdf-distribution-from-pdf.md
-    # Getting the CDF of a distribution given the PDF using Numpy
+    # Getting the CDF of a distribution given the PDF using NumPy
 
     <ans>
     ```python
@@ -3181,6 +3181,105 @@
 
     **Know more:**
     - #ref=en-US/python/convert-char-code-to-string.md
+
+#file=en-US/python/urllib2-httperror-403-forbidden-with-urlopen.md
+    # urllib2.HTTPError: HTTP Error 403: Forbidden using urlopen in Python
+
+    <ans>
+    ```python
+    headers = { 'User-Agent': 'Mozilla/5.0' }
+    request = Request(uri, headers=headers)
+    stream = urlopen(request)
+    ```
+    </ans>
+
+    **Remarks:**
+
+    When using a URL string with `urlopen` the header *User-Agent* is not defined,
+    and this causes the server to return 403 Forbidden.
+
+#file=en-US/python/time-delays-using-time-sleep.md
+    # Time delays using `time.sleep` in Python
+
+    <ans>
+    ```python
+    time.sleep(10) # 10 seconds
+    ```
+    </ans>
+
+    **Prerequisite:**
+
+    ```python
+    import time
+    ```
+
+#file=en-US/python/re-raise-exception.md
+    # Re-raise exception in Python
+
+    <ans>
+    ```python
+    try: # ...
+    except ex: # ...
+    raise ex from None
+    ```
+    </ans>
+
+    **Remarks:**
+
+    Use `from None` to remove parent exceptions, e.g. when exception is raised while handling another exception.
+
+#file=en-US/python/raise-exception-from-none.md
+    # Raise exception from None in Python
+
+    <ans>
+    Remove parent exceptions, e.g. when exception is raised in the except block of another exception.
+    </ans>
+
+    **Example:**
+    ```python
+    try: # ...
+    except ex1:
+        try: # ...
+        except ex2:
+            # ex1 is parent of ex2
+            # use from None to force parent to be None
+            raise ex2 from None
+    ```
+
+#file=en-US/numpy/sum-all-items-in-multi-dimensional-array.md
+    # Sum multi-dimensional array along all axes using NumPy
+
+    <ans>
+    ```python
+    numpy.sum(a)
+    ```
+    </ans>
+
+    **Remarks:**
+
+    The sum function from NumPy has an *axes* parameter which defaults to `None`, causing NumPy to sum over all axes.
+
+    **References:**
+    - #ref=https://numpy.org/doc/stable/reference/generated/numpy.sum.html
+
+#file=en-US/numpy/get-total-size-of-multi-dimensional-array.md
+    # Get total size/length of multi-dimensional array using NumPy
+
+    <ans>
+    Use *size* property, instead of *len* function.
+    ```python
+    a.size
+    ```
+    </ans>
+
+    **Remarks:**
+
+    Python's `len` function will not give number of elements in NumPy multi-dimensional array.
+
+    `size` property is the multiplication of all items in `shape` property.
+
+    **References:**
+    - #ref=https://numpy.org/doc/stable/reference/generated/numpy.ndarray.size.html
 
 #file=_.md
     #ref=https://realpython.com/python-modulo-operator/#how-to-check-if-a-number-is-even-or-odd

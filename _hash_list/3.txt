@@ -27,3 +27,9 @@ fbaa48bdf4364ca3741bb4851d0b9151ca272dcb165dbb5e67b6feff33d283d5 en-US/python/gr
 2bfb58b9305ab1a7d9afef16619ba50250bcf5b24d73ef3ed01942f46b9bde08 en-US/python/convert-list-of-characters-into-string.md
 6457d895d5b8084f8a188b44eb9b05c6011221761816dd0c10d5d25e8f04e6cb en-US/python/convert-char-code-to-string.md
 2f01dd7a66d27ea949a865c4f3be250eeea9b8338d98ec852f4a9319e97b61a7 en-US/python/convert-character-to-char-code.md
+3249981678cfa0df00dff5aa419b1bf77689f111f201a5faa05edfc35573aadf en-US/python/urllib2-httperror-403-forbidden-with-urlopen.md
+bb9177e4170311c95555daccbc707f6681d3caa6bfbc7d7850e1ca925e32c654 en-US/python/time-delays-using-time-sleep.md
+3ca5b95bacaf6e8f38ca64b180c6bf5a4025bfa0d93246cb14db5e400d17ba89 en-US/python/re-raise-exception.md
+77144350b7baa877cc824de4efa62b27ba9bc40f047d253492ce704b3c50d5d8 en-US/python/raise-exception-from-none.md
+d77a7fd3af95441bac91395da356fb7a10cbfef9e0ff93ce5d33cfbaacf7a095 en-US/numpy/sum-all-items-in-multi-dimensional-array.md
+da12c9e79fc2090949221b34d9a6743561ca46a2f7df6a8477f4eb037ab44b77 en-US/numpy/get-total-size-of-multi-dimensional-array.md
