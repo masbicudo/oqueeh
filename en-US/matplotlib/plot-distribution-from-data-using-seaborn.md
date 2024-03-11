@@ -21,4 +21,4 @@ Parameters:
 </div>
 
 References:
-- [seaborn.kdeplot — seaborn 0.12.2 documentation - seaborn.pydata.org](https://seaborn.pydata.org/generated/seaborn.kdeplot.html)
+- [seaborn.kdeplot — seaborn 0.13.2 documentation - seaborn.pydata.org](https://seaborn.pydata.org/generated/seaborn.kdeplot.html)

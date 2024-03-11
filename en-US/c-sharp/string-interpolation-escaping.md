@@ -17,4 +17,4 @@ $"{{"{{"}}someValue}}: {someValue:0.0}"
 - Use multiple *$* to denote that braces (*{* and *}*)should be also the same multiple.
 
 **Know more:**
-- [$ - string interpolation - format string output \| Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/interpolated)
+- [$ - string interpolation - format string output - C# \| Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/interpolated)

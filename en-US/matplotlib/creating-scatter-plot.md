@@ -15,4 +15,4 @@ Other important parameters:
 - linewidths
 
 **Reference:**
-- [matplotlib.pyplot.scatter — Matplotlib 3.7.2 documentation](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.scatter.html)
+- [matplotlib.pyplot.scatter — Matplotlib 3.8.3 documentation](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.scatter.html)

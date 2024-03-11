@@ -25,4 +25,4 @@ import re
 
 #### Reference
 
-[re — Regular expression operations — Python 3.11.4 documentation](https://docs.python.org/3/library/re.html#re.Match.groups)
+[re — Regular expression operations — Python 3.12.2 documentation](https://docs.python.org/3/library/re.html#re.Match.groups)

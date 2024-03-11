@@ -40,8 +40,8 @@ f67e1bd4a88967ee2b1bcebd9e1245f5a29c0a10b2121306be0d3e865020e2e8 en-US/windows-t
 882b2bd07ea21594510c687db2971e05b0a70380dd912b00987f1a5196de6830 en-US/batch/execute-multiple-commands-in-single-line.md
 fd336f97954c2f70bff403b371087478ff288c782ff44a273e1ae31049e7b78b en-US/python/execute-function-at-exit.md
 1bd02ccd184d4fdb25b8773cd1863585a1ede10e81f0e8f225c2fa8d8fc647ff en-US/css/condition-styles-to-screen-orientation.md
-87d9e2dcb3d2f745817e1084beafd07c97beb3c24f2da899ae35e0ba0805fb11 en-US/python/better-performance-with-compiled-regex.md
-8ef98c0f9c105f6ba105c2eb2da2ad121c3272170973666b73df86cca7474e78 en-US/python/get-all-capture-groups-from-regex-match.md
+5977a0584dcfa36e52e10b72efc3f69155c3ce1b93f4617aed90fcc9de5e7af0 en-US/python/better-performance-with-compiled-regex.md
+9e2a537afc7798997b913f0120d9098c1efeff7a8c072fe6270fffa847169e85 en-US/python/get-all-capture-groups-from-regex-match.md
 d6ca19759e0c9049b390089f7e33af3ce59c2c3a699611b38aaefd42409012c2 en-US/html/anchor-with-reference-to-page-element.md
 f42bec3d5a817d5779a8d2a0a962e6de6877a91a71a4b9f9e6f672eb7f81f739 en-US/html/set-name-of-file-to-be-downloaded-via-link.md
 3f3e5af7d60b7a229b1dc303847f07d38fc9ea31beaa9d61cf25a75c920fcb2a en-US/html/set-selected-item-in-html-select-element.md

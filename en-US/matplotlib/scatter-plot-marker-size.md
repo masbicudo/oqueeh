@@ -15,4 +15,4 @@ plt.scatter(x=xs, y=ys, s=sizes, c=colors)
 - [Creating a scatter plot using MatPlotLib](/en-US/matplotlib/creating-scatter-plot)
 
 **Reference:**
-- [matplotlib.pyplot.scatter — Matplotlib 3.7.2 documentation](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.scatter.html)
+- [matplotlib.pyplot.scatter — Matplotlib 3.8.3 documentation](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.scatter.html)

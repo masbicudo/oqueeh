@@ -25,4 +25,4 @@ public void PrintMessage(
 - [Creating a custom string interpolation handler in C#](/en-US/c-sharp/creating-custom-string-interpolation-handler)
 
 **References:**
-- [Explore string interpolation handlers \| Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/tutorials/interpolated-string-handler)
+- [Explore string interpolation handlers - C# \| Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/tutorials/interpolated-string-handler)

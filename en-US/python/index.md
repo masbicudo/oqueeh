@@ -16,6 +16,12 @@ title: Python
 
 [Command line arguments in Python](command-line-arguments)
 
+[Convert char-code to string in Python](convert-char-code-to-string)
+
+[Convert string containing character to char-code in Python](convert-character-to-char-code)
+
+[Convert list of characters into string in Python](convert-list-of-characters-into-string)
+
 [Create a text file in Python](create-text-file)
 
 [Create a Python virtual environment](create-virtual-environment)
@@ -47,6 +53,8 @@ title: Python
 [Get a list of True values inside a *Namespace* in Python](get-list-of-true-values-in-namespace)
 
 [Get type of object in Python](get-type-of-object)
+
+[Group iterable sequence in chunks of N elements in Python](group-iterable-list-in-chunks)
 
 [Initializing a PyProjectX Python project](initializing-pyprojectx-project-manager)
 

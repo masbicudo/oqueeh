@@ -21,4 +21,4 @@ Create a class with the following:
 - [Passing parameters to a string interpolation handler constructor in C#](/en-US/c-sharp/passing-parameters-to-interpolation-handler-constructor)
 
 **References:**
-- [Explore string interpolation handlers \| Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/tutorials/interpolated-string-handler)
+- [Explore string interpolation handlers - C# \| Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/tutorials/interpolated-string-handler)

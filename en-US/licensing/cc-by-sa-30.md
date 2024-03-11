@@ -10,4 +10,7 @@ Attribution-ShareAlike 3.0 Unported
 </div>
 
 **References:**
-- https://creativecommons.org/licenses/by-sa/3.0/
+- [
+   CC BY-SA 3.0 Deed \| Attribution-ShareAlike 3.0 Unported
+ \| Creative Commons
+   - creativecommons.org](https://creativecommons.org/licenses/by-sa/3.0/)

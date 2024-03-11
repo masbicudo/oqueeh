@@ -14,4 +14,4 @@ array1.AsSpan().SequenceEqual(array2)
 </div>
 
 **References:**
-- https://code-maze.com/csharp-compare-arrays/
+- [Compare Arrays in C# - Code Maze - code-maze.com](https://code-maze.com/csharp-compare-arrays/)
