@@ -14,10 +14,11 @@ def get_charset_from_content_type(content_type):
     return None
 
 def get_page_html(uri):
-    from urllib.request import urlopen
+    from urllib.request import urlopen, Request
     from lxml.html import document_fromstring
-
-    stream = urlopen(uri)
+    hdr = { 'User-Agent': 'Mozilla/5.0' }
+    req = Request(uri, headers=hdr)
+    stream = urlopen(req)
     if "Content-Type" in stream.headers:
         content_type_charset = get_charset_from_content_type(stream.headers["Content-Type"])
 
