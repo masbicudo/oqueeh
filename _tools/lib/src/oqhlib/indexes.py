@@ -110,14 +110,29 @@ def get_dir_link(path):
         "url": name,
     }
 
+def exponential_backoff(func, max_retries, unit_timedelta):
+    import time
+    def exp_bo(*args, **kwargs):
+        delta = unit_timedelta
+        ex = None
+        for _ in range(max_retries):
+            try:
+                return func(*args, **kwargs)
+            except ex:
+                time.sleep(unit_timedelta.seconds)
+                delta *= 2
+        raise ex
+    return exp_bo
+
 def get_file_link(path):
+    import datetime as dt
     name = os.path.basename(path)
 
     # Remove index file containing the category items.
     # This file will be regenerated again at the end
     # of this method with new content.
     if name in ["index.html", "index.md"]:
-        os.remove(path)
+        exponential_backoff(os.remove, 4, dt.timedelta(seconds=1))(path)
         return None
 
     # Skip non *.md files.
