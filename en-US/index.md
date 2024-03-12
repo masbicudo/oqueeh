@@ -38,6 +38,8 @@ title: All topics
 
 [NumPy](numpy)
 
+[OpenCV](opencv)
+
 [Pandoc](pandoc)
 
 [PDM](pdm)

@@ -33,3 +33,7 @@ bb9177e4170311c95555daccbc707f6681d3caa6bfbc7d7850e1ca925e32c654 en-US/python/ti
 77144350b7baa877cc824de4efa62b27ba9bc40f047d253492ce704b3c50d5d8 en-US/python/raise-exception-from-none.md
 d77a7fd3af95441bac91395da356fb7a10cbfef9e0ff93ce5d33cfbaacf7a095 en-US/numpy/sum-all-items-in-multi-dimensional-array.md
 da12c9e79fc2090949221b34d9a6743561ca46a2f7df6a8477f4eb037ab44b77 en-US/numpy/get-total-size-of-multi-dimensional-array.md
+2bcd0afdd7816aa4f6191d8094bdae0a8d17d0f8e99ae1f62193618deafad563 en-US/opencv/thresholding-multi-channel-images.md
+1ee666a8745b4c241ff39e6c9275b6d2f78b7056bc1a52bc06659d809eb6ca2a en-US/opencv/saving-jpeg-image-file.md
+1097453e23174d0ca7cd5527df50455aa7f1eaa82fda3a5a916d7610b184cbe0 en-US/opencv/loading-images-with-imread-return-none.md
+4f4e853f4e21d77afe320fc42d547bec808707981ec8579cb66b20511094f9c3 en-US/opencv/images-not-opening-with-imread.md

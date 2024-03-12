@@ -21,6 +21,7 @@ category_names = {
     "nssm": "NSSM",
     "texlive": "TeX Live",
     "vscode": "VS Code",
+    "opencv": "OpenCV",
 }
 
 # Equivalence classes of words

@@ -3281,6 +3281,48 @@
     **References:**
     - #ref=https://numpy.org/doc/stable/reference/generated/numpy.ndarray.size.html
 
+#file=en-US/opencv/thresholding-multi-channel-images.md
+    # Thresholding multi-channel images like CMYK using OpenCV
+
+    <ans>
+    ```python
+    # Thresholding C and K values
+    binaryImage = cv.inRange(
+        inputImageCMYK,
+        (128,   0,   0,   0),
+        (255, 255, 255, 196))
+    ```
+    </ans>
+
+    **Remarks:**
+
+    You can then display the thresholded images:
+    ```python
+    plt.imshow(binaryImage, cmap='gray')
+    ```
+
+#file=en-US/opencv/saving-jpeg-image-file.md
+    # Saving jpeg image file using OpenCV
+
+    <ans>
+    ```python
+    cv2.imwrite("some.jpg", img)
+    ```
+    </ans>
+
+#file=en-US/opencv/loading-images-with-imread-return-none.md
+    # Loading images with `imread` return None in OpenCV
+
+    <ans>
+    OpenCV `imread` fails silently in multiple situations:
+    - File doesn't exist
+    - File name or path contains non-ASCII characters
+    </ans>
+
+#file=en-US/opencv/images-not-opening-with-imread.md
+    # OpenCV not opening images with `imread` in Python
+    #include=en-US/opencv/loading-images-with-imread-return-none.md
+
 #file=_.md
     #ref=https://realpython.com/python-modulo-operator/#how-to-check-if-a-number-is-even-or-odd
     #ref=https://jekyllrb.com/docs/variables/

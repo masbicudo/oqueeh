@@ -33,5 +33,6 @@
     "texlive": "TeX Live",
     "vscode": "VS Code",
     "pyprojectx": "Pyprojectx",
-    "licensing": "Licensing"
+    "licensing": "Licensing",
+    "opencv": "OpenCV"
 }
