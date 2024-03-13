@@ -102,17 +102,8 @@ Scripts:
 
 ```bash
 site-tools-install.cmd
-```
-
-```bash
 site-bundle-init.cmd
-```
-
-```bash
 site-bundle-update.cmd
-```
-
-```bash
 site-serve.cmd
 ```
 
