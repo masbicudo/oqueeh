@@ -1571,6 +1571,8 @@
     </ans>
 
 #file=en-US/pyenv/pyenv-is-not-recognized-as-the-name-of-a-cmdlet-function.md
+    #delete
+#file=en-US/pyenv-win/pyenv-is-not-recognized-as-the-name-of-a-cmdlet-function.md
     # 'pyenv' is not recognized as the name of a cmdlet, function
 
     <ans>
@@ -1580,6 +1582,13 @@
         -Uri "https://raw.githubusercontent.com/pyenv-win/pyenv-win/master/pyenv-win/install-pyenv-win.ps1" `
         -OutFile "./install-pyenv-win.ps1"; &"./install-pyenv-win.ps1"
     ```
+    </ans>
+
+    **Alternative:**
+    <ans>
+    Add the following to current user `Path`:
+    - `%USERPROFILE%\.pyenv\pyenv-win\bin`
+    - `%USERPROFILE%\.pyenv\pyenv-win\shims`
     </ans>
 
     See [pyenv for Windows](https://github.com/pyenv-win/pyenv-win)
@@ -3213,20 +3222,68 @@
     import time
     ```
 
+#file=en-US/python/re-raise-exception-without-chaining.md
+    # Re-raise exception without chaining in Python
+
+    <ans>
+    Use `raise exc from None` to remove parent exceptions.
+    </ans>
+
+    **Example:**
+
+    ```python
+    try: # ...
+    except Exception ex1: # ...
+        try: # ...
+        except Exception ex2: # ...
+            raise ex1 from None
+    ```
+
+    **Related:**
+    - #ref=en-US/python/re-raise-exception.md
+    - #ref=en-US/python/raise-exception.md
+
+    **References:**
+    - #ref=https://docs.python.org/3/tutorial/errors.html
+
 #file=en-US/python/re-raise-exception.md
     # Re-raise exception in Python
 
     <ans>
+    Use `raise` to re-raise exception.
+    </ans>
+
+    **Example:**
+
     ```python
     try: # ...
-    except ex: # ...
-    raise ex from None
+    except: # ...
+        print("Error occurred")
+        raise
+    ```
+
+    **Related:**
+    - #ref=en-US/python/re-raise-exception-without-chaining.md
+    - #ref=en-US/python/raise-exception.md
+
+    **References:**
+    - #ref=https://docs.python.org/3/tutorial/errors.html
+
+#file=en-US/python/raise-exception.md
+    # Raise exception in Python
+
+    <ans>
+    ```python
+    raise Exception("Error")
     ```
     </ans>
 
-    **Remarks:**
+    **Related:**
+    - #ref=en-US/python/re-raise-exception.md
+    - #ref=en-US/python/re-raise-exception-without-chaining.md
 
-    Use `from None` to remove parent exceptions, e.g. when exception is raised while handling another exception.
+    **References:**
+    - #ref=https://docs.python.org/3/tutorial/errors.html
 
 #file=en-US/python/raise-exception-from-none.md
     # Raise exception from None in Python
@@ -3245,6 +3302,12 @@
             # use from None to force parent to be None
             raise ex2 from None
     ```
+
+    **Related:**
+    - #ref=en-US/python/re-raise-exception-without-chaining.md
+
+    **References:**
+    - #ref=https://docs.python.org/3/tutorial/errors.html
 
 #file=en-US/numpy/sum-all-items-in-multi-dimensional-array.md
     # Sum multi-dimensional array along all axes using NumPy
@@ -3322,6 +3385,572 @@
 #file=en-US/opencv/images-not-opening-with-imread.md
     # OpenCV not opening images with `imread` in Python
     #include=en-US/opencv/loading-images-with-imread-return-none.md
+
+#file=en-US/pandas/create-timestamp-without-timezone.md
+    # Creating a timestamp without timezone using Pandas
+
+    <ans>
+    ```python
+    timestamp = pd.Timestamp('2024-02-14 22:15:14')
+    ```
+    </ans>
+
+    **References:**
+    - #ref=en-US/pandas/create-timestamp-with-timezone.md
+    - #ref=en-US/pandas/remove-timezone-from-timestamp.md
+
+#file=en-US/pandas/create-timestamp-with-timezone.md
+    # Creating a timestamp with timezone using Pandas
+
+    <ans>
+    ```python
+    timestamp = pd.Timestamp(
+        '2024-02-14 22:15:14',
+        tz='America/Sao_Paulo')
+    ```
+    </ans>
+
+    **References:**
+    - #ref=en-US/pandas/create-timestamp-without-timezone.md
+    - #ref=en-US/pandas/remove-timezone-from-timestamp.md
+
+#file=en-US/pandas/remove-timezone-from-timestamp.md
+    # Removing timezone from a Pandas timestamp
+
+    <ans>
+    ```python
+    timestamp.tz_localize(None)
+    ```
+    </ans>
+
+    **References:**
+    - #ref=en-US/pandas/create-timestamp-with-timezone.md
+
+#file=en-US/python/get-type-name-of-object.md
+    # Get type name of an object in Python
+
+    <ans>
+    ```python
+    type(obj).__name__
+    ```
+    </ans>
+
+#file=en-US/pandas/convert-ndarray-with-dates-to-pandas-series-with-timestamps.md
+    # Convert ndarray with dates to Pandas series with timestamps
+
+    <ans>
+    ```python
+    pd.to_datetime(ndarray_with_dates)
+    ```
+    </ans>
+
+#file=en-US/numpy/convert-ndarray-with-dates-to-pandas-series-with-timestamps.md
+    # Convert ndarray with dates to Pandas series with timestamps
+    #include=en-US/pandas/convert-ndarray-with-dates-to-pandas-series-with-timestamps.md
+
+#file=en-US/python/what-actions-are-available-in-warnings-simplefilter.md
+    # Whats actions are available for `warnings.simplefilter` in Python
+
+    <ans>
+    - "ignore": Never print.
+    - "error": Treat as errors.
+    - "always": Always print.
+    - "default": Print once per code location.
+    - "module": Print once per module.
+    - "once": Print once.
+    </ans>
+
+#file=en-US/python/treating-errors.md
+    # Treating errors in Python
+
+    <ans>
+    ```python
+    try: # code to try
+    except Exception as ex: # execute on error
+    else: # execute only if no errors
+    finally: # always execute
+    ```
+    </ans>
+
+    **Remarks:**
+    - You can omit exception variable name and type.
+    - Multiple `except` blocks with different types are allowed.
+
+    **Related:**
+    - #ref=en-US/python/raising-errors.md
+
+    **References:**
+    - #ref=https://docs.python.org/3/tutorial/errors.html
+
+#file=en-US/python/handling-multiple-exception-types-same-block.md
+    # Handling multiple exception types in the same `except` block in Python
+
+    <ans>
+    except (ExceptionType1, ExceptionType2):
+    </ans>
+
+    **Related:**
+    - #ref=en-US/python/treating-errors.md
+
+    **References:**
+    - #ref=https://docs.python.org/3/tutorial/errors.html
+
+#file=en-US/python/raising-errors.md
+    # Raising errors in Python
+
+    <ans>
+    ```python
+    raise Exception("Error")
+    ```
+    </ans>
+
+    **Related:**
+    - #ref=en-US/python/treating-errors.md
+
+    **References:**
+    - #ref=https://docs.python.org/3/tutorial/errors.html
+
+#file=en-US/python/treating-future-warnings-as-errors.md
+    # Treating `FutureWarning` as errors in Python
+
+    <ans>
+    ```python
+    warnings.simplefilter('error', FutureWarning)
+    ```
+    </ans>
+
+    **Remarks:**
+    You can undo the change using:
+    ```python
+    warnings.simplefilter('default', FutureWarning)
+    ```
+
+    **References:**
+    - #ref=en-US/python/what-actions-are-available-in-warnings-simplefilter.md
+
+#file=en-US/python/decoding-web-requests-returning-json.md
+    # Descoding web-requests returning JSON in Python
+
+    <ans>
+    ```python
+    data = requests.get(url).json()
+    ```
+    </ans>
+
+    **Prerequisite:**
+    ```python
+    import requests
+    ```
+
+    **Alternative:**
+    - #ref=en-US/python/decoding-json-web-requests-using-urllib.md
+
+#file=en-US/python/decoding-json-web-requests-using-urllib.md
+    # Descoding JSON web-requests using URL-Lib in Python
+
+    <ans>
+    ```python
+    data = json.load(urllib.request.urlopen(url))
+    ```
+    </ans>
+
+    **Prerequisite:**
+    ```python
+    import json
+    import urllib.request
+    ```
+
+    **Alternative:**
+    - #ref=en-US/python/decoding-web-requests-returning-json.md
+
+#file=en-US/pyenv-win/listing-python-versions-to-install.md
+    # Listing Python versions to install in PyEnv-Win
+
+    <ans>
+    ```powershell
+    pyenv install -l
+    ```
+    </ans>
+
+    If you don't see the desired Python version, update the version cache:
+    ```powershell
+    pyenv update
+    ```
+
+    **Related:**
+    - #ref=en-US/pyenv-win/listing-installed-python-versions.md
+    - #ref=en-US/pyenv-win/installing-python-version.md
+
+    **References:**
+    See [pyenv for Windows](https://github.com/pyenv-win/pyenv-win)
+
+#file=en-US/pyenv-win/listing-installed-python-versions.md
+    # Listing installed Python versions in PyEnv-Win
+
+    <ans>
+    ```powershell
+    pyenv versions
+    ```
+    </ans>
+
+    **Related:**
+    - #ref=en-US/pyenv-win/listing-python-versions-to-install.md
+
+    **References:**
+    See [pyenv for Windows](https://github.com/pyenv-win/pyenv-win)
+
+#file=en-US/pyenv-win/installing-python-version.md
+    # Installing Python version in PyEnv-Win
+
+    <ans>
+    ```powershell
+    pyenv install 3.12.2
+    ```
+    </ans>
+
+    **Related:**
+    - #ref=en-US/pyenv-win/listing-python-versions-to-install.md
+
+    **References:**
+    See [pyenv for Windows](https://github.com/pyenv-win/pyenv-win)
+
+#file=en-US/python/running-http-server-returning-empty-response.md
+    # Running `http.server` returning `ERR_EMPTY_RESPONSE` in Python
+
+    <ans>
+    Add a binding to localhost when running:
+    ```bash
+    python -m http.server 8000 --bind localhost
+    ```
+    </ans>
+
+    **Related:**
+    - #ref=en-US/python/running-http-server-returning-invalid-address.md
+    - #ref=en-US/python/running-http-server-returning-connection-refused.md
+
+#file=en-US/python/running-http-server-returning-invalid-address.md
+    # Running `http.server` returning `ERR_ADDRESS_INVALID` in Python
+
+    <ans>
+    Use a valid IP or hostname to access the server:
+    - localhost
+    - 127.0.0.1
+    
+    You can bind to 0.0.0.0, but not access it.
+    </ans>
+
+    **Remarks:**
+    Binding to 0.0.0.0 means to accept any IP address when connecting.
+
+    **Related:**
+    - #ref=en-US/python/running-http-server-returning-empty-response.md
+    - #ref=en-US/python/running-http-server-returning-connection-refused.md
+
+#file=en-US/python/running-http-server-returning-connection-refused.md
+    # Running `http.server` returning `ERR_CONNECTION_REFUSED` in Python
+
+    <ans>
+    You need to use the specific binding IP or hostname to access the server:
+    Either:
+    - http://localhost &lt;or&gt;
+    - http://127.0.0.1
+    </ans>
+
+    **Related:**
+    - #ref=en-US/python/running-http-server-returning-empty-response.md
+    - #ref=en-US/python/running-http-server-returning-invalid-address.md
+
+#file=en-US/matplotlib/italics-in-texts.md
+    # Italics in texts using Matplotlib
+
+    <ans>
+    ```python
+    plt.title(r"$\mathit{text in italics}$")
+    ```
+    </ans>
+
+    **Related:**
+    - #ref=en-US/matplotlib/text-formating.md
+    - #ref=en-US/matplotlib/bold-italic-texts.md
+
+    **References:**
+    - #ref=https://matplotlib.org/stable/users/explain/text/mathtext.html
+
+#file=en-US/matplotlib/bolded-texts.md
+    # Bold font using Matplotlib
+
+    <ans>
+    ```python
+    plt.title(r"$\mathbf{text in bold}$")
+    ```
+    </ans>
+
+    **Related:**
+    - #ref=en-US/matplotlib/text-formating.md
+    - #ref=en-US/matplotlib/bold-italic-texts.md
+
+    **References:**
+    - #ref=https://matplotlib.org/stable/users/explain/text/mathtext.html
+
+#file=en-US/matplotlib/bold-italic-texts.md
+    # Bold italic using Matplotlib
+
+    <ans>
+    ```python
+    plt.title(r"$\mathbfit{text in bold italic}$")
+    ```
+    </ans>
+
+    **Related:**
+    - #ref=en-US/matplotlib/text-formating.md
+    - #ref=en-US/matplotlib/italics-in-texts.md
+    - #ref=en-US/matplotlib/bolded-texts.md
+
+    **References:**
+    - #ref=https://matplotlib.org/stable/users/explain/text/mathtext.html
+
+#file=en-US/matplotlib/text-formating.md
+    # Text formating in Matplolib
+
+    <ans>
+    - `\mathit{}`: default (italic)
+    - `\mathrm{}`: Roman (upright)
+    - `\mathtt{}`: Typewriter (monospace)
+    - `\mathbf{}`: bold
+    - `\mathbfit{}`: bold italic
+    - `\mathcal{}`: calligraphic
+    - `\mathsf{}`: sans-serif
+    </ans>
+
+    **References:**
+    - #ref=https://matplotlib.org/stable/users/explain/text/mathtext.html
+
+#file=en-US/matplotlib/math-notation-in-texts.md
+    # Math notation in texts using Matplotlib
+
+    <ans>
+    ```python
+    plt.title("$y = x^2$")
+    ```
+    </ans>
+
+    Note that backslashes `'\'` must be escaped (e.g. `"\\alpha"`), or used inside raw strings (e.g. `r"\alpha"`).
+
+    **Related:**
+    - #ref=en-US/matplotlib/text-formating.md
+
+    **References:**
+    - #ref=https://matplotlib.org/stable/users/explain/text/mathtext.html
+
+#file=en-US/pandas/convert-datetime-to-timestamp.md
+    # Convert datetime to Timestamp format in Pandas
+
+    <ans>
+    ```python
+    pd.to_datetime(dt.datetime(2024, 3, 31)) # dtype('<M8[ns]')
+    pd.to_datetime(dt.date(2024, 3, 31)) # dtype('<M8[ns]')
+    ```
+    </ans>
+
+    **Related:**
+    - #ref=en-US/numpy/convert-datetime-to-datetime64.md
+
+#file=en-US/numpy/convert-datetime-to-datetime64.md
+    # Convert datetime to datetime64 format in NumPy
+
+    <ans>
+    ```python
+    np.datetime64(dt.datetime(2024, 3, 31)) # dtype('<M8[us]')
+    pd.datetime64(dt.date(2024, 3, 31)) # dtype('<M8[D]')
+    ```
+    </ans>
+
+    **Related:**
+    - #ref=en-US/pandas/convert-datetime-to-timestamp.md
+    - #ref=en-US/numpy/converting-datetime64-formats.md
+
+#file=en-US/numpy/converting-datetime64-formats.md
+    # Converting datetime64 formats using NumPy
+
+    <ans>
+    dt64d.astype("<M8[us]")
+    dt64ns.astype("<M8[D]")
+    </ans>
+
+    **Remarks:**
+    NumPy can store date and times in multiple formats inside datetime64.
+    The stored int64, which can be accessed using `value` property may be different even if the represented date is the same.
+
+    **Related:**
+    - #ref=en-US/numpy/convert-datetime-to-datetime64.md
+
+#file=en-US/cudf/native-windows-installation.md
+    # Can cuDF be installed natively in Windows
+
+    <ans>
+    cuDF does not support Windows natively, only via WSL2.
+    </ans>
+
+#file=en-US/cudf/requirements.md
+    # Requirements for cuDF
+
+    <ans>
+    - GPU: NVIDIA Volta™ with compute capability 7.0+
+    - OS: Ubuntu 20 or 22 / CentOS 7 / Rocky Linux 8 / Windows 11 with WSL2
+    - CUDA: 11 / 12 + updated drivers
+    </ans>
+
+    **References:**
+    - #ref=https://docs.rapids.ai/install#system-req
+
+#file=en-US/cupy/requirements.md
+    # Requirements for using cuPy
+
+    <ans>
+    - GPU: NVIDIA with CUDA support
+    - CUDA: 11 / 12 + updated drivers
+    - C++ compiler: MSVC on Windows / g++ on Linux
+    </ans>
+
+    **References:**
+    - #ref=https://docs.cupy.dev/en/stable/install.html#requirements
+    - #ref=https://docs.cupy.dev/_/downloads/en/v7.3.0/pdf/
+
+#file=en-US/cupy/installing.md
+    # Installing cuPy
+
+    <ans>
+    - step 1
+        ```bash
+        python -m pip install -U setuptools pip
+        ```
+    - step 2
+        ```bash
+        pip install cupy-cuda11x
+        # =or= pip install cupy-cuda12x
+        ```
+    - step 3
+        Install MSVC on Windows =or= g++ on Linux
+    </ans>
+
+    **References:**
+    - #ref=https://docs.cupy.dev/en/stable/install.html
+    - #ref=https://docs.cupy.dev/_/downloads/en/v7.3.0/pdf/
+
+#file=en-US/scipy/remove-drift-from-data.md
+    # Removing linear tendency (or drift) from data using SciPy
+
+    <ans>
+    ```python
+    def remove_linear_drift(data):
+        x = np.arange(len(data))
+        return data - stats.linregress(x, data).slope * x
+    ```
+    </ans>
+
+#file=en-US/python/hashing-a-function-object.md
+    # Hashing a function object in Python
+
+    <ans>
+    ```python
+    def get_function_hash(fn):
+        return hash((
+            inspect.getsource(fn),
+            get_function_closures(fn),
+            get_function_globals(fn),
+        ))
+    ```
+    See related content for `get_function_closures` and `get_function_globals` implementations.
+    </ans>
+
+    **Requirements:**
+    ```python
+    import inspect
+    ```
+
+    **Related:**
+    - #ref=en-US/python/get-closure-variables-used-by-function.md
+    - #ref=en-US/python/get-global-context-variables-used-by-function.md
+
+#file=en-US/python/get-closure-variables-used-by-function.md
+    # Get closure variables used by a function in Python
+
+    <ans>
+    ```python
+    def get_function_closures(fn):
+        return (*(
+                closure.cell_contents
+                for closure
+                in fn.__closure__
+            ),)
+    ```
+    </ans>
+
+    **Related:**
+    - #ref=en-US/python/get-global-context-variables-used-by-function.md
+
+#file=en-US/python/get-global-context-variables-used-by-function.md
+    # Get global context variables used by a function in Python
+
+    <ans>
+    ```python
+    def get_function_globals(fn):
+        return (*(
+                fn.__globals__[instruction.argval]
+                for instruction
+                in dis.Bytecode(fn)
+                if instruction.opname == 'LOAD_GLOBAL'
+            ),)
+    ```
+    </ans>
+
+    **Requirements:**
+    ```python
+    import dis
+    ```
+
+    **Related:**
+    - #ref=en-US/python/get-closure-variables-used-by-function.md
+
+#file=en-US/tech_name/article_name.md
+    #delete
+    # Title
+
+    <ans>
+    </ans>
+
+    **Related:**
+    - #ref=
+
+#file=en-US/tech_name/article_name.md
+    #delete
+    # Title
+
+    <ans>
+    </ans>
+
+    **Related:**
+    - #ref=
+
+#file=en-US/tech_name/article_name.md
+    #delete
+    # Title
+
+    <ans>
+    </ans>
+
+    **Related:**
+    - #ref=
+
+#file=en-US/tech_name/article_name.md
+    #delete
+    # Title
+
+    <ans>
+    </ans>
+
+    **Related:**
+    - #ref=
 
 #file=_.md
     #ref=https://realpython.com/python-modulo-operator/#how-to-check-if-a-number-is-even-or-odd

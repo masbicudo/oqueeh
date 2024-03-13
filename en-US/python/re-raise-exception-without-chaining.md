@@ -1,23 +1,24 @@
 ---
-title: Re-raise exception in Python
+title: Re-raise exception without chaining in Python
 generated: true
 ---
 
 <div markdown="1" class="ans">
-Use `raise` to re-raise exception.
+Use `raise exc from None` to remove parent exceptions.
 </div>
 
 **Example:**
 
 ```python
 try: # ...
-except: # ...
-    print("Error occurred")
-    raise
+except Exception ex1: # ...
+    try: # ...
+    except Exception ex2: # ...
+        raise ex1 from None
 ```
 
 **Related:**
-- [Re-raise exception without chaining in Python](/en-US/python/re-raise-exception-without-chaining)
+- [Re-raise exception in Python](/en-US/python/re-raise-exception)
 - [Raise exception in Python](/en-US/python/raise-exception)
 
 **References:**

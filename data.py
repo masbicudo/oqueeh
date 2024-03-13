@@ -22,6 +22,11 @@ category_names = {
     "texlive": "TeX Live",
     "vscode": "VS Code",
     "opencv": "OpenCV",
+    "pyenv-win": "PyEnv-Win",
+    "cudf": "cuDF",
+    "cupy": "cuPy",
+    "syncthing": "Syncthing",
+    "scipy": "SciPy",
 }
 
 # Equivalence classes of words

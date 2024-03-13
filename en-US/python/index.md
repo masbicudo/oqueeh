@@ -30,6 +30,10 @@ title: Python
 
 [Custom string conversion in Python](custom-string-conversion)
 
+[Descoding JSON web-requests using URL-Lib in Python](decoding-json-web-requests-using-urllib)
+
+[Descoding web-requests returning JSON in Python](decoding-web-requests-returning-json)
+
 [Difference between "w" and "w+" flags in Python](difference-between-w-w+-flags)
 
 [Encode string to UTF-8 in Python](encode-string-to-utf-8)
@@ -44,17 +48,27 @@ title: Python
 
 [Get all capture groups from regex match in Python](get-all-capture-groups-from-regex-match)
 
+[Get closure variables used by a function in Python](get-closure-variables-used-by-function)
+
 [Get current working directory](get-current-working-directory)
 
 [Get currently executing file path](get-currently-executing-file-path)
 
 [Get currently executing file name](get-currently-executing-filename)
 
+[Get global context variables used by a function in Python](get-global-context-variables-used-by-function)
+
 [Get a list of True values inside a *Namespace* in Python](get-list-of-true-values-in-namespace)
+
+[Get type name of an object in Python](get-type-name-of-object)
 
 [Get type of object in Python](get-type-of-object)
 
 [Group iterable sequence in chunks of N elements in Python](group-iterable-list-in-chunks)
+
+[Handling multiple exception types in the same `except` block in Python](handling-multiple-exception-types-same-block)
+
+[Hashing a function object in Python](hashing-a-function-object)
 
 [Initializing a PyProjectX Python project](initializing-pyprojectx-project-manager)
 
@@ -79,6 +93,12 @@ title: Python
 [psycopg2 copy_from cannot insert field with delimiter, even if quoted](psycopg2-copy_from-cannot-insert-field-with-delimiter-even-if-quoted)
 
 [Raise exception from None in Python](raise-exception-from-none)
+
+[Raise exception in Python](raise-exception)
+
+[Raising errors in Python](raising-errors)
+
+[Re-raise exception without chaining in Python](re-raise-exception-without-chaining)
 
 [Re-raise exception in Python](re-raise-exception)
 
@@ -108,6 +128,12 @@ title: Python
 
 [Reversing lists in Python](reversing-lists)
 
+[Running `http.server` returning `ERR_CONNECTION_REFUSED` in Python](running-http-server-returning-connection-refused)
+
+[Running `http.server` returning `ERR_EMPTY_RESPONSE` in Python](running-http-server-returning-empty-response)
+
+[Running `http.server` returning `ERR_ADDRESS_INVALID` in Python](running-http-server-returning-invalid-address)
+
 [Save object to JSON in Python](save-object-to-json)
 
 [Save text file using UTF-8 in Python](save-text-file-using-utf-8)
@@ -126,6 +152,10 @@ title: Python
 
 [Time delays using `time.sleep` in Python](time-delays-using-time-sleep)
 
+[Treating errors in Python](treating-errors)
+
+[Treating `FutureWarning` as errors in Python](treating-future-warnings-as-errors)
+
 [Trim string in Python](trim-string)
 
 [Tuples: Immutable lists in Python](tuples-immutable-lists)
@@ -133,6 +163,8 @@ title: Python
 [](upgrade-pip)
 
 [urllib2.HTTPError: HTTP Error 403: Forbidden using urlopen in Python](urllib2-httperror-403-forbidden-with-urlopen)
+
+[Whats actions are available for `warnings.simplefilter` in Python](what-actions-are-available-in-warnings-simplefilter)
 
 [What are __enter__ and __exit__ functions in Python](what-are-enter-and-exit-functions)
 

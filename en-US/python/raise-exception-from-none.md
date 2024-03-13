@@ -17,3 +17,9 @@ except ex1:
         # use from None to force parent to be None
         raise ex2 from None
 ```
+
+**Related:**
+- [Re-raise exception without chaining in Python](/en-US/python/re-raise-exception-without-chaining)
+
+**References:**
+- [8. Errors and Exceptions — Python 3.12.2 documentation](https://docs.python.org/3/tutorial/errors.html)

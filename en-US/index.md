@@ -12,6 +12,10 @@ title: All topics
 
 [CSS](css)
 
+[cuDF](cudf)
+
+[cuPy](cupy)
+
 [.NET](dot-net)
 
 [Git](git)
@@ -40,6 +44,8 @@ title: All topics
 
 [OpenCV](opencv)
 
+[Pandas](pandas)
+
 [Pandoc](pandoc)
 
 [PDM](pdm)
@@ -52,9 +58,13 @@ title: All topics
 
 [Pyenv](pyenv)
 
+[PyEnv-Win](pyenv-win)
+
 [Pyprojectx](pyprojectx)
 
 [Python](python)
+
+[SciPy](scipy)
 
 [Streamlit](streamlit)
 
