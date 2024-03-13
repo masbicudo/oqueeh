@@ -3213,20 +3213,68 @@
     import time
     ```
 
+#file=en-US/python/re-raise-exception-without-chaining.md
+    # Re-raise exception without chaining in Python
+
+    <ans>
+    Use `raise exc from None` to remove parent exceptions.
+    </ans>
+
+    **Example:**
+
+    ```python
+    try: # ...
+    except Exception ex1: # ...
+        try: # ...
+        except Exception ex2: # ...
+            raise ex1 from None
+    ```
+
+    **Related:**
+    - #ref=en-US/python/re-raise-exception.md
+    - #ref=en-US/python/raise-exception.md
+
+    **References:**
+    - #ref=https://docs.python.org/3/tutorial/errors.html
+
 #file=en-US/python/re-raise-exception.md
     # Re-raise exception in Python
 
     <ans>
+    Use `raise` to re-raise exception.
+    </ans>
+
+    **Example:**
+
     ```python
     try: # ...
-    except ex: # ...
-    raise ex from None
+    except: # ...
+        print("Error occurred")
+        raise
+    ```
+
+    **Related:**
+    - #ref=en-US/python/re-raise-exception-without-chaining.md
+    - #ref=en-US/python/raise-exception.md
+
+    **References:**
+    - #ref=https://docs.python.org/3/tutorial/errors.html
+
+#file=en-US/python/raise-exception.md
+    # Raise exception in Python
+
+    <ans>
+    ```python
+    raise Exception("Error")
     ```
     </ans>
 
-    **Remarks:**
+    **Related:**
+    - #ref=en-US/python/re-raise-exception.md
+    - #ref=en-US/python/re-raise-exception-without-chaining.md
 
-    Use `from None` to remove parent exceptions, e.g. when exception is raised while handling another exception.
+    **References:**
+    - #ref=https://docs.python.org/3/tutorial/errors.html
 
 #file=en-US/python/raise-exception-from-none.md
     # Raise exception from None in Python
@@ -3245,6 +3293,12 @@
             # use from None to force parent to be None
             raise ex2 from None
     ```
+
+    **Related:**
+    - #ref=en-US/python/re-raise-exception-without-chaining.md
+
+    **References:**
+    - #ref=https://docs.python.org/3/tutorial/errors.html
 
 #file=en-US/numpy/sum-all-items-in-multi-dimensional-array.md
     # Sum multi-dimensional array along all axes using NumPy
@@ -3322,6 +3376,147 @@
 #file=en-US/opencv/images-not-opening-with-imread.md
     # OpenCV not opening images with `imread` in Python
     #include=en-US/opencv/loading-images-with-imread-return-none.md
+
+#file=en-US/pandas/create-timestamp-without-timezone.md
+    # Creating a timestamp without timezone using Pandas
+
+    <ans>
+    ```python
+    timestamp = pd.Timestamp('2024-02-14 22:15:14')
+    ```
+    </ans>
+
+    **References:**
+    - #ref=en-US/pandas/create-timestamp-with-timezone.md
+    - #ref=en-US/pandas/remove-timezone-from-timestamp.md
+
+#file=en-US/pandas/create-timestamp-with-timezone.md
+    # Creating a timestamp with timezone using Pandas
+
+    <ans>
+    ```python
+    timestamp = pd.Timestamp(
+        '2024-02-14 22:15:14',
+        tz='America/Sao_Paulo')
+    ```
+    </ans>
+
+    **References:**
+    - #ref=en-US/pandas/create-timestamp-without-timezone.md
+    - #ref=en-US/pandas/remove-timezone-from-timestamp.md
+
+#file=en-US/pandas/remove-timezone-from-timestamp.md
+    # Removing timezone from a Pandas timestamp
+
+    <ans>
+    ```python
+    timestamp.tz_localize(None)
+    ```
+    </ans>
+
+    **References:**
+    - #ref=en-US/pandas/create-timestamp-with-timezone.md
+
+#file=en-US/python/get-type-name-of-object.md
+    # Get type name of an object in Python
+
+    <ans>
+    ```python
+    type(obj).__name__
+    ```
+    </ans>
+
+#file=en-US/pandas/convert-ndarray-with-dates-to-pandas-series-with-timestamps.md
+    # Convert ndarray with dates to Pandas series with timestamps
+
+    <ans>
+    ```python
+    pd.to_datetime(ndarray_with_dates)
+    ```
+    </ans>
+
+#file=en-US/numpy/convert-ndarray-with-dates-to-pandas-series-with-timestamps.md
+    #include=en-US/pandas/convert-ndarray-with-dates-to-pandas-series-with-timestamps.md
+
+#file=en-US/python/what-actions-are-available-in-warnings-simplefilter.md
+    # Whats actions are available for `warnings.simplefilter` in Python
+
+    <ans>
+    - "ignore": Never print.
+    - "error": Treat as errors.
+    - "always": Always print.
+    - "default": Print once per code location.
+    - "module": Print once per module.
+    - "once": Print once.
+    </ans>
+
+#file=en-US/python/treating-errors.md
+    # Treating errors in Python
+
+    <ans>
+    ```python
+    try: # code to try
+    except Exception as ex: # execute on error
+    else: # execute only if no errors
+    finally: # always execute
+    ```
+    </ans>
+
+    **Remarks:**
+    - You can omit exception variable name and type.
+    - Multiple `except` blocks with different types are allowed.
+
+    **Related:**
+    - #ref=en-US/python/raising-errors.md
+
+    **References:**
+    - #ref=https://docs.python.org/3/tutorial/errors.html
+
+#file=en-US/python/handling-multiple-exception-types-same-block.md
+    # Handling multiple exception types in the same `except` block in Python
+
+    <ans>
+    except (ExceptionType1, ExceptionType2):
+    </ans>
+
+    **Related:**
+    - #ref=en-US/python/treating-errors.md
+
+    **References:**
+    - #ref=https://docs.python.org/3/tutorial/errors.html
+
+#file=en-US/python/raising-errors.md
+    # Raising errors in Python
+
+    <ans>
+    ```python
+    raise Exception("Error")
+    ```
+    </ans>
+
+    **Related:**
+    - #ref=en-US/python/treating-errors.md
+
+    **References:**
+    - #ref=https://docs.python.org/3/tutorial/errors.html
+
+#file=en-US/python/treating-future-warnings-as-errors.md
+    # Treating `FutureWarning` as errors in Python
+
+    <ans>
+    ```python
+    warnings.simplefilter('error', FutureWarning)
+    ```
+    </ans>
+
+    **Remarks:**
+    You can undo the change using:
+    ```python
+    warnings.simplefilter('default', FutureWarning)
+    ```
+
+    **References:**
+    - #ref=en-US/python/what-actions-are-available-in-warnings-simplefilter.md
 
 #file=_.md
     #ref=https://realpython.com/python-modulo-operator/#how-to-check-if-a-number-is-even-or-odd

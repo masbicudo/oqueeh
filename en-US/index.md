@@ -40,6 +40,8 @@ title: All topics
 
 [OpenCV](opencv)
 
+[Pandas](pandas)
+
 [Pandoc](pandoc)
 
 [PDM](pdm)

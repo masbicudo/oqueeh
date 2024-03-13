@@ -34,5 +34,6 @@
     "vscode": "VS Code",
     "pyprojectx": "Pyprojectx",
     "licensing": "Licensing",
-    "opencv": "OpenCV"
+    "opencv": "OpenCV",
+    "pandas": "Pandas"
 }

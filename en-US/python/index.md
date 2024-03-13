@@ -52,9 +52,13 @@ title: Python
 
 [Get a list of True values inside a *Namespace* in Python](get-list-of-true-values-in-namespace)
 
+[Get type name of an object in Python](get-type-name-of-object)
+
 [Get type of object in Python](get-type-of-object)
 
 [Group iterable sequence in chunks of N elements in Python](group-iterable-list-in-chunks)
+
+[Handling multiple exception types in the same `except` block in Python](handling-multiple-exception-types-same-block)
 
 [Initializing a PyProjectX Python project](initializing-pyprojectx-project-manager)
 
@@ -79,6 +83,12 @@ title: Python
 [psycopg2 copy_from cannot insert field with delimiter, even if quoted](psycopg2-copy_from-cannot-insert-field-with-delimiter-even-if-quoted)
 
 [Raise exception from None in Python](raise-exception-from-none)
+
+[Raise exception in Python](raise-exception)
+
+[Raising errors in Python](raising-errors)
+
+[Re-raise exception without chaining in Python](re-raise-exception-without-chaining)
 
 [Re-raise exception in Python](re-raise-exception)
 
@@ -126,6 +136,10 @@ title: Python
 
 [Time delays using `time.sleep` in Python](time-delays-using-time-sleep)
 
+[Treating errors in Python](treating-errors)
+
+[Treating `FutureWarning` as errors in Python](treating-future-warnings-as-errors)
+
 [Trim string in Python](trim-string)
 
 [Tuples: Immutable lists in Python](tuples-immutable-lists)
@@ -133,6 +147,8 @@ title: Python
 [](upgrade-pip)
 
 [urllib2.HTTPError: HTTP Error 403: Forbidden using urlopen in Python](urllib2-httperror-403-forbidden-with-urlopen)
+
+[Whats actions are available for `warnings.simplefilter` in Python](what-actions-are-available-in-warnings-simplefilter)
 
 [What are __enter__ and __exit__ functions in Python](what-are-enter-and-exit-functions)
 
