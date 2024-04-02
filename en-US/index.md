@@ -8,6 +8,8 @@ title: All topics
 
 [C#](c-sharp)
 
+[Chocolatey](chocolatey)
+
 [Computing](computing)
 
 [CSS](css)
@@ -17,6 +19,8 @@ title: All topics
 [cuPy](cupy)
 
 [.NET](dot-net)
+
+[gallery-dl](gallery-dl)
 
 [Git](git)
 
@@ -29,6 +33,8 @@ title: All topics
 [JavaScript](javascript)
 
 [Jekyll](jekyll)
+
+[LaTeX](latex)
 
 [Licensing](licensing)
 
@@ -68,6 +74,8 @@ title: All topics
 
 [Streamlit](streamlit)
 
+[Tech Name](tech_name)
+
 [TeX Live](texlive)
 
 [Visual Studio](visual-studio)
@@ -75,5 +83,7 @@ title: All topics
 [VS Code](vscode)
 
 [Windows](windows)
+
+[Windows Cmd](windows-cmd)
 
 [Windows Terminal](windows-terminal)

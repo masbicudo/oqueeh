@@ -507,7 +507,7 @@
     ```
     </ans>
 
-#file=en-US/batch/execute-multiple-commands-in-single-line.md
+#file=en-US/windows-cmd/execute-multiple-commands-in-single-line.md
     # Execute multiple commands in a single line in Batch
 
     <ans>
@@ -1528,6 +1528,9 @@
     ````
     </ans>
 
+    **References:**
+    - [highlight.js/SUPPORTED_LANGUAGES.md](https://github.com/highlightjs/highlight.js/blob/main/SUPPORTED_LANGUAGES.md)
+
 #file=en-US/pdm/ModuleNotFoundError-No-module-named-pdm-core.md
 
     # ModuleNotFoundError: No module named 'pdm.core'
@@ -1593,7 +1596,7 @@
 
     See [pyenv for Windows](https://github.com/pyenv-win/pyenv-win)
 
-#file=en-US/batch/maths-division-cmd.md
+#file=en-US/windows-cmd/maths-division-cmd.md
     # Division using CMD
 
     <ans>
@@ -1604,7 +1607,7 @@
 
     You can use variables in the place of numbers.
 
-#file=en-US/batch/maths-in-cmd.md
+#file=en-US/windows-cmd/maths-in-cmd.md
     # Mathematics using CMD
 
     <ans>
@@ -1621,8 +1624,8 @@
 
     You can use variables in the place of numbers.
 
-#file=en-US/batch/assign-output-of-command-to-variable.md
-    # Assign the output of a command to a variable
+#file=en-US/windows-cmd/assign-output-of-command-to-variable.md
+    # Assign the output of a command to a variable in CMD
 
     <ans>
     ```bat
@@ -1633,7 +1636,7 @@
     ```
     </ans>
 
-#file=en-US/batch/run-powershell-command.md
+#file=en-US/windows-cmd/run-powershell-command.md
     # Run PowerShell command in CMD
 
     <ans>
@@ -1670,6 +1673,9 @@
     ````markdown
     ```javascript
     ````
+
+    **References:**
+    - [highlight.js/SUPPORTED_LANGUAGES.md](https://github.com/highlightjs/highlight.js/blob/main/SUPPORTED_LANGUAGES.md)
 
 #file=en-US/c-sharp/reading-embedded-resources.md
     # Reading embedded resources in C#
@@ -2746,7 +2752,7 @@
     rm -rf ~/.vscode/extensions
     ```
 
-    In Batch (Windows):
+    In Batch (Windows CMD):
 
     ```bash
     rmdir %USERPROFILE%\.vscode\extensions /s
@@ -3911,6 +3917,196 @@
 
     **Related:**
     - #ref=en-US/python/get-closure-variables-used-by-function.md
+
+#file=en-US/windows-cmd/split-commands-in-multiple-lines-in-batch-file.md
+    # Split commands in multiple lines in a batch file
+
+    <ans>
+    ```bat
+    somecommand ^
+        --param1
+    ```
+    </ans>
+
+#file=en-US/windows-cmd/what-is-windows-command-prompt.md
+    # What is Windows Command Prompt (CMD)?
+
+    <ans>
+    It is an instruction parser used to issue commands to the computer and execute programs.
+    </ans>
+
+    **Related:**
+    - #ref=en-US/windows-cmd/what-is-windows-command-file.md
+
+#file=en-US/windows-cmd/what-is-windows-batch-file.md
+    # What is a Windows batch file (*.bat)?
+
+    <ans>
+    It is a script file that executes Windows Command Prompt instructions.
+    </ans>
+
+    **Related:**
+    - #ref=en-US/windows-cmd/what-is-windows-command-prompt.md
+    - #ref=en-US/windows-cmd/what-is-windows-command-file.md
+
+#file=en-US/windows-cmd/what-is-windows-command-file.md
+    # What is a Windows command file (*.cmd)?
+
+    <ans>
+    It is a script file that executes Windows Command Prompt instructions.
+    </ans>
+
+    **Related:**
+    - #ref=en-US/windows-cmd/what-is-windows-command-prompt.md
+    - #ref=en-US/tech_name/what-is-windows-batch-file.md
+
+#file=en-US/gallery-dl/what-is-gallery-dl.md
+    # What is gallery-dl?
+
+    <ans>
+    It is used to batch download picture files from online gallery sites such as Pinterest.
+    </ans>
+
+#file=en-US/gallery-dl/skip-already-downloaded-files.md
+    # Skipping already downloaded files using gallery-dl
+
+    <ans>
+    It skips already downloaded files by default. =)
+    </ans>
+
+#file=en-US/gallery-dl/write-metadata-about-galleries-and-files.md
+    # Write metadata about galleries and files using `gallery-dl`
+
+    <ans>
+    Use the arguments:
+    - `--write-metadata`: Write metadata to separate JSON files
+    - `--write-info-json`: Write gallery metadata to a info.json file
+    </ans>
+
+#file=en-US/gallery-dl/install-using-choco.md
+    # Install gallery-dl using Chocolatey
+
+    <ans>
+    ```bash
+    choco upgrade -y gallery-dl
+    ```
+    </ans>
+
+    **Related:**
+    - #ref=en-US/chocolatey/what-is-choco.md
+
+#file=en-US/chocolatey/what-is-choco.md
+    # What is Chocolatey?
+
+    <ans>
+    It is a package manager for Windows which manages installed softwares.
+    </ans>
+
+    **Remarks:**
+    Choco packages may also add [shims](/en-US/chocolatey/what-are-shims.md) to help running programs in the command line.
+
+#file=en-US/chocolatey/what-are-shims.md
+    # What are Shims created by Chocolatey packages?
+
+    <ans>
+    Shims are program shortcuts in the form of an executable.
+    They are used to relocate a program to a common folder, such that only a single folder is needed for many programs in the PATH environment variable.
+    </ans>
+
+#file=en-US/numpy/create-range-of-date-times.md
+    # Creating a range of date-times using NumPy
+
+    <ans>
+    ```python
+    date_range = np.arange(
+            dt.datetime(2024, 1, 1),
+            dt.datetime(2025, 1, 1),
+            dt.timedelta(days=1),
+        )
+    ```
+    </ans>
+
+    The element types of the resulting array will be `datetime64`, with dtype `'<M8[us]'`.
+
+#file=en-US/latex/creating-figures-with-multiple-images.md
+    # Creating figures with multiple images in LaTeX
+
+    <ans>
+    ```
+    \begin{figure}
+        \begin{subfigure}
+        \end{subfigure}
+    \end{figure}
+    ```
+    </ans>
+
+#file=en-US/markdown/list-of-supported-markdown-language.md
+    # List of supported Markdown languages in code blocks
+
+    <ans>
+    See [highlight.js/SUPPORTED_LANGUAGES.md](https://github.com/highlightjs/highlight.js/blob/main/SUPPORTED_LANGUAGES.md)
+    </ans>
+
+#file=en-US/markdown/creating-latex-code-block.md
+    # LaTeX code inside a Markdown file
+
+    <ans>
+    ````
+    ```tex
+    \LaTeX code inside Markdown
+    ```
+    ````
+    </ans>
+
+    **References:**
+    - [highlight.js/SUPPORTED_LANGUAGES.md](https://github.com/highlightjs/highlight.js/blob/main/SUPPORTED_LANGUAGES.md)
+
+#file=en-US/latex/creating-latex-logo-using-latex.md
+    # Creating LaTeX logo using LaTeX
+
+    <ans>
+    ```tex
+    \LaTeX
+    ```
+    </ans>
+
+    **Example:**
+    $$
+    \LaTeX
+    $$
+
+#file=en-US/latex/creating-latex-logo-using-unicode.md
+    # Creating LaTeX logo using unicode
+
+    <ans>
+    <serif>LᴬTᴇX</serif>
+    *=or=*
+    LaTeX
+    </ans>
+
+    **References:**
+    - [Letter a](https://static.uni-graz.at/fileadmin/_Persoenliche_Webseite/vollmann_ralf/Computersachen/uni_letter_a.html)
+    - [Letter e](https://static.uni-graz.at/fileadmin/_Persoenliche_Webseite/vollmann_ralf/Computersachen/uni_letter_e.html)
+
+#file=en-US/tech_name/article_name.md
+    #delete
+    # Title
+
+    <ans>
+    </ans>
+
+    **Related:**
+    - #ref=
+
+#file=en-US/tech_name/article_name.md
+    #delete
+    # Title
+
+    <ans>
+    </ans>
+
+    **Related:**
+    - #ref=
 
 #file=en-US/tech_name/article_name.md
     #delete

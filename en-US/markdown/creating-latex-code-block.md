@@ -1,12 +1,12 @@
 ---
-title: C# code inside a Markdown file
+title: LaTeX code inside a Markdown file
 generated: true
 ---
 
 <div markdown="1" class="ans">
-````c#
-```c#
-// C# code fence in markdown
+````
+```tex
+\LaTeX code inside Markdown
 ```
 ````
 </div>

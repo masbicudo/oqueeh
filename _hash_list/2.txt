@@ -1,7 +1,7 @@
 b63b3b74affde997df6c13d420c0ef19b6fcb78bb4910169e5ab702c2a0ad1e4 en-US/batch/assign-output-of-command-to-variable.md
 2332fe5eafe4fa552b1ed491b6bd40ce30168b414df7f1bc66997bfb06366f0e en-US/batch/run-powershell-command.md
 73700b4acac5ba610da601c31332570dae285570b6268094c167ae222f1357ce en-US/windows/what-is-powershell.md
-236112d0ffb2861c1a6ebc48c47ea084d013695804c42272ab239da607f68b88 en-US/markdown/set-code-block-language.md
+b6b1cb7c8075620a82edd295a19325cbb3e20a11c2ea3cc40dab1269bd474dbc en-US/markdown/set-code-block-language.md
 d0a4a1102cda0772d075245b2033dd5365f560a5fd323d709da43fb04d6838e6 en-US/javascript/create-data-uri-from-web-content.md
 a0d83b31e1eedc3e2d15f1200e11258df4d1261f44414c514b939f46290287c4 en-US/html/encode-file-data-inside-link-href-attribute.md
 9a6ffb21b77d628880971c2a0834f4f0d946f8d307ab53d8cc175345b14473ae en-US/javascript/window-load-dom-content-loaded-ready-state-change-events.md
@@ -93,7 +93,7 @@ c23cfe94f7692d1cf779058190720d00b40335336d8fdce751965c7684a17327 en-US/texlive/l
 1662ac0a68416bee9e53d57b1307879d457f20b18b1d4825cd603c00cf4a518d en-US/python/open-text-file.md
 63cc335ba2d8d4ad2dca7b57ed36688892f8403621681203b9ef50a0fe2a396d en-US/python/open-binary-file.md
 eafbb94acbd99b5699a5006b7036ebc6968553a3bab03e3fa67b94238869cd55 en-US/bash/get-file-size.md
-9411344139afa35911a98aa261c199dfd4313ec314a4cea36d50b428239a422b en-US/vscode/remove-all-extensions.md
+90bc75623f6a71e606e6816a2b632fc4a0baac45852c6a005f5ab33457b8caa2 en-US/vscode/remove-all-extensions.md
 a536601991e01dc030869768f32efebb8ca1a3c0f227886f1f74eb4593b6ac59 en-US/c-sharp/detect-offline-or-not-synchronized-files.md
 da20ac4cd73fc81d70cf79dd437ebf0e9997a73af7891afc03c13594475e433b en-US/python/upgrade-pip.md
 383f4a5beba03f0c080176ac356838011cea6b5ceaa4c3f1eb7c2f81ea1fae08 en-US/pdm/install-pdm.md

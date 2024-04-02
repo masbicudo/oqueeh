@@ -9,7 +9,7 @@ In Bash (Linux or Mac):
 rm -rf ~/.vscode/extensions
 ```
 
-In Batch (Windows):
+In Batch (Windows CMD):
 
 ```bash
 rmdir %USERPROFILE%\.vscode\extensions /s

@@ -10,6 +10,8 @@ title: NumPy
 
 [Converting datetime64 formats using NumPy](converting-datetime64-formats)
 
+[Creating a range of date-times using NumPy](create-range-of-date-times)
+
 [Get total size/length of multi-dimensional array using NumPy](get-total-size-of-multi-dimensional-array)
 
 [Sum multi-dimensional array along all axes using NumPy](sum-all-items-in-multi-dimensional-array)

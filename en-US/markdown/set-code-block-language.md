@@ -14,3 +14,6 @@ generated: true
 ````markdown
 ```javascript
 ````
+
+**References:**
+- [highlight.js/SUPPORTED_LANGUAGES.md](https://github.com/highlightjs/highlight.js/blob/main/SUPPORTED_LANGUAGES.md)
