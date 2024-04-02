@@ -9,4 +9,4 @@ It is a script file that executes Windows Command Prompt instructions.
 
 **Related:**
 - [What is Windows Command Prompt (CMD)?](/en-US/windows-cmd/what-is-windows-command-prompt)
-- [None](/en-US/tech_name/what-is-windows-batch-file)
+- [What is a Windows batch file (*.bat)?](/en-US/windows-cmd/what-is-windows-batch-file)

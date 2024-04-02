@@ -12,6 +12,7 @@
     "gallery-dl": "gallery-dl",
     "git": "Git",
     "github": "GitHub",
+    "github-pages": "GitHub Pages",
     "hosting": "Hosting",
     "html": "HTML",
     "javascript": "JavaScript",
@@ -40,7 +41,7 @@
     "visual-studio": "Visual Studio",
     "vscode": "VS Code",
     "windows": "Windows",
-    "windows-cmd": "Windows Cmd",
+    "windows-cmd": "Windows Command Prompt (CMD)",
     "windows-terminal": "Windows Terminal",
     "pt-BR": "Todos os t\u00f3picos",
     "data-hora": "Data Hora"

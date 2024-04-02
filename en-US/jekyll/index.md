@@ -2,6 +2,8 @@
 title: Jekyll
 ---
 
+[Adding support for LaTeX using MathJax](adding-support-for-latex-using-mathjax)
+
 [Categories of page is empty in Jekyll](categories-of-page-is-empty)
 
 [Convert date to string in Jekyll](convert-date-to-string)

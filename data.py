@@ -10,6 +10,7 @@ category_names = {
     "firefox": "FireFox",
     "gallery-dl": "gallery-dl",
     "github": "GitHub",
+    "github-pages": "GitHub Pages",
     "html": "HTML",
     "javascript": "JavaScript",
     "latex": "LaTeX",
@@ -28,6 +29,7 @@ category_names = {
     "syncthing": "Syncthing",
     "texlive": "TeX Live",
     "vscode": "VS Code",
+    "windows-cmd": "Windows Command Prompt (CMD)",
 }
 
 # Equivalence classes of words

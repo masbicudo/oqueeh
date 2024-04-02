@@ -26,6 +26,8 @@ title: All topics
 
 [GitHub](github)
 
+[GitHub Pages](github-pages)
+
 [Hosting](hosting)
 
 [HTML](html)
@@ -84,6 +86,6 @@ title: All topics
 
 [Windows](windows)
 
-[Windows Cmd](windows-cmd)
+[Windows Command Prompt (CMD)](windows-cmd)
 
 [Windows Terminal](windows-terminal)

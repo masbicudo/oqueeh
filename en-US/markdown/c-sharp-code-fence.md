@@ -4,7 +4,7 @@ generated: true
 ---
 
 <div markdown="1" class="ans">
-````c#
+````md
 ```c#
 // C# code fence in markdown
 ```

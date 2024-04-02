@@ -10,6 +10,8 @@ generated: true
 </div>
 
 **Example:**
-$$
-\LaTeX
-$$
+
+$$\LaTeX$$
+
+**Related:**
+- [Creating LaTeX logo using unicode](/en-US/latex/creating-latex-logo-using-unicode)

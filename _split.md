@@ -3958,7 +3958,7 @@
 
     **Related:**
     - #ref=en-US/windows-cmd/what-is-windows-command-prompt.md
-    - #ref=en-US/tech_name/what-is-windows-batch-file.md
+    - #ref=en-US/windows-cmd/what-is-windows-batch-file.md
 
 #file=en-US/gallery-dl/what-is-gallery-dl.md
     # What is gallery-dl?
@@ -4071,32 +4071,48 @@
     </ans>
 
     **Example:**
-    $$
-    \LaTeX
-    $$
+
+    $$\LaTeX$$
+
+    **Related:**
+    - #ref=en-US/latex/creating-latex-logo-using-unicode.md
 
 #file=en-US/latex/creating-latex-logo-using-unicode.md
     # Creating LaTeX logo using unicode
 
     <ans>
-    <serif>LᴬTᴇX</serif>
+    <roman>LᴬTᴇX</roman>
+
     *=or=*
+
     LaTeX
     </ans>
+
+    **Related:**
+    - #ref=en-US/latex/creating-latex-logo-using-latex.md
 
     **References:**
     - [Letter a](https://static.uni-graz.at/fileadmin/_Persoenliche_Webseite/vollmann_ralf/Computersachen/uni_letter_a.html)
     - [Letter e](https://static.uni-graz.at/fileadmin/_Persoenliche_Webseite/vollmann_ralf/Computersachen/uni_letter_e.html)
 
-#file=en-US/tech_name/article_name.md
-    #delete
-    # Title
+#file=en-US/jekyll/adding-support-for-latex-using-mathjax.md
+    # Adding support for LaTeX using MathJax
 
     <ans>
+    Add the following to your `_layouts/default.html` page:
+    ```html
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    ```
     </ans>
 
-    **Related:**
-    - #ref=
+    **References:**
+    - #ref=https://stackoverflow.com/questions/34347818/using-mathjax-on-a-github-page
+
+#file=en-US/github-pages/adding-support-for-latex-with-mathjax.md
+    # Adding support for LaTeX with MathJax using GitHub Pages
+    #include=en-US/jekyll/adding-support-for-latex-using-mathjax.md
 
 #file=en-US/tech_name/article_name.md
     #delete

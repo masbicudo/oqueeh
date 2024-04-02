@@ -1,5 +1,5 @@
 ---
-title: Windows Cmd
+title: Windows Command Prompt (CMD)
 ---
 
 [Assign the output of a command to a variable in CMD](assign-output-of-command-to-variable)
