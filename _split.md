@@ -1521,7 +1521,7 @@
     # C# code inside a Markdown file
 
     <ans>
-    ````c#
+    ````md
     ```c#
     // C# code fence in markdown
     ```
@@ -4003,7 +4003,7 @@
     </ans>
 
     **Remarks:**
-    Choco packages may also add [shims](/en-US/chocolatey/what-are-shims.md) to help running programs in the command line.
+    Choco packages may also add [shims](/en-US/chocolatey/what-are-shims) to help running programs in the command line.
 
 #file=en-US/chocolatey/what-are-shims.md
     # What are Shims created by Chocolatey packages?
