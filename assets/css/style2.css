@@ -139,7 +139,7 @@ roman {
     font-family: serif;
 }
 
-.MathJax_Display { 
+.MathJax { 
     text-align: left !important;
-    display: inline !important;
+    display: inline-block !important;
 }
