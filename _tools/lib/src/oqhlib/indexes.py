@@ -1,6 +1,7 @@
 import os
 import re
 from oqhlib.utils import get_category_name
+from glob import glob
 
 # Generates a page in HTML format
 def html(header, items):
@@ -184,6 +185,22 @@ def make_children(path=".", url_path=""):
         make(title, child_path, child_url_path)
         make_children(child_path, child_url_path)
 
+
+def delete_empty_dirs(root_dir="."):
+    for item in os.listdir(root_dir):
+        if not valid_dir(item):
+            continue
+        item_path = os.path.join(root_dir, item)
+        if os.path.isdir(item_path):
+            delete_empty_dirs(item_path)
+            if not os.listdir(item_path):
+                os.rmdir(item_path)
+                # print(f"Deleted empty category directory: {item_path[2:]}")
+
+def clear_indexes():
+    indices = glob("./**/index.md", recursive=True)
+    for file in indices:
+        os.remove(file)
 
 def generate_indexes():
     make(ignore_files=True)

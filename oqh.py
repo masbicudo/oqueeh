@@ -38,6 +38,8 @@ def main():
 
         if args.list == False:
             categories.ensure_categories()
+            indexes.clear_indexes()
+            indexes.delete_empty_dirs()
             indexes.generate_indexes()
 
     if args.command == "list":
