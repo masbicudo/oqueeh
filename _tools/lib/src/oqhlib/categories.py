@@ -1,14 +1,7 @@
 import os
 import re
 from oqhlib.utils import get_category_name
-
-def onerror(oserror):
-    pass
-
-def valid_dir(name):
-    if name[0] in "._" or name == "assets" or "=" in name:
-        return False
-    return True
+from oqhlib.list_items import list_files
 
 def read_categories(line):
     m = re.match(r'categories:(.*)', line)
@@ -20,20 +13,12 @@ def read_categories(line):
 def ensure_categories():
     category_names = {}
 
-    for root, dirs, files in os.walk(".", onerror=onerror):
-        if root == '.':
-            continue
-        categories = re.split(r'[\\/]', root)[1:]
-        if any(not valid_dir(c) for c in categories):
-            continue
-        for file in files:
-            m = re.match(r'.*\.md$', file)
-            if m is None:
-                continue
-            cats = categories if file != "index.md" else categories[:-1]
-            for cat in cats:
-                cat_name = get_category_name(cat)
-                category_names[cat] = cat_name
+    for file in list_files():
+        file_split = re.split(r'[\\/]', file)
+        categories = file_split[1:-1]
+        for cat in categories:
+            cat_name = get_category_name(cat)
+            category_names[cat] = cat_name
 
     import json
     with open("_data/category_names.json", "w") as fs:

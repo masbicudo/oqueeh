@@ -38,6 +38,14 @@
             "console": "integratedTerminal"
         },
         {
+            "name": "Python: oqh.py list -o",
+            "type": "python",
+            "request": "launch",
+            "program": "oqh.py",
+            "args": ["list", "-o"],
+            "console": "integratedTerminal"
+        },
+        {
             "name": "Python: Current Module File (local)",
             "type": "python",
             "request": "launch",

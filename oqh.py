@@ -1,7 +1,7 @@
 import argparse
 from oqhcli.args import arguments_setup
 import oqhlib
-from oqhlib import build, categories, indexes
+from oqhlib import build, categories, indexes, list_items
 import sys
 
 def arguments_read(values):
@@ -39,6 +39,12 @@ def main():
         if args.list == False:
             categories.ensure_categories()
             indexes.generate_indexes()
+
+    if args.command == "list":
+        input_filenames = build.get_input_filenames(args.inputs)
+        if args.orphaned == True:
+            for x in list_items.list_files_orphaned(input_filenames):
+                print(x)
 
 if __name__ == '__main__':
     main()
