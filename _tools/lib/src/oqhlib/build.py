@@ -721,7 +721,7 @@ def save_hashes(file_hashes):
         fp.write(str(idx))
 
 def arguments_setup(parser : argparse.ArgumentParser):
-    parser.add_argument("inputs", nargs="*", type=argparse.FileType("r"), default=["_split", "_split.md"])
+    parser.add_argument("inputs", nargs="*", type=str, default=["_split", "_split.md"])
     parser.add_argument("-u", "--update", action='store_true')
     parser.add_argument("-c", "--check-generated", action='store_true')
     parser.add_argument("-t", "--test", action='store_true')
