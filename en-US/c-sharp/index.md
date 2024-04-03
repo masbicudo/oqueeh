@@ -34,8 +34,6 @@ title: C#
 
 [Passing parameters to a string interpolation handler constructor in C#](passing-parameters-to-interpolation-handler-constructor)
 
-[Passing parameters to a string interpolation handler in C#](passing-parameters-to-interpolation-handler)
-
 [Reading embedded resource from *.resx* file](reading-embedded-resource-from-resx-file)
 
 [Reading embedded resources in C#](reading-embedded-resources)

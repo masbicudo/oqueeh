@@ -1376,8 +1376,6 @@
         tfs.write(string_value)
     </ans>
 
-#file=en-US/python/convert-string-to-utf-8-before-saving-file.md
-    #delete
 #file=en-US/python/write-utf-8-encoded-text-inside-binary-file.md
     # Write UTF-8 encoded text inside binary file in Python
 
@@ -1573,8 +1571,6 @@
     3. Locate **Edit the system environment variables**
     </ans>
 
-#file=en-US/pyenv/pyenv-is-not-recognized-as-the-name-of-a-cmdlet-function.md
-    #delete
 #file=en-US/pyenv-win/pyenv-is-not-recognized-as-the-name-of-a-cmdlet-function.md
     # 'pyenv' is not recognized as the name of a cmdlet, function
 

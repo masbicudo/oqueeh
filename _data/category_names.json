@@ -1,7 +1,6 @@
 {
     "en-US": "All topics",
     "bash": "Bash",
-    "batch": "Batch",
     "c-sharp": "C#",
     "chocolatey": "Chocolatey",
     "computing": "Computing",
@@ -37,7 +36,6 @@
     "python": "Python",
     "scipy": "SciPy",
     "streamlit": "Streamlit",
-    "tech_name": "Tech Name",
     "texlive": "TeX Live",
     "visual-studio": "Visual Studio",
     "vscode": "VS Code",
