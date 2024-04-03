@@ -32,14 +32,12 @@ def list_files():
 def list_files_orphaned(
             input_filenames,
         ):
-    errors_list : list[str] = []
-    
     import oqhlib.build as bld
+    errors_list : list[str] = []
     pre_files = bld.preproc_files(input_filenames, errors_list)
-
-    listed_files = {x.name for x in pre_files if not x.delete}
+    listed_files = {x.name for x in pre_files}
     site_files = {x.replace("\\", "/")[2:] for x in list_files()}
-    generated_site_files = {x for x in site_files if bld.check_generated_flag(x)}
-
-    orphaned_list = generated_site_files.difference(listed_files)
+    orphaned_candidates = sorted(site_files.difference(listed_files))
+    orphaned_files = {x for x in orphaned_candidates if bld.check_generated_flag(x)}
+    orphaned_list = [*sorted(orphaned_files)]
     return orphaned_list
