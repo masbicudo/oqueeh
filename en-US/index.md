@@ -4,8 +4,6 @@ title: All topics
 
 [Bash](bash)
 
-[Batch](batch)
-
 [C#](c-sharp)
 
 [Chocolatey](chocolatey)
@@ -66,8 +64,6 @@ title: All topics
 
 [PowerShell](powershell)
 
-[Pyenv](pyenv)
-
 [PyEnv-Win](pyenv-win)
 
 [Pyprojectx](pyprojectx)
@@ -77,8 +73,6 @@ title: All topics
 [SciPy](scipy)
 
 [Streamlit](streamlit)
-
-[Tech Name](tech_name)
 
 [TeX Live](texlive)
 
