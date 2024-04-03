@@ -14,6 +14,7 @@ category_names = {
     "html": "HTML",
     "javascript": "JavaScript",
     "latex": "LaTeX",
+    "mathjax": "MathJax",
     "matplotlib": "Matplotlib",
     "nodejs": "Node.js",
     "nssm": "NSSM",

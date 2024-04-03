@@ -1,2 +1,9 @@
 13722bd4c08f4c4b5cd59ffdc7a7b123a5e49bc1598cb39c23fa2bf07ce1fa0d en-US/jekyll/adding-support-for-latex-using-mathjax.md
 bfcb3a8e68cbb18c51f760ca828002856e0979631ccab056304c4feb39d010ca en-US/github-pages/adding-support-for-latex-with-mathjax.md
+c46be9402d94f4f0c4993eea48723d8dad036d28d52a2c8f9f05f6a9be9a3c07 en-US/latex/align-text-on-center.md
+b0de1f0d86650162a128e85ee5ea89b7cace25c9fd4aa9c2c9aed66d0a08a181 en-US/mathjax/align-equations-to-left-of-page-instead-of-center.md
+ed843d62596f41488cb1d59f14d2844fff13f1abe71c9399d64fe1acd3bea9dd en-US/mathjax/align-equations-to-left-with-indent.md
+2fe7d845879ed297a74ec671a307e330a61a9927e74a88d07263334dfd9fb0e4 en-US/latex/include-figure-in-pdf-format.md
+c6941aec671a589912cca3ecbb810e9481bb764fd011ed23f5c1b326cf4b92e4 en-US/latex/include-figure-in-png-format.md
+c0c1191cab9fa60e8817eb5614e3ebfa596849798447970f760594da2e4e3900 en-US/latex/create-figure-spanning-multiple-document-columns.md
+cc5eb2888febdf33280e9c72d4be6beb5d4824985522284766671aea742bdb70 en-US/windows-terminal/error-0x80070002-when launching.md

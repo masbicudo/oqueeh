@@ -4034,11 +4034,19 @@
     <ans>
     ```
     \begin{figure}
-        \begin{subfigure}
+        \begin{subfigure}[b]{0.5\textwidth}
+            \includegraphics[scale=0.5]{image.pdf}
         \end{subfigure}
+        % ... other subfigures
     \end{figure}
     ```
     </ans>
+
+    **Related:**
+    - ref=en-US/latex/create-figure-spanning-multiple-document-columns.md
+
+    **References:**
+    - #ref=https://www.overleaf.com/learn/latex/How_to_Write_a_Thesis_in_LaTeX_(Part_3)%3A_Figures%2C_Subfigures_and_Tables#Subfigures
 
 #file=en-US/markdown/list-of-supported-markdown-language.md
     # List of supported Markdown languages in code blocks
@@ -4114,6 +4122,120 @@
     # Adding support for LaTeX with MathJax using GitHub Pages
     #include=en-US/jekyll/adding-support-for-latex-using-mathjax.md
 
+#file=en-US/latex/align-text-on-center.md
+    # Aligning text on center of the page using LaTeX
+
+    <ans>
+    ```tex
+    \begin{center}
+        Any text
+    \end{center}
+    ```
+
+    *=or=*
+
+    ```tex
+    \centerline{Line of text to center}
+    ```
+    </ans>
+
+#file=en-US/mathjax/align-equations-to-left-of-page-instead-of-center.md
+    # Aligning equations to the left of the page using MathJax
+
+    <ans>
+    ```css
+    .MathJax { 
+        text-align: left !important;
+    }
+    ```
+
+    *=or=*
+
+    ```js
+    MathJax.Hub.Config({
+        jax: ["input/TeX","output/HTML-CSS"],
+        TODO!
+    });
+    ```
+    </ans>
+
+#file=en-US/mathjax/align-equations-to-left-with-indent.md
+    # Aligning equations to the left with indent using MathJax
+
+    <ans>
+    ```css
+    .MathJax { 
+        margin-left: 2em !important;
+    }
+    ```
+
+    *=or=*
+
+    ```js
+    MathJax.Hub.Config({
+        jax: ["input/TeX","output/HTML-CSS"],
+        displayIndent: "2em"
+    });
+    ```
+    </ans>
+
+#file=en-US/latex/include-figure-in-pdf-format.md
+    # Include figure in PDF format in LaTeX
+
+    <ans>
+    ```tex
+    \begin{figure}[h]
+        \centering
+        \includegraphics[scale=0.75]{image.pdf}
+        \caption{Image caption text}
+        \label{fig:image-id}
+    \end{figure}
+    ```
+    </ans>
+
+    **Related:**
+    - #ref=en-US/latex/include-figure-in-png-format.md
+
+#file=en-US/latex/include-figure-in-png-format.md
+    # Include figure in PNG format in LaTeX
+
+    <ans>
+    ```tex
+    \begin{figure}[h]
+        \centering
+        \includegraphics[scale=0.75]{image.png}
+        \caption{Image caption text}
+        \label{fig:image-id}
+    \end{figure}
+    ```
+    </ans>
+
+    **Related:**
+    - #ref=en-US/latex/include-figure-in-pdf-format.md
+
+#file=en-US/latex/create-figure-spanning-multiple-document-columns.md
+    # Create figure spanning multiple document columns in LaTeX
+
+    <ans>
+    ```tex
+    \begin{figure*}
+        \includegraphics[width=0.5\textwidth]{image.png}
+        \label{fig:wide-figure}
+    \end{figure*}
+    ```
+    </ans>
+
+    **Related:**
+    - #ref=en-US/latex/creating-figures-with-multiple-images.md
+
+#file=en-US/windows-terminal/error-0x80070002-when launching.md
+    # Error 0x80070002 when launching Windows Terminal
+
+    <ans>
+    This error occurs when the default profile is corrupted.
+    Change the default profile or try to reinstall it.
+    </ans>
+
 #file=en-US/tech_name/article_name.md
     #delete
     # Title
@@ -4165,6 +4287,7 @@
     - #ref=
 
 #file=_.md
+    #delete
     #ref=https://realpython.com/python-modulo-operator/#how-to-check-if-a-number-is-even-or-odd
     #ref=https://jekyllrb.com/docs/variables/
     #ref=https://github.com/daattali/beautiful-jekyll

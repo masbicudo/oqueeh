@@ -91,7 +91,7 @@ b37979f6cc63202be93b492d6abe7e60a9b53bca1ff358b9fd816b4e221b4d9a en-US/gallery-d
 73ce5fb52488a86eca4ea1cbe81998070f975831c75585073ae62dc0ead71ad8 en-US/chocolatey/what-is-choco.md
 75f03e39619cd72d712bb80672790114ae3a2165d3684dfaf2474e07c41296c5 en-US/chocolatey/what-are-shims.md
 62983d88d5753ffbf6735e5f897f66ecd2394beeb40ffc3a2f05e11bf88e89c9 en-US/numpy/create-range-of-date-times.md
-82fe77ab9e5678bd78ddbb57a59d8011b27ddff8bd17e7d823d80f46ed5c399f en-US/latex/creating-figures-with-multiple-images.md
+b4b65da976361f4fa641a08fa5be3efbc9092976ffc8c6a1c01b1e926e0c69b2 en-US/latex/creating-figures-with-multiple-images.md
 de5eee209589fafe9ee850dc025a874ba79fd66a6ea41629cfe23a9befa6f43f en-US/markdown/list-of-supported-markdown-language.md
 59ed39cd9b5bfc45b6d3200ae1a25fccd800dd2b6fb5a7783d5c05c263da682d en-US/markdown/creating-latex-code-block.md
 f181a8b82a51d4edd14783db3e47d28943df1a6eae1d0b117c4d871cd2b73881 en-US/windows-cmd/what-is-windows-batch-file.md

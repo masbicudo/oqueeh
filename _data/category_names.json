@@ -21,6 +21,7 @@
     "licensing": "Licensing",
     "liquid-templates": "Liquid Templates",
     "markdown": "Markdown",
+    "mathjax": "MathJax",
     "matplotlib": "Matplotlib",
     "nssm": "NSSM",
     "numpy": "NumPy",

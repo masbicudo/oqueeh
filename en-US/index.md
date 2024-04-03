@@ -44,6 +44,8 @@ title: All topics
 
 [Markdown](markdown)
 
+[MathJax](mathjax)
+
 [Matplotlib](matplotlib)
 
 [NSSM](nssm)

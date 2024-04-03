@@ -6,6 +6,8 @@ title: Windows Terminal
 
 [Default key bindings in Windows Terminal](default-key-bindings)
 
+[Error 0x80070002 when launching Windows Terminal](error-0x80070002-when launching)
+
 [Execute command in new split pane in Windows Terminal](execute-command-in-new-split-pane)
 
 [Execute command in new tab in Windows Terminal](execute-command-in-new-tab)
