@@ -40,5 +40,5 @@ def list_files_orphaned(
     listed_files = {x.name for x in pre_files if not x.delete}
     site_files = {x.replace("\\", "/")[2:] for x in list_files()}
 
-    orphaned_list = listed_files.difference(site_files)
+    orphaned_list = site_files.difference(listed_files)
     return orphaned_list
