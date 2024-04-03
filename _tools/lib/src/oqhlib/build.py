@@ -599,6 +599,20 @@ def load_hashes():
 
     return result
 
+def check_generated_flag(file_path:str):
+    found_generated_flag = False
+    with _open(file_path, "r") as fs:
+        for ltext, state in parse_post(fs):
+            if state == 1:
+                key_value = ltext.split(":", 1)
+                if len(key_value) == 2:
+                    key = key_value[0]
+                    value = get_value_from_string(key_value[1])
+                    if key == "generated":
+                        found_generated_flag = value
+                        break
+    return found_generated_flag
+
 def get_file_action(
         file_data : FileData,
         prev_file_hash,
@@ -631,17 +645,7 @@ def get_file_action(
         wow = file_data.overwrite != False
     if wow == True and os.path.isfile(file_path):
         if wow == True and args.check_generated:
-            found_generated_flag = False
-            with _open(file_path, "r") as fs:
-                for ltext, state in parse_post(fs):
-                    if state == 1:
-                        key_value = ltext.split(":", 1)
-                        if len(key_value) == 2:
-                            key = key_value[0]
-                            value = get_value_from_string(key_value[1])
-                            if key == "generated":
-                                found_generated_flag = value
-                                break
+            found_generated_flag = check_generated_flag(file_path)
             if not found_generated_flag:
                 raise ParseException("cannot replace file without 'generated' marker", file_path)
 

@@ -3,7 +3,7 @@ import os
 import re
 
 def arguments_setup(parser : argparse.ArgumentParser):
-    parser.add_argument("inputs", nargs="*", type=argparse.FileType("r"), default=["_split", "_split.md"])
+    parser.add_argument("inputs", nargs="*", type=str, default=["_split", "_split.md"])
     parser.add_argument("-o", "--orphaned", action='store_true')
 
 def onerror(oserror):
@@ -39,6 +39,7 @@ def list_files_orphaned(
 
     listed_files = {x.name for x in pre_files if not x.delete}
     site_files = {x.replace("\\", "/")[2:] for x in list_files()}
+    generated_site_files = {x for x in site_files if bld.check_generated_flag(x)}
 
-    orphaned_list = site_files.difference(listed_files)
+    orphaned_list = generated_site_files.difference(listed_files)
     return orphaned_list
